@@ -18,6 +18,10 @@ public class TCSV {
      * @return TCSV the new oject with the data from the line
      */
     public static TCSV createTCSVfromString(String aLine) {
+        if (aLine == null) {
+            return null;
+        }
+        
         String[] temp = aLine.split(",", 0);
 
         return new TCSV(temp[0], Arrays.copyOfRange(temp, 1, temp.length));

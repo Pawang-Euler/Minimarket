@@ -5,8 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.pawaneuler.TCSV.TCSV;
 import org.pawaneuler.TCSVTools.Exceptions.BadExtentionException;
-import org.pawaneuler.TSCV.TCSV;
 
 public class Reader {
     private BufferedReader fileReader;

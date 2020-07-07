@@ -1,4 +1,4 @@
-package org.pawaneuler.TSCV;
+package org.pawaneuler.TCSV;
 
 import java.util.Arrays;
 

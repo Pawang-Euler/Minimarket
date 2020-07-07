@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
-import org.pawaneuler.TSCV.TCSV;
+import org.pawaneuler.TCSV.TCSV;
 
 /**
  * JUnit test for TCSVToolsTest

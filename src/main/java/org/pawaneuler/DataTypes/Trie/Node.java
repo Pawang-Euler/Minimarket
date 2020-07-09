@@ -1,11 +1,13 @@
-package org.pawaneuler.Trie;
+package org.pawaneuler.DataTypes.Trie;
 
 import java.util.ArrayList;
+
+import org.pawaneuler.DataTypes.Writeable;
 
 /**
  * @author ReyRizki
  */
-public class Node implements Comparable<Node> {
+public class Node implements Comparable<Node>, Writeable {
     private String product;
     private int frequency;
     private ArrayList<Integer> indexesOfChildren;
@@ -156,5 +158,16 @@ public class Node implements Comparable<Node> {
     @Override
     public int compareTo(Node node) {
         return this.product.compareTo(node.product);
+    }
+
+    @Override
+    public String generateRecord() {
+        String temp = "";
+
+        for (int item : this.indexesOfChildren) {
+            temp += item;
+            temp += ",";
+        }
+        return this.product + "," + this.frequency + "," + temp.substring(0, temp.lastIndexOf(",") - 1);
     }
 }

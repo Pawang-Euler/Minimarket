@@ -1,8 +1,10 @@
-package org.pawaneuler.TCSV;
+package org.pawaneuler.DataTypes.TCSV;
+
+import org.pawaneuler.DataTypes.Writeable;
 
 import java.util.Arrays;
 
-public class TCSV {
+public class TCSV implements Writeable {
     private String id;
     private String[] products;
 
@@ -13,15 +15,15 @@ public class TCSV {
 
     /**
      * Creates an object of TCSV, from a string of a line in tcsv file.
-     * 
+     *
      * @param aLine a line from tcsv file
      * @return TCSV the new oject with the data from the line
      */
     public static TCSV createTCSVfromString(String aLine) {
         if (aLine == null) {
-            return null;
+            return new TCSVNull();
         }
-        
+
         String[] temp = aLine.split(",", 0);
 
         return new TCSV(temp[0], Arrays.copyOfRange(temp, 1, temp.length));
@@ -29,7 +31,7 @@ public class TCSV {
 
     /**
      * Getter for Id.
-     * 
+     *
      * @return String the id of the tscv line.
      */
     public String getId() {
@@ -38,11 +40,15 @@ public class TCSV {
 
     /**
      * Getter for the list of products.
-     * 
+     *
      * @return String[] the list of products.
      */
     public String[] getProducts() {
         return products;
+    }
+
+    public boolean isNull() {
+        return false;
     }
 
     @Override
@@ -55,5 +61,18 @@ public class TCSV {
         }
 
         return false;
+    }
+
+    @Override
+    public String generateRecord() {
+        String temp = "";
+
+        for (String item : this.products) {
+            temp += item;
+            temp += ",";
+        }
+
+        String finalString = this.id + "," + temp.substring(0, temp.lastIndexOf(','));
+        return finalString;
     }
 }

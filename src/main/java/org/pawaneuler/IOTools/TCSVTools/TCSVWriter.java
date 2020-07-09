@@ -51,7 +51,7 @@ public class TCSVWriter extends Writer {
                 return false;
             }
 
-            header = header.strip();
+            header = header.trim();
             if (header == "id,products") {
                 return true;
             } else {

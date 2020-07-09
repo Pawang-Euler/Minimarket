@@ -3,7 +3,7 @@ package org.pawaneuler.Trie;
 import java.util.ArrayList;
 
 /**
- * @author Rey Rizki
+ * @author ReyRizki
  */
 public class Node implements Comparable<Node> {
     private String product;
@@ -13,6 +13,18 @@ public class Node implements Comparable<Node> {
     public Node(String product) {
         this.product = product;
         this.frequency = 0;
+        this.indexesOfChildren = new ArrayList<Integer>();
+    }
+
+    /**
+     * Constructor with 2 parameters for create a leaf node with the frequency
+     * 
+     * @param product
+     * @param frequency
+     */
+    public Node(String product, int frequency) {
+        this.product = product;
+        this.frequency = frequency;
         this.indexesOfChildren = new ArrayList<Integer>();
     }
 

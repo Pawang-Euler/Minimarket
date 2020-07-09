@@ -1,21 +1,23 @@
-package org.pawaneuler.TCSVTools;
+package org.pawaneuler.IOTools;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
-import org.pawaneuler.TCSV.TCSV;
+import org.pawaneuler.IOTools.TCSVTools.TCSVReader;
+import org.pawaneuler.DataTypes.TCSV.TCSV;
 
 /**
  * JUnit test for TCSVToolsTest
  */
-public class TCSVToolsTest {
+public class TCSVReaderTest {
 
     @Test
     public void createTCSVTest() {
         try {
-            Reader reader = new Reader("./src/test/java/org/pawaneuler/TCSVTools/test.tcsv");
+            TCSVReader reader;
+            reader = org.pawaneuler.IOTools.TCSVTools.TCSVReader.createReader("\"./src/test/java/org/pawaneuler/TCSVTools/test.tcsv\"");
 
             TCSV temp = reader.readLine();
 
@@ -35,10 +37,11 @@ public class TCSVToolsTest {
     @Test
     public void endOfFileTest() {
         try {
-            Reader reader = new Reader("./src/test/java/org/pawaneuler/TCSVTools/test.tcsv");
+            TCSVReader reader;
+            reader = org.pawaneuler.IOTools.TCSVTools.TCSVReader.createReader("./src/test/java/org/pawaneuler/TCSVTools/test.tcsv");
             TCSV temp = reader.readLine();
 
-            while(temp != null) {
+            while(!temp.isNull()) {
                 // Do Something, nothing as a test
 
                 temp = reader.readLine();

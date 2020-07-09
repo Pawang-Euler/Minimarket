@@ -1,4 +1,4 @@
-package org.pawaneuler.Trie;
+package org.pawaneuler.DataTypes.Trie;
 
 import java.util.ArrayList;
 

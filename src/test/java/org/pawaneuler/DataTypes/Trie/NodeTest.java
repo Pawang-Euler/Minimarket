@@ -1,4 +1,4 @@
-package org.pawaneuler.Trie;
+package org.pawaneuler.DataTypes.Trie;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;

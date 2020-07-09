@@ -18,7 +18,7 @@ public class TCSVWriterTest {
     @Test
     public void writeTest() {
         try {
-            TCSVWriter writer = TCSVWriter.createReader("./writeTest.tcsv");
+            TCSVWriter writer = TCSVWriter.createWriter("./writeTest.tcsv");
             File checker = new File("./writeTest.tcsv");
 
             assertTrue(checker.exists());

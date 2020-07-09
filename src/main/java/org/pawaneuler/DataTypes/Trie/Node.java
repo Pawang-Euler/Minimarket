@@ -39,10 +39,17 @@ public class Node implements Comparable<Node>, Writeable {
     /**
      * Method to get a null Node object
      * 
-     * @return null Node    
+     * @return null Node
      */
     public static Node getNullNode() {
-        return new Node(null, -1, new ArrayList<Integer>());
+        return new NodeNull();
+    }
+
+    /**
+     * @return boolean
+     */
+    public boolean isNull() {
+        return false;
     }
 
     /**
@@ -54,10 +61,16 @@ public class Node implements Comparable<Node>, Writeable {
         return this.indexesOfChildren.size();
     }
 
+    /**
+     * @return String
+     */
     public String getProduct() {
         return product;
     }
 
+    /**
+     * @return int
+     */
     public int getFrequency() {
         return frequency;
     }
@@ -68,7 +81,7 @@ public class Node implements Comparable<Node>, Writeable {
     public void increaseFrequncy() {
         this.frequency++;
     }
-    
+
     /**
      * Method to get a child index in the ArrayList by specifix index
      * 
@@ -96,12 +109,12 @@ public class Node implements Comparable<Node>, Writeable {
      * Method to add a child index in a specific index at the ArrayList
      * 
      * @param target index in the ArrayList
-     * @param index to be added
+     * @param index  to be added
      */
     public void addChildIndex(int target, int index) {
         this.indexesOfChildren.add(target, index);
     }
-    
+
     /**
      * Method to increase an element in ArrayList with 1
      * 
@@ -125,7 +138,7 @@ public class Node implements Comparable<Node>, Writeable {
         String[] temp = line.split(",", 0);
 
         ArrayList<Integer> indexes = new ArrayList<Integer>();
-        
+
         for (int i = 2; i < temp.length; i++)
             indexes.add(Integer.parseInt(temp[i]));
 
@@ -155,11 +168,18 @@ public class Node implements Comparable<Node>, Writeable {
         return result.toString();
     }
 
+    /**
+     * @param node
+     * @return int
+     */
     @Override
     public int compareTo(Node node) {
         return this.product.compareTo(node.product);
     }
 
+    /**
+     * @return String
+     */
     @Override
     public String generateRecord() {
         String temp = "";
@@ -168,6 +188,12 @@ public class Node implements Comparable<Node>, Writeable {
             temp += item;
             temp += ",";
         }
-        return this.product + "," + this.frequency + "," + temp.substring(0, temp.lastIndexOf(",") - 1);
+
+        if (temp.isEmpty()) {
+            temp = "";
+        } else {
+            temp = temp.substring(0, temp.lastIndexOf(","));
+        }
+        return this.product + "," + this.frequency + "," + temp;
     }
 }

@@ -9,6 +9,9 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+/**
+ * @author ReyRizki
+ */
 public class NodeTest {
     /**
      * Basic node testing for constructor, getter, and setter.

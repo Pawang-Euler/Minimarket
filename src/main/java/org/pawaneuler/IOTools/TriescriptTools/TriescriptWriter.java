@@ -13,7 +13,7 @@ import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
 
 public class TriescriptWriter extends Writer {
 
-    public TriescriptWriter(File fileChecker, FileWriter fileWriter) {
+    private TriescriptWriter(File fileChecker, FileWriter fileWriter) {
         super(fileChecker, fileWriter);
     }
 

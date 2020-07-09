@@ -17,7 +17,7 @@ public class TCSVReaderTest {
     public void createTCSVTest() {
         try {
             TCSVReader reader;
-            reader = org.pawaneuler.IOTools.TCSVTools.TCSVReader.createReader("\"./src/test/java/org/pawaneuler/TCSVTools/test.tcsv\"");
+            reader = org.pawaneuler.IOTools.TCSVTools.TCSVReader.createReader("./src/test/java/org/pawaneuler/IOTools/test.tcsv");
 
             TCSV temp = reader.readLine();
 
@@ -38,7 +38,7 @@ public class TCSVReaderTest {
     public void endOfFileTest() {
         try {
             TCSVReader reader;
-            reader = org.pawaneuler.IOTools.TCSVTools.TCSVReader.createReader("./src/test/java/org/pawaneuler/TCSVTools/test.tcsv");
+            reader = org.pawaneuler.IOTools.TCSVTools.TCSVReader.createReader("./src/test/java/org/pawaneuler/IOTools/test.tcsv");
             TCSV temp = reader.readLine();
 
             while(!temp.isNull()) {

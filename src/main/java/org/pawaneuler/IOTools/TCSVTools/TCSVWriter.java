@@ -29,8 +29,6 @@ public class TCSVWriter extends Writer {
         }
 
         if (!temp.isHeaderPresent(filePath)) {
-            System.out.println("Creating...");
-            // temp.fileChecker.createNewFile();
             temp.writeHeader();
         }
 
@@ -42,7 +40,7 @@ public class TCSVWriter extends Writer {
         this.fileWriter.flush();
     }
 
-    public boolean isHeaderPresent(String filePath) {
+    public boolean isHeaderPresent(String filePath) throws IOException{
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
 
@@ -56,6 +54,8 @@ public class TCSVWriter extends Writer {
             header = header.strip();
             if (header == "id,products") {
                 return true;
+            } else {
+                throw new IOException("File header is not standard : " + header);
             }
 
         } catch (FileNotFoundException e) {

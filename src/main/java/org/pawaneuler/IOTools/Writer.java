@@ -8,7 +8,7 @@ public abstract class Writer implements ExtensionChecker {
     protected File fileChecker;
     protected FileWriter fileWriter;
 
-    public Writer(File fileChecker, FileWriter fileWriter) {
+    protected Writer(File fileChecker, FileWriter fileWriter) {
         this.fileChecker = fileChecker;
         this.fileWriter = fileWriter;
     }

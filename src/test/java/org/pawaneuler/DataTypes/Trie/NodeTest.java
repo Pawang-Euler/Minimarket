@@ -2,6 +2,7 @@ package org.pawaneuler.DataTypes.Trie;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
@@ -33,6 +34,21 @@ public class NodeTest {
             assertEquals("Frequency didn't increased", 1, node.getFrequency());
             assertEquals("Nodes are not added", 2, node.getDegree());
             assertEquals("Index isn't increased", 6, node.getChildIndexAt(1));
+        } catch (Exception e) {
+            System.out.println("Got exception " + e);
+
+            fail();
+        }
+    }
+
+    @Test
+    public void nodeEqualsTest() {
+        try {
+            Node node = new Node("Jaguar", 1, new ArrayList<Integer>(Arrays.asList(3, 6)));
+            Node expectedNode = new Node("Jaguar", 1, new ArrayList<Integer>(Arrays.asList(3, 6)));
+            
+            assertTrue("NodeEquals is false", node.equals(expectedNode));
+            assertEquals("Node is not equals", expectedNode, node);
         } catch (Exception e) {
             System.out.println("Got exception " + e);
 

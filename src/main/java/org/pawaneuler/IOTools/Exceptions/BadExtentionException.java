@@ -1,5 +1,10 @@
 package org.pawaneuler.IOTools.Exceptions;
 
+/**
+ * Extension Exception 
+ * 
+ * @author fauh45
+ */
 public class BadExtentionException extends Exception{
     private static final long serialVersionUID = 1L;
 

@@ -25,5 +25,8 @@ hs_err_pid*
 # Intellij Idea
 .idea/
 
+# VSCode
+.vscode/
+
 # other
 target/

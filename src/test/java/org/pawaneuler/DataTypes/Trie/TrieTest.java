@@ -2,10 +2,14 @@ package org.pawaneuler.DataTypes.Trie;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
+/**
+ * @author ReyRizki
+ */
 public class TrieTest {
     /**
      * The trie:
@@ -32,6 +36,16 @@ public class TrieTest {
 
             fail();
         }
+    }
+
+    @Test
+    public void rootNodeTest() {
+        Trie trie = new Trie();
+        int size = 1;
+
+        assertSame("Size is not 1", size, trie.size());
+        assertTrue("Root node is not null", trie.getNodeAt(0).isRoot());
+        // assertEquals("Root node is not null node", nullNode, trie.getNodeAt(0));
     }
 
 

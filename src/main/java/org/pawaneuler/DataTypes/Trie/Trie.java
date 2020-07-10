@@ -3,6 +3,8 @@ package org.pawaneuler.DataTypes.Trie;
 import java.util.ArrayList;
 
 /**
+ * Trie class implemented using array
+ * 
  * @author ReyRizki
  */
 public class Trie {
@@ -13,7 +15,16 @@ public class Trie {
      */
     public Trie() {
         this.nodes = new ArrayList<Node>();
-        this.addNode(Node.getNullNode());
+        this.addNode(Node.createRootNode());
+    }
+
+    public Trie(Node root) {
+        this.nodes = new ArrayList<Node>();
+        this.addNode(root);
+    }
+
+    public Node getRootNode() {
+        return this.getNodeAt(0);
     }
 
     /**

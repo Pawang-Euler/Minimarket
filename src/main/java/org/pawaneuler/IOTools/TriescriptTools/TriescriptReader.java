@@ -8,12 +8,26 @@ import org.pawaneuler.DataTypes.Trie.Node;
 import org.pawaneuler.IOTools.Reader;
 import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
 
+/**
+ * Reader for triescript™ type file
+ * 
+ * @author fauh45
+ */
 public class TriescriptReader extends Reader {
 
     private TriescriptReader(BufferedReader fileReader) {
         super(fileReader);
     }
 
+    /**
+     * Factory constructor for TriescriptReader
+     * 
+     * @param filePath the full path the triescript file is at
+     * @return TriescriptReader new object of TriescriptReader opened at the
+     *         filePath
+     * @throws BadExtentionException thrown at wrong file extension
+     * @throws IOException           file cannot be opened
+     */
     public static TriescriptReader createReader(String filePath) throws BadExtentionException, IOException {
         TriescriptReader temp = new TriescriptReader(new BufferedReader(new FileReader(filePath)));
 
@@ -26,12 +40,26 @@ public class TriescriptReader extends Reader {
         return temp;
     }
 
+    /**
+     * Read a line in the opened file, and return an object of Node
+     * 
+     * @return Node A new Object of Node with data from the file
+     * @throws IOException Cannot read the file
+     */
     public Node readLine() throws IOException {
         String aLine = super.reader.readLine();
 
         return Node.stringToNode(aLine);
     }
 
+    /**
+     * Check whether the inputted filepath is the correct file type or not
+     * <p>
+     * This function only checks for the filename, and not the file contents
+     * 
+     * @param filePath the filepath of the file
+     * @return boolean true if the file is correct
+     */
     @Override
     public boolean typeChecker(String filePath) {
         int filePathLength = filePath.length();
@@ -39,5 +67,5 @@ public class TriescriptReader extends Reader {
 
         return extension.compareTo("triescript") == 0;
     }
-    
+
 }

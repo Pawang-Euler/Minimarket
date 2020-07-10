@@ -3,7 +3,7 @@ package org.pawaneuler.DataTypes.Trie;
 import java.util.ArrayList;
 
 /**
- * Null node to return if the index in the trie array is not available
+ * Null Node representation (ADT)
  * 
  * @author fauh45
  */

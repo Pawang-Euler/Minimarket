@@ -8,12 +8,25 @@ import org.pawaneuler.IOTools.Reader;
 import org.pawaneuler.DataTypes.TCSV.TCSV;
 import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
 
+/**
+ * Reader for TCSV type file
+ * 
+ * @author fauh45
+ */
 public class TCSVReader extends Reader {
 
     private TCSVReader(BufferedReader fileReader) {
         super(fileReader);
     }
 
+    /**
+     * Factory constructor for TCSVReader
+     * 
+     * @param filePath the full path the tcsv file is at
+     * @return TCSVReader new object of TCSVReader opened at the filePath
+     * @throws BadExtentionException thrown at wrong file extension
+     * @throws IOException           file cannot be opened
+     */
     public static TCSVReader createReader(String filePath) throws BadExtentionException, IOException {
         TCSVReader temp = new TCSVReader(new BufferedReader(new FileReader(filePath)));
 
@@ -29,8 +42,8 @@ public class TCSVReader extends Reader {
     /**
      * Read a line in the opened file, and return an object of TCSV
      *
-     * @return TCSV The data from the tcsv line
-     * @throws IOException Something has gone badly wrong... Cannot read the line
+     * @return TCSV New object of TCSV using the data from the file
+     * @throws IOException Cannot read the line
      */
     public TCSV readLine() throws IOException {
         String aLine = super.reader.readLine();

@@ -4,6 +4,11 @@ import org.pawaneuler.DataTypes.Writeable;
 
 import java.util.Arrays;
 
+/**
+ * TCSV representation (ADT)
+ * 
+ * @author fauh45
+ */
 public class TCSV implements Writeable {
     private String id;
     private String[] products;
@@ -47,10 +52,23 @@ public class TCSV implements Writeable {
         return products;
     }
 
+    
+    /** 
+     * Return if the class a type of null
+     * 
+     * @return boolean
+     */
     public boolean isNull() {
         return false;
     }
 
+    
+    /** 
+     * Overriding the equals
+     * 
+     * @param obj object to be compared
+     * @return boolean true if equal, false if not
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof TCSV) {
@@ -63,6 +81,12 @@ public class TCSV implements Writeable {
         return false;
     }
 
+    
+    /** 
+     * Implementation of Writeable
+     * 
+     * @return String a Record to write into file
+     */
     @Override
     public String generateRecord() {
         String temp = "";

@@ -1,3 +1,5 @@
+package org.pawaneuler.DataTypes.Rule;
+
 import java.util.ArrayList;
 import java.util.Collection;
 

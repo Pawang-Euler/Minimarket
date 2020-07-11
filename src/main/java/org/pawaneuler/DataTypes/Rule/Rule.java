@@ -110,7 +110,7 @@ public class Rule implements Comparable<Rule> {
         String[] temp = this.leftItemset.split(",");
 
         for (int i = 0; i < temp.length; i++) {
-            leftList.add(String[i]);
+            leftList.add(temp[i]);
         }
 
         return leftList;
@@ -126,7 +126,7 @@ public class Rule implements Comparable<Rule> {
         String[] temp = this.rightItemset.split(",");
 
         for (int i = 0; i < temp.length; i++) {
-            leftList.add(String[i]);
+            rightList.add(temp[i]);
         }
 
         return rightList;

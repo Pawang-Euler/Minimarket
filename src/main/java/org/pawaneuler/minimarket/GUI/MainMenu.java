@@ -1,0 +1,53 @@
+package org.pawaneuler.minimarket.GUI;
+
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class MainMenu extends JPanel {
+    private JLabel prompt;
+    private JButton load;
+    private JButton generate;
+    private JLabel jcomp4;
+
+    public MainMenu() {
+        // construct components
+        prompt = new JLabel("Select One From The Menu Below");
+        load = new JButton("Load File");
+        generate = new JButton("Generate Transaction");
+        jcomp4 = new JLabel("PawangEuler, 2020");
+
+        load.addActionListener(new LoadFile());
+        
+        // set components properties
+        load.setToolTipText("Load triescript™ or tscv");
+        generate.setToolTipText("Generate new random transaction file");
+
+        // adjust size and set layout
+        setPreferredSize(new Dimension(409, 302));
+        setLayout(null);
+
+        // add components
+        add(prompt);
+        add(load);
+        add(generate);
+        add(jcomp4);
+
+        // set component bounds (only needed by Absolute Positioning)
+        prompt.setBounds(110, 40, 195, 30);
+        load.setBounds(120, 95, 175, 35);
+        generate.setBounds(120, 145, 175, 35);
+        jcomp4.setBounds(290, 275, 115, 25);
+    }
+
+    public static void run() {
+        JFrame frame = new JFrame("Minimarket");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(new MainMenu());
+        frame.pack();
+        frame.setVisible(true);
+    }
+}

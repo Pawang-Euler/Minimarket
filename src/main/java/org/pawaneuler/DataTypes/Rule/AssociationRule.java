@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class AssociationRule 
 {
@@ -33,5 +34,9 @@ public class AssociationRule
      */
     public ArrayList<Rule> getAssociationRules() {
         return associationRules;
+    }
+
+    public void sort() {
+        Collection.sort(this.associationRules);
     }
 }

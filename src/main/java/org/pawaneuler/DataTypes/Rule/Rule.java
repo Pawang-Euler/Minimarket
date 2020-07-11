@@ -96,7 +96,7 @@ public class Rule implements Comparable<Rule> {
      * 
      * @return String Array List from left itemset of rule
      */
-    public ArrayList<> leftItemlistToArrayList() {
+    public ArrayList<String> leftItemlistToArrayList() {
         ArrayList<String> leftList = new ArrayList<String>();
 
         String [] temp = leftItemset.split(",");
@@ -112,7 +112,7 @@ public class Rule implements Comparable<Rule> {
      * 
      * @return String Array List from right itemset of rule
      */
-    public ArrayList<> rightItemlistToArrayList() {
+    public ArrayList<String> rightItemlistToArrayList() {
         ArrayList<String> rightList = new ArrayList<String>();
 
         String [] temp = rightItemset.split(",");

@@ -2,6 +2,7 @@ package org.pawaneuler.DataTypes.Rule;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 public class AssociationRule 
 {
@@ -19,7 +20,7 @@ public class AssociationRule
      */
     public AssociationRule(int minSupport) {
         this.associationRules = new ArrayList<Rule>();
-        this.minSupportPercentage = minSupport;
+        this.minSupport = minSupport;
     }
 
     /**
@@ -39,6 +40,6 @@ public class AssociationRule
     }
 
     public void sort() {
-        Collection.sort(this.associationRules);
+        Collections.sort(this.associationRules);
     }
 }

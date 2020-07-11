@@ -59,10 +59,18 @@ public class Rule implements Comparable<Rule> {
 
     /**
      * 
-     * @param itemset
+     * @param leftItemset
      */
-    public void setItemset(String itemset) {
-        this.itemset = itemset;
+    public void setLeftItemset(String leftItemset) {
+        this.leftItemset = leftItemset;
+    }
+
+    /**
+     * 
+     * @param rightItemset
+     */
+    public void setRightItemset(String rightItemset) {
+        this.rightItemset = rightItemset;
     }
 
     /**
@@ -99,7 +107,7 @@ public class Rule implements Comparable<Rule> {
     public ArrayList<String> leftItemlistToArrayList() {
         ArrayList<String> leftList = new ArrayList<String>();
 
-        String [] temp = leftItemset.split(",");
+        String[] temp = this.leftItemset.split(",");
 
         for (int i = 0; i < temp.length; i++) {
             leftList.add(String[i]);
@@ -115,7 +123,7 @@ public class Rule implements Comparable<Rule> {
     public ArrayList<String> rightItemlistToArrayList() {
         ArrayList<String> rightList = new ArrayList<String>();
 
-        String [] temp = rightItemset.split(",");
+        String[] temp = this.rightItemset.split(",");
 
         for (int i = 0; i < temp.length; i++) {
             leftList.add(String[i]);
@@ -129,10 +137,8 @@ public class Rule implements Comparable<Rule> {
         StringBuilder result = new StringBuilder();
         
         result.append(this.leftItemset + "----->" + this.rightItemset + ",");
-        result.apend(" support: " + this.support + ",");
-        result.apend(" confidence: " + this.confidence + ",");
-        result.apend(" lift: " + this.lift + ",");
-        result.apend(" leverage: " + this.leverage + ".");
+        result.append(" support: " + this.support + ",");
+        result.append(" confidence: " + this.confidence + ",");
         
         return result.toString();
     }
@@ -140,10 +146,10 @@ public class Rule implements Comparable<Rule> {
     @Override
     public int compareTo(Rule rule) {
         if (this.support == rule.getSupport()) {
-            return (Double(this.confidence).compareTo(rule.getConfidence()));
+            return new Double(rule.getConfidence()).compareTo(this.confidence);
         }
         else {
-            return (Double(this.support).compareTo(rule.getSupport()));
+            return new Double(rule.getSupport()).compareTo(this.support);
         }
     }
 }

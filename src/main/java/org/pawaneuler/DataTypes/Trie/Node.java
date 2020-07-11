@@ -62,6 +62,10 @@ public class Node implements Comparable<Node>, Writeable {
         return false;
     }
 
+    public boolean isLeaf() {
+        return this.getDegree() == 0;
+    }
+
     @Override
     public boolean equals(Object object) {
         if (object instanceof Node) {

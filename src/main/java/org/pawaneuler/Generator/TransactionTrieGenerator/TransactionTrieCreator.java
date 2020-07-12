@@ -44,19 +44,12 @@ public class TransactionTrieCreator {
         for (int i = 0; i < productsLength; i++) {
             Node currentNode = trie.getNodeAt(trav);
 
-            // traverse the child indexes
-            int j = 0;
-            Node currentNodeChild = trie.getNodeAt(currentNode.getChildIndexAt(j));
+            int lowerBound = lowerBoundIndex(trie, currentNode, products[i]);
+            Node currentNodeChild = trie.getNodeAt(currentNode.getChildIndexAt(lowerBound));
 
-            while (!currentNodeChild.isNull() && currentNodeChild.getProduct().compareTo(products[i]) < 0
-                    && j < currentNode.getDegree()) {
-                j++;
-                currentNodeChild = trie.getNodeAt(currentNode.getChildIndexAt(j));
-            }
-
-            // int lowerBound = lowerBoundIndex(trie, currentNode, products[i]);
-            // Node currentNodeChild = trie.getNodeAt(lowerBound);
-
+            System.out.println(lowerBound);
+            System.out.println(currentNodeChild);
+            
             // product name is greater than all of the child node products
             // so, just add the node in the end of the child nodes
             if (currentNodeChild.isNull()) {
@@ -71,7 +64,7 @@ public class TransactionTrieCreator {
                 }
                 // product name is exist in the child node
             } else if (currentNodeChild.getProduct().equals(products[i])) {
-                trav = currentNode.getChildIndexAt(j);
+                trav = currentNode.getChildIndexAt(lowerBound);
 
                 if (i == productsLength - 1) {
                     currentNodeChild.increaseFrequncy();
@@ -79,11 +72,11 @@ public class TransactionTrieCreator {
                 // product name isn't exist in the child node
                 // and between all of the child
             } else {
-                int target = currentNode.getChildIndexAt(j);
+                int target = currentNode.getChildIndexAt(lowerBound);
 
                 this.shiftIndexes(trie, target);
 
-                currentNode.addChildIndex(j, target);
+                currentNode.addChildIndex(lowerBound, target);
 
                 Node newNode = new Node(products[i]);
                 trie.addNode(target, newNode);
@@ -115,17 +108,17 @@ public class TransactionTrieCreator {
         }
     }
 
-    // private int lowerBoundIndex(Trie trie, Node node, String product) {
-    //     // traverse the child indexes
-    //     int j = 0;
-    //     Node nodeChild = trie.getNodeAt(node.getChildIndexAt(j));
+    private int lowerBoundIndex(Trie trie, Node node, String product) {
+        // traverse the child indexes
+        int j = 0;
+        Node nodeChild = trie.getNodeAt(node.getChildIndexAt(j));
 
-    //     while (!nodeChild.isNull() && nodeChild.getProduct().compareTo(product) < 0
-    //             && j < node.getDegree()) {
-    //         j++;
-    //         nodeChild = trie.getNodeAt(node.getChildIndexAt(j));
-    //     }
+        while (!nodeChild.isNull() && nodeChild.getProduct().compareTo(product) < 0
+                && j < node.getDegree()) {
+            j++;
+            nodeChild = trie.getNodeAt(node.getChildIndexAt(j));
+        }
 
-    //     return j;
-    // }
+        return j;
+    }
 }

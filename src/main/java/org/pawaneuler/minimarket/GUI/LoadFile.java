@@ -20,6 +20,8 @@ public class LoadFile implements ActionListener{
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             System.out.println("Opening : " + fileChooser.getSelectedFile().getAbsolutePath());
+
+            MainProgress.run(fileChooser.getSelectedFile().getAbsolutePath());
         }
 
     }

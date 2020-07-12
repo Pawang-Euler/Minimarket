@@ -18,7 +18,7 @@ public class AssociationRuleGenerator {
      * 
      * @param T trie that want to generate to Association Rule
      */
-    public AssociationRule(Trie T) {
+    public AssociationRuleGenerator(Trie T) {
         this.AR = new AssociationRule();
         this.T = T;
     }
@@ -28,7 +28,7 @@ public class AssociationRuleGenerator {
      * @param T trie that want to generate to Association Rule
      * @param minSup minimum support for generating Association Rule
      */
-    public AssociationRule(Trie T, int minSup) {
+    public AssociationRuleGenerator(Trie T, int minSup) {
         this.AR = new AssociationRule(minSup);
         this.T = T;
     }

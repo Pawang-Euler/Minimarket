@@ -1,3 +1,5 @@
+package org.pawaneuler.DataTypes.Rule;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -5,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Node;
 
-import org.pawaneuler.DataTypes.Trie.Trie;
+import org.pawaneuler.DataTypes.Trie.*;
 
 /**
  * @author marissanura
@@ -116,7 +118,7 @@ public class AssociationRuleGenerator {
      */
     public ArrayList<ArrayList<String>> combination(List<String> candidate, int k)
     {
-        ArrayList<ArrayLIst<String>> allCombi = new ArrayList<String>();
+        ArrayList<ArrayList<String>> allCombi = new ArrayList<String>();
         allCombi = Combinations.getCombination(result, candidate, candidate.size(), k);
         return allCombi;
     }
@@ -146,7 +148,7 @@ public class AssociationRuleGenerator {
     public ArrayList<Rule> generateItemset(ArrayList<String> subset) {
         ArrayList<Rule> rules = new ArrayList<Rule>();
         ArrayList<ArrayList<String>> allCombi = new ArrayList<ArrayList<String>>();
-        Combinations.getAllCombination(allCombi, candidate);
+        Combinations.getAllCombination(allCombi, subset);
         rules = generateRule(allCombi, subset);
         return rules;
     }

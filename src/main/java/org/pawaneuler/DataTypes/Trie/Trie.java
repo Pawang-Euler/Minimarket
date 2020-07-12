@@ -55,7 +55,7 @@ public class Trie {
     public Node getNodeAt(int index) {
         if (index >= 0 && index < nodes.size())
             return this.nodes.get(index);
-        else
+        else if (index < 0 || index > nodes.size());
             return Node.getNullNode();
     }
 

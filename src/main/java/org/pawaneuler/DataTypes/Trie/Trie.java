@@ -53,10 +53,11 @@ public class Trie {
      * @return the node if the index is valid, else return a NullNode
      */
     public Node getNodeAt(int index) {
-        if (index >= 0 && index < nodes.size())
+        if (index >= 0 && index < nodes.size()) {
             return this.nodes.get(index);
-        else
-            return Node.getNullNode();
+        }
+        
+        return Node.getNullNode();
     }
 
     /**

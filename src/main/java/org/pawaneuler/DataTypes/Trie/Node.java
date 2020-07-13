@@ -123,9 +123,9 @@ public class Node implements Comparable<Node>, Writeable {
     public int getChildIndexAt(int index) {
         if (index >= 0 && index < this.getDegree()) {
             return this.indexesOfChildren.get(index);
-        } else {
-            return -1;
         }
+        
+        return -1;
     }
 
     /**

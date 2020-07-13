@@ -47,7 +47,9 @@ public class TransactionTrieCreator {
             int lowerBound = lowerBoundIndex(trie, currentNode, products[i]);
             Node currentNodeChild = trie.getNodeAt(currentNode.getChildIndexAt(lowerBound));
 
-            if (currentNodeChild.isNull() || !currentNodeChild.getProduct().equals(products[i])) {
+            boolean currentNodeisNotExpected = currentNodeChild.isNull() || !currentNodeChild.getProduct().equals(products[i]);
+            
+            if (currentNodeisNotExpected) {
                 Node newNode = new Node(products[i]);
 
                 // Case 1: product name is greater than all of the child node products
@@ -104,14 +106,21 @@ public class TransactionTrieCreator {
 
     private int lowerBoundIndex(Trie trie, Node node, String product) {
         // traverse the child indexes
-        int j = 0;
-        Node nodeChild = trie.getNodeAt(node.getChildIndexAt(j));
+        int currentChildIndex = 0;
 
-        while (!nodeChild.isNull() && nodeChild.getProduct().compareTo(product) < 0 && j < node.getDegree()) {
-            j++;
-            nodeChild = trie.getNodeAt(node.getChildIndexAt(j));
+        while (nodeIsNotLowerBound(trie, node, product, currentChildIndex)) {
+            currentChildIndex++;
         }
 
-        return j;
+        return currentChildIndex;
+    }
+
+    private boolean nodeIsNotLowerBound(Trie trie, Node node, String product, int currentChildIndex) {
+        Node nodeChild = trie.getNodeAt(node.getChildIndexAt(currentChildIndex));
+
+        boolean nodeIsInsideLimit = currentChildIndex < node.getDegree();
+        boolean nodeIsBeforeCurrentProduct = !nodeChild.isNull() && (nodeChild.getProduct().compareTo(product) < 0);
+
+        return nodeIsInsideLimit && nodeIsBeforeCurrentProduct;
     }
 }

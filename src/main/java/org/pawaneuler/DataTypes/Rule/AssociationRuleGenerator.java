@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Node;
+import java.util.ListIterator;
 
 import org.pawaneuler.DataTypes.Trie.*;
 
@@ -42,9 +42,8 @@ public class AssociationRuleGenerator {
         T.generateAllFreq();
         ArrayList<ArrayList<String>> allSubSet = generateSet();
 
-        for (Iterator<ArrayList<String>> iter = allSubSet.iterator(); iter.hasNext(); ) {
-            ArrayList<String> subset = iter.next();
-            AssociationRule.addAll(generatRuleFromSubset(subset));
+        for (ArrayList<String> subset : allSubSet) {
+            AR.getAssociationRules().addAll(generatRuleFromSubset(subset));
         }
 
         AR.sort();
@@ -57,8 +56,8 @@ public class AssociationRuleGenerator {
     public ArrayList<ArrayList<String>> generateSet() {
         int kItemset = 1; // Combinations start with 1-itemset
         ArrayList<ArrayList<String>> itemList = new ArrayList<ArrayList<String>>();
-        List<ArrayList<String>> candidate = new List<ArrayList<String>>();
-        List<String> candidateSingleset = new ArrayList<String>();
+        ArrayList<ArrayList<String>> candidate = new ArrayList<ArrayList<String>>();
+        ArrayList<String> candidateSingleset = new ArrayList<String>();
         candidateSingleset = generateSingleSet();
         candidate = combination(candidateSingleset,kItemset);
         do {
@@ -77,17 +76,17 @@ public class AssociationRuleGenerator {
      */
     public ArrayList<String> generateSingleSet() {
         HashSet<String> uniqSet = new HashSet<String>();
-        for (Iterator<ArrayList<Node>> iter = (T.getNodes()).iterator(); iter.hasNext(); ) {
-            ArrayList<Node> nodes = iter.next();
+        for (ListIterator<Node> iter = (T.getNodes()).iterator(); iter.hasNext(); ) {
+            Node nodes = iter.next();
             uniqSet.add(nodes.getProduct());
         }
         ArrayList<String> nodeSingleSet = new ArrayList<String>(uniqSet);
         return nodeSingleSet;
     }
 
-    public List<String> getUniqueList(List<ArrayList<String>> list) {
+    public ArrayList<String> getUniqueList(ArrayList<ArrayList<String>> list) {
         Set<String> uniqSet = new HashSet<String>(nodes);
-        for (Iterator<ArrayList<String>> iter = list.iterator(); iter.hasNext(); ) {
+        for (ListIterator<ArrayList<String>> iter = list.iterator(); iter.hasNext(); ) {
             ArrayList<String> itemset = iter.next();
             for (Iterator<String> it = itemset.iterator(); it.hasNext(); ) {
                 String string = it.next();
@@ -102,8 +101,8 @@ public class AssociationRuleGenerator {
      * 
      * @param list
      */
-    public void pruning(List<ArrayList<String>> list) {
-        for (Iterator<List<ArrayList<String>>> iter = list.iterator(); iter.hasNext(); ) {
+    public void pruning(ArrayList<ArrayList<String>> list) {
+        for (ListIterator<ArrayList<String>> iter = list.iterator(); iter.hasNext(); ) {
             ArrayList<String> itemset = iter.next();
             if (getItemsetFreq(itemset) < AR.getMinSupport())
                 iter.remove();
@@ -116,7 +115,7 @@ public class AssociationRuleGenerator {
      * @param k
      * @return
      */
-    public ArrayList<ArrayList<String>> combination(List<String> candidate, int k)
+    public ArrayList<ArrayList<String>> combination(ArrayList<String> candidate, int k)
     {
         ArrayList<ArrayList<String>> allCombi = new ArrayList<String>();
         allCombi = Combinations.getCombination(result, candidate, candidate.size(), k);
@@ -162,7 +161,7 @@ public class AssociationRuleGenerator {
         ArrayList<Rule> rules = new ArrayList<Rule>();
         String leftString = new String();
         String rightString = new String();
-        for (Iterator<ArrayList<String>> iter = leftSubset.iterator(); iter.hasNext(); ) {
+        for (ListIterator<ArrayList<String>> iter = leftSubset.iterator(); iter.hasNext(); ) {
             ArrayList<String> sub = iter.next();
             leftString = sub.toString();
             rightString = generateRightString(sub, subset);

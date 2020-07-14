@@ -85,11 +85,9 @@ public class AssociationRuleGenerator {
     }
 
     public ArrayList<String> getUniqueList(ArrayList<ArrayList<String>> list) {
-        Set<String> uniqSet = new HashSet<String>(nodes);
-        for (ListIterator<ArrayList<String>> iter = list.iterator(); iter.hasNext(); ) {
-            ArrayList<String> itemset = iter.next();
-            for (Iterator<String> it = itemset.iterator(); it.hasNext(); ) {
-                String string = it.next();
+        Set<String> uniqSet = new HashSet<String>(T.getNodes());
+        for (ArrayList<String> itemset : list) {
+            for (String string : itemset) {
                 uniqSet.add(string);
             }
         }
@@ -102,9 +100,8 @@ public class AssociationRuleGenerator {
      * @param list
      */
     public void pruning(ArrayList<ArrayList<String>> list) {
-        for (ListIterator<ArrayList<String>> iter = list.iterator(); iter.hasNext(); ) {
-            ArrayList<String> itemset = iter.next();
-            if (getItemsetFreq(itemset) < AR.getMinSupport())
+        for (ArrayList<String> itemset : list) {
+            if (T.getItemsetFreq(itemset,0,0) < AR.getMinSupport())
                 iter.remove();
         }
     }
@@ -118,7 +115,7 @@ public class AssociationRuleGenerator {
     public ArrayList<ArrayList<String>> combination(ArrayList<String> candidate, int k)
     {
         ArrayList<ArrayList<String>> allCombi = new ArrayList<String>();
-        allCombi = Combinations.getCombination(result, candidate, candidate.size(), k);
+        Combinations.getCombination(allCombi, candidate, candidate.size(), k);
         return allCombi;
     }
 
@@ -161,8 +158,7 @@ public class AssociationRuleGenerator {
         ArrayList<Rule> rules = new ArrayList<Rule>();
         String leftString = new String();
         String rightString = new String();
-        for (ListIterator<ArrayList<String>> iter = leftSubset.iterator(); iter.hasNext(); ) {
-            ArrayList<String> sub = iter.next();
+        for (ArrayList<String> sub : leftSubset) {
             leftString = sub.toString();
             rightString = generateRightString(sub, subset);
             Rule temp = new Rule(leftString,rightString);
@@ -186,7 +182,7 @@ public class AssociationRuleGenerator {
      * @return
      */
     public double generateSupport(ArrayList<String> subset) {
-        return T.getItemsetFreq(subset) / T.getAllFreq();
+        return T.getItemsetFreq(subset,0,0) / T.getAllFreq();
     }
 
     /**
@@ -194,6 +190,6 @@ public class AssociationRuleGenerator {
      * @param rule
      */
     public void generateConfidence(Rule rule) {
-        rule.setConfidence(rule.getSupport() / T.getItemsetFreq(rule.leftItemlistToArrayList()));
+        rule.setConfidence(rule.getSupport() / T.getItemsetFreq(rule.leftItemlistToArrayList(),0,0));
     }
 }

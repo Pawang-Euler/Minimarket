@@ -75,9 +75,42 @@ public class Trie {
         return AllFreq;
     }
 
-    public int getItemsetFreq(ArrayList<String> itemset) {
-        //TODO
-        return 0;
+    /**
+     * @author Marissa Nur
+     * 
+     * @param itemset itemset that want to be checked
+     * @param currIndex current item index in itemset that want to be found
+     * @param currNode current node index in trie
+     * @return
+     */
+    public int getItemsetFreq(ArrayList<String> itemset, int currIndex, int currNode) {
+        String currentItem = itemset.get(currIndex);
+        Node currentNode = getNodeAt(currNode);
+        boolean isNodeNull = currentNode.isNull();
+        boolean isCurrentNodeProductGreaterThanCurrentItem = currentItem.compareTo(currentNode.getProduct()) < 0;
+
+        if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem) {
+            return 0;
+        }
+        else {
+            if (currentItem.compareTo(currentNode.getProduct()) == 0) {
+                currIndex++;
+            }
+
+            int sumFreq = 0;
+
+            for (int i = 0; i < currentNode.getDegree(); i++) {
+                sumFreq += getItemsetFreq(itemset, currIndex, currentNode.getChildIndexAt(i));
+            }
+
+            boolean isAllItemSetFound = itemset.size() == currIndex;
+
+            if (isAllItemSetFound) {
+                return sumFreq + currentNode.getFrequency();
+            } else {
+                return sumFreq;
+            }
+        }
     }
 
 }

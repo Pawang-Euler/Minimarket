@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import org.pawaneuler.DataTypes.Writeable;
 
 /**
- * @author ReyRizki
+ * Custom node for storing products from TCSV and triescript
+ * 
+ * @author ReyRizki, fauh45
  */
 public class Node implements Comparable<Node>, Writeable {
     private String product;
@@ -45,10 +47,36 @@ public class Node implements Comparable<Node>, Writeable {
         return new NodeNull();
     }
 
+    public static Node createRootNode() {
+        return new NodeRoot();
+    }
+
     /**
      * @return boolean
      */
     public boolean isNull() {
+        return false;
+    }
+
+    public boolean isRoot() {
+        return false;
+    }
+
+    public boolean isLeaf() {
+        return this.getDegree() == 0;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof Node) {
+            boolean productEquals = this.product.equals(((Node) object).getProduct());
+            boolean frequencyEquals = this.frequency == ((Node) object).getFrequency();
+            boolean sizeEquals = this.getDegree() == ((Node) object).getDegree();
+            boolean childrenEquals = this.indexesOfChildren.equals(((Node) object).getIndexesOfChildren());
+
+            return productEquals && frequencyEquals && sizeEquals && childrenEquals;
+        }
+
         return false;
     }
 
@@ -82,6 +110,10 @@ public class Node implements Comparable<Node>, Writeable {
         this.frequency++;
     }
 
+    public ArrayList<Integer> getIndexesOfChildren() {
+        return indexesOfChildren;
+    }
+
     /**
      * Method to get a child index in the ArrayList by specifix index
      * 
@@ -91,9 +123,9 @@ public class Node implements Comparable<Node>, Writeable {
     public int getChildIndexAt(int index) {
         if (index >= 0 && index < this.getDegree()) {
             return this.indexesOfChildren.get(index);
-        } else {
-            return -1;
         }
+        
+        return -1;
     }
 
     /**
@@ -142,7 +174,12 @@ public class Node implements Comparable<Node>, Writeable {
         for (int i = 2; i < temp.length; i++)
             indexes.add(Integer.parseInt(temp[i]));
 
-        return new Node(temp[0], Integer.parseInt(temp[1]), indexes);
+        if (temp[0].equals("null"))
+            return new NodeNull(indexes);
+        else if (temp[0].equals("root"))
+            return new NodeRoot(indexes);
+        else
+            return new Node(temp[0], Integer.parseInt(temp[1]), indexes);
     }
 
     /**
@@ -170,7 +207,7 @@ public class Node implements Comparable<Node>, Writeable {
 
     /**
      * @param node
-     * @return int
+     * @return difference between product name
      */
     @Override
     public int compareTo(Node node) {

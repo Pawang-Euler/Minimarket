@@ -1,6 +1,7 @@
 package org.pawaneuler.DataTypes.Trie;
 
 import java.util.ArrayList;
+
 /**
  * Null Node representation (ADT)
  * 
@@ -8,7 +9,11 @@ import java.util.ArrayList;
  */
 public class NodeNull extends Node {
     public NodeNull() {
-        super(null, -1, new ArrayList<Integer>());
+        super(null, 0, new ArrayList<Integer>());
+    }
+
+    public NodeNull(ArrayList<Integer> indexesOfChildren) {
+        super(null, 0, indexesOfChildren);
     }
 
     @Override

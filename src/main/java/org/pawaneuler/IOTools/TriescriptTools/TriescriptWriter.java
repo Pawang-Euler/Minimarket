@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import org.pawaneuler.DataTypes.Trie.Node;
+import org.pawaneuler.DataTypes.Trie.Trie;
 import org.pawaneuler.IOTools.Writer;
 import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
 
@@ -59,6 +60,19 @@ public class TriescriptWriter extends Writer {
     public void writeLine(Node aRecord) throws IOException {
         this.fileWriter.write(aRecord.generateRecord() + "\n");
         this.fileWriter.flush();
+    }
+
+    /**
+     * Method to write all trie nodes to a triescript file
+     * 
+     * @param trie
+     * @throws IOException
+     */
+    public void bulkWriteLine(Trie trie) throws IOException {
+        int size = trie.size();
+        for (int i = 0; i < size; i++) {
+            this.writeLine(trie.getNodeAt(i));
+        }
     }
 
     /**

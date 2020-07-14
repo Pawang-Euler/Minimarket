@@ -3,9 +3,6 @@ package org.pawaneuler.DataTypes.Rule;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.ListIterator;
 
 import org.pawaneuler.DataTypes.Trie.*;
 
@@ -76,16 +73,20 @@ public class AssociationRuleGenerator {
      */
     public ArrayList<String> generateSingleSet() {
         HashSet<String> uniqSet = new HashSet<String>();
-        for (ListIterator<Node> iter = (T.getNodes()).iterator(); iter.hasNext(); ) {
-            Node nodes = iter.next();
+        ArrayList<Node> node = T.getNodes();
+        for (Node nodes : node) {
             uniqSet.add(nodes.getProduct());
         }
+
         ArrayList<String> nodeSingleSet = new ArrayList<String>(uniqSet);
         return nodeSingleSet;
     }
 
+    /**
+     * 
+     */
     public ArrayList<String> getUniqueList(ArrayList<ArrayList<String>> list) {
-        Set<String> uniqSet = new HashSet<String>(T.getNodes());
+        HashSet<String> uniqSet = new HashSet<String>();
         for (ArrayList<String> itemset : list) {
             for (String string : itemset) {
                 uniqSet.add(string);
@@ -102,7 +103,7 @@ public class AssociationRuleGenerator {
     public void pruning(ArrayList<ArrayList<String>> list) {
         for (ArrayList<String> itemset : list) {
             if (T.getItemsetFreq(itemset,0,0) < AR.getMinSupport())
-                iter.remove();
+                list.remove(itemset);
         }
     }
 
@@ -114,7 +115,7 @@ public class AssociationRuleGenerator {
      */
     public ArrayList<ArrayList<String>> combination(ArrayList<String> candidate, int k)
     {
-        ArrayList<ArrayList<String>> allCombi = new ArrayList<String>();
+        ArrayList<ArrayList<String>> allCombi = new ArrayList<ArrayList<String>>();
         Combinations.getCombination(allCombi, candidate, candidate.size(), k);
         return allCombi;
     }

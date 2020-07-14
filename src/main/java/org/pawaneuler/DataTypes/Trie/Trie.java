@@ -23,6 +23,7 @@ public class Trie {
     public Trie(Node root) {
         this.nodes = new ArrayList<Node>();
         this.addNode(root);
+        this.AllFreq = 0;
     }
 
     public Node getRootNode() {

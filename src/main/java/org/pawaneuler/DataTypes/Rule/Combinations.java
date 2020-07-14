@@ -1,8 +1,9 @@
+package org.pawaneuler.DataTypes.Rule;
+
 // Java program to print all combination of size r in an array of size n 
 // Modificate by Marissa Nur Amalia
 // 11 July 2020
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List; 

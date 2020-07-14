@@ -39,7 +39,6 @@ public class TransactionTrieCreatorTest {
             for (int i = 0; i < size; i++) {
                 assertEquals("Node different in index" + i, expectedTrie.getNodeAt(i), trie.getNodeAt(i));
             }
-            // assertEquals("Leaf is not equal", expectedTrie.getNodeAt(1), trie.getNodeAt(1));
         } catch (Exception e) {
             System.out.println("Got exception " + e);
 

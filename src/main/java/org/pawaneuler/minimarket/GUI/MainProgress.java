@@ -8,15 +8,19 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import org.pawaneuler.DataTypes.Trie.Trie;
+
 public class MainProgress extends JPanel {
     private String filePath;
     private JTextArea progress;
     private JTextField jcomp2;
     private JButton send;
+    private Trie processTrie;
 
     private MainProgress(String filePath) {
         this.filePath = filePath;
-        
+        this.processTrie = null;
+
         // construct components
         progress = new JTextArea(5, 5);
         jcomp2 = new JTextField(5);
@@ -48,8 +52,13 @@ public class MainProgress extends JPanel {
 
         if (extension.equals("tcsv")) {
             this.progress.append("Got TCSV File, opening...");
+
+            this.processTrie = TCSVHandler.handleTCSV(this.progress, this.filePath);
+            // TODO: Add Association Rules handler
         } else if (extension.equals("triescript")) {
             this.progress.append("Got triescript, opening...");
+
+            // TODO: Add Triescript handler
         } else {
             this.progress.append("Unsupported file type!");
         }

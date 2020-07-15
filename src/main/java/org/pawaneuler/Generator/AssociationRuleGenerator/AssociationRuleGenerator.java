@@ -64,7 +64,7 @@ public class AssociationRuleGenerator {
             candidateSingleset = getUniqueList(candidate);
             candidate = combination(candidateSingleset,kItemset);
             itemList.addAll(candidate);
-        } while (candidate.size() <= kItemset);
+        } while (candidate.size() > kItemset);
         return itemList;
     }
 
@@ -104,7 +104,8 @@ public class AssociationRuleGenerator {
     public void pruning(ArrayList<ArrayList<String>> list) {
         ArrayList<ArrayList<String>> removedList = new ArrayList<>();
         for (ArrayList<String> itemset : list) {
-            if (T.getItemsetFreq(itemset,0,0) < AR.getMinSupport())
+            int itemsetfreq = T.getItemsetFreq(itemset,0,0);
+            if (itemsetfreq < AR.getMinSupport())
                 removedList.add(itemset);
         }
         list.removeAll(removedList);

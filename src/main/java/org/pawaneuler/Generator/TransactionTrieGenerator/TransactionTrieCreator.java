@@ -16,7 +16,7 @@ import org.pawaneuler.IOTools.TCSVTools.TCSVReader;
 public class TransactionTrieCreator {
     private TCSVReader source;
 
-    TransactionTrieCreator(String filePath) throws BadExtentionException, IOException {
+    public TransactionTrieCreator(String filePath) throws BadExtentionException, IOException {
         source = TCSVReader.createReader(filePath);
     }
 

@@ -115,7 +115,7 @@ public class Trie {
             }
         } else {
             String currentItem = itemset.get(currIndex);
-            boolean isCurrentNodeProductGreaterThanCurrentItem = currentItem.compareTo(currentNode.getProduct()) < 0;
+            boolean isCurrentNodeProductGreaterThanCurrentItem = currentItem.compareTo(currentNode.getProduct()) > 0;
 
             if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem) {
                 return 0;
@@ -128,8 +128,11 @@ public class Trie {
                 int sumFreq = 0;
 
                 for (int i = 0; i < currentNode.getDegree(); i++) {
-                    sumFreq += getItemsetFreq(itemset, currIndex, currentNode.getChildIndexAt(i));
+                    int childrenIndex = currentNode.getChildIndexAt(i);
+                    sumFreq += getItemsetFreq(itemset, currIndex, childrenIndex);
                 }
+
+                isAllItemSetFound = itemset.size() == currIndex;
 
                 if (isAllItemSetFound) {
                     return sumFreq + currentNode.getFrequency();

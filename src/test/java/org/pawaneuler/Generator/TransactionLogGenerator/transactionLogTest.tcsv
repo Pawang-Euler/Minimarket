@@ -1,0 +1,101 @@
+id,products
+0,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+1,Eggs,Jelly
+2,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham
+3,Apple,Coke,Fanta,Ham
+4,Coke,Eggs,Granola,Ice Cream,Jelly
+5,Apple,Coke,Dumpling,Eggs,Fanta,Granola
+6,Fanta
+7,Apple,Beer,Coke,Dumpling,Fanta,Ham,Ice Cream,Jelly
+8,Apple,Ice Cream,Jelly
+9,Apple,Coke,Eggs,Fanta,Granola,Ice Cream,Jelly
+10,Apple,Beer,Dumpling,Fanta,Ice Cream
+11,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+12,Apple,Beer,Ham
+13,Apple,Dumpling,Eggs,Fanta,Ham
+14,Apple,Beer,Coke,Fanta,Granola,Ham,Ice Cream,Jelly
+15,Apple,Beer,Coke,Eggs,Fanta,Ham,Ice Cream,Jelly
+16,Beer,Eggs
+17,Beer,Coke
+18,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream
+19,Dumpling,Fanta,Ham
+20,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream
+21,Beer,Coke,Eggs,Fanta
+22,Apple,Beer,Eggs,Ice Cream
+23,Coke,Dumpling,Granola,Ham,Ice Cream
+24,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+25,Dumpling,Eggs,Ham,Jelly
+26,Fanta
+27,Apple,Coke,Dumpling,Fanta,Granola,Ice Cream,Jelly
+28,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+29,Apple,Beer,Fanta,Granola,Ham,Jelly
+30,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+31,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+32,Beer,Jelly
+33,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+34,Beer,Eggs,Fanta,Ice Cream,Jelly
+35,Beer,Eggs,Granola
+36,Apple,Coke,Fanta,Granola
+37,Beer
+38,Apple,Beer,Coke,Dumpling,Fanta,Granola,Jelly
+39,Eggs,Granola,Ham
+40,Coke,Dumpling
+41,Beer
+42,Apple,Coke,Jelly
+43,Apple,Eggs,Granola,Ham,Jelly
+44,Beer,Dumpling,Jelly
+45,Apple,Coke,Eggs,Granola,Ice Cream
+46,Coke,Granola
+47,Apple,Beer,Coke,Fanta,Granola,Ham,Ice Cream,Jelly
+48,Apple,Dumpling,Fanta,Jelly
+49,Beer,Dumpling
+50,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+51,Apple,Fanta
+52,Apple,Ham
+53,Apple,Beer,Coke,Fanta,Ice Cream,Jelly
+54,Apple,Beer,Dumpling,Granola,Ice Cream,Jelly
+55,Apple,Eggs,Fanta,Granola,Ice Cream,Jelly
+56,Apple,Beer,Dumpling,Fanta,Ham,Jelly
+57,Apple,Beer,Coke,Dumpling,Ham
+58,Eggs,Fanta,Ham
+59,Apple,Eggs,Fanta
+60,Dumpling,Ice Cream
+61,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+62,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+63,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Jelly
+64,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Jelly
+65,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+66,Ice Cream
+67,Apple,Beer,Coke,Eggs,Fanta,Granola,Ice Cream,Jelly
+68,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+69,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Jelly
+70,Coke,Dumpling,Ham
+71,Beer,Coke,Fanta,Granola
+72,Ice Cream,Jelly
+73,Beer,Coke,Dumpling,Granola,Ham,Ice Cream,Jelly
+74,Apple,Coke,Eggs,Fanta,Granola,Jelly
+75,Coke,Dumpling,Eggs,Fanta,Ice Cream
+76,Coke,Granola,Ice Cream
+77,Apple,Beer,Dumpling,Granola,Ham,Jelly
+78,Apple,Beer,Coke,Eggs,Fanta,Ham,Ice Cream
+79,Dumpling,Fanta,Ice Cream
+80,Apple,Ham
+81,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+82,Eggs,Ham
+83,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+84,Beer,Coke,Eggs,Fanta,Ham,Jelly
+85,Apple,Beer,Coke,Eggs,Fanta,Ham
+86,Fanta,Granola
+87,Apple,Coke,Eggs,Granola
+88,Beer,Eggs,Fanta,Granola,Ham
+89,Apple,Dumpling,Eggs,Fanta,Granola,Ice Cream
+90,Beer,Dumpling,Eggs,Fanta,Ham,Ice Cream
+91,Apple,Coke,Dumpling,Fanta,Ice Cream,Jelly
+92,Beer,Dumpling,Fanta,Ham,Ice Cream,Jelly
+93,Beer,Fanta,Ice Cream,Jelly
+94,Dumpling
+95,Dumpling
+96,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+97,Dumpling
+98,Apple,Beer,Fanta,Granola,Ham,Ice Cream,Jelly
+99,Apple,Beer,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly

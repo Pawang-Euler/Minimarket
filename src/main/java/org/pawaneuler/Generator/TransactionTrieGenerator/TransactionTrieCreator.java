@@ -16,8 +16,8 @@ import org.pawaneuler.IOTools.TCSVTools.TCSVReader;
 public class TransactionTrieCreator {
     private TCSVReader source;
 
-    TransactionTrieCreator(String filePath) throws BadExtentionException, IOException {
-        source = TCSVReader.createReader(filePath);
+    public TransactionTrieCreator(String filePath) throws BadExtentionException, IOException {
+        this.source = TCSVReader.createReader(filePath);
     }
 
     public Trie createTranssactionTrie() throws IOException {
@@ -38,11 +38,11 @@ public class TransactionTrieCreator {
 
     private void insertProduct(Trie trie, String[] products) {
         // traverse the trie from the root node
-        int trav = 0;
+        int currentTraverseIndex = 0;
         int productsLength = products.length;
 
         for (int i = 0; i < productsLength; i++) {
-            Node currentNode = trie.getNodeAt(trav);
+            Node currentNode = trie.getNodeAt(currentTraverseIndex);
 
             int lowerBound = lowerBoundIndex(trie, currentNode, products[i]);
             Node currentNodeChild = trie.getNodeAt(currentNode.getChildIndexAt(lowerBound));
@@ -55,7 +55,7 @@ public class TransactionTrieCreator {
                 // Case 1: product name is greater than all of the child node products
                 if (currentNodeChild.isNull()) {
                     currentNode.addChildIndex(trie.size());
-                    trav = trie.size();
+                    currentTraverseIndex = trie.size();
 
                     trie.addNode(newNode);
                 // Case 2: product name is among the currentNode's children
@@ -65,7 +65,7 @@ public class TransactionTrieCreator {
                     this.shiftIndexes(trie, target);
                     
                     currentNode.addChildIndex(lowerBound, target);
-                    trav = target;
+                    currentTraverseIndex = target;
 
                     trie.addNode(target, newNode);
                 }
@@ -75,7 +75,7 @@ public class TransactionTrieCreator {
                 }
             // Case 3: product name is exist in the child node
             } else if (currentNodeChild.getProduct().equals(products[i])) {
-                trav = currentNode.getChildIndexAt(lowerBound);
+                currentTraverseIndex = currentNode.getChildIndexAt(lowerBound);
 
                 if (i == productsLength - 1) {
                     currentNodeChild.increaseFrequncy();

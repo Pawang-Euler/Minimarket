@@ -1,10 +1,11 @@
-package org.pawaneuler.DataTypes.Rule;
+package org.pawaneuler.Generator.AssociationRuleGenerator;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 
 import org.pawaneuler.DataTypes.Trie.*;
+import org.pawaneuler.DataTypes.Rule.*;
 
 /**
  * @author marissanura
@@ -101,10 +102,12 @@ public class AssociationRuleGenerator {
      * @param list
      */
     public void pruning(ArrayList<ArrayList<String>> list) {
+        ArrayList<ArrayList<String>> removedList = new ArrayList<>();
         for (ArrayList<String> itemset : list) {
             if (T.getItemsetFreq(itemset,0,0) < AR.getMinSupport())
-                list.remove(itemset);
+                removedList.add(itemset);
         }
+        list.removeAll(removedList);
     }
 
     /**

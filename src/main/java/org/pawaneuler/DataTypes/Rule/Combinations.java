@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List; 
 
-class Combinations { 
+public class Combinations { 
 
 	/* arr[] ---> Input Array 
 	data[] ---> Temporary array to store current combination 
 	start & end ---> Staring and Ending indexes in arr[] 
 	index ---> Current index in data[] 
 	r ---> Size of a combination to be printed */
-	static void combinationUtil(ArrayList<ArrayList<String>> result, List<String> candidate, String data[], int start, 
+	public static void combinationUtil(ArrayList<ArrayList<String>> result, List<String> candidate, String data[], int start, 
 								int end, int index, int r) 
 	{ 
 		// Current combination is ready to be printed, print it 
@@ -46,7 +46,7 @@ class Combinations {
         
 	// The main function that prints all combinations of size r 
 	// in arr[] of size n. This function mainly uses combinationUtil() 
-	static void getCombination(ArrayList<ArrayList<String>> result, List<String> candidate, int n, int r) 
+	public static void getCombination(ArrayList<ArrayList<String>> result, List<String> candidate, int n, int r) 
 	{ 
 		// A temporary array to store all combination one by one 
 		String data[] = new String[r]; 
@@ -55,7 +55,7 @@ class Combinations {
 		combinationUtil(result, candidate, data, 0, n-1, 0, r); 
 	} 
 
-    static void getAllCombination(ArrayList<ArrayList<String>> result, List<String> candidate) {
+    public static void getAllCombination(ArrayList<ArrayList<String>> result, List<String> candidate) {
         for (int i = 0; i < candidate.size(); i++) {
             getCombination(result, candidate, candidate.size(), i);
         }

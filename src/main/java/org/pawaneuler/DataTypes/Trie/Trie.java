@@ -97,31 +97,45 @@ public class Trie {
      * @return
      */
     public int getItemsetFreq(ArrayList<String> itemset, int currIndex, int currNode) {
-        String currentItem = itemset.get(currIndex);
+        boolean isAllItemSetFound = itemset.size() == currIndex;
         Node currentNode = getNodeAt(currNode);
         boolean isNodeNull = currentNode.isNull();
-        boolean isCurrentNodeProductGreaterThanCurrentItem = currentItem.compareTo(currentNode.getProduct()) < 0;
-
-        if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem) {
-            return 0;
-        }
-        else {
-            if (currentItem.compareTo(currentNode.getProduct()) == 0) {
-                currIndex++;
-            }
-
-            int sumFreq = 0;
-
-            for (int i = 0; i < currentNode.getDegree(); i++) {
-                sumFreq += getItemsetFreq(itemset, currIndex, currentNode.getChildIndexAt(i));
-            }
-
-            boolean isAllItemSetFound = itemset.size() == currIndex;
-
-            if (isAllItemSetFound) {
-                return sumFreq + currentNode.getFrequency();
+        
+        if (isAllItemSetFound) {
+            if (isNodeNull) {
+                return 0;
             } else {
-                return sumFreq;
+                int sumFreq = 0;
+
+                for (int i = 0; i < currentNode.getDegree(); i++) {
+                    sumFreq += getItemsetFreq(itemset, currIndex, currentNode.getChildIndexAt(i));
+                }
+
+                return sumFreq + currentNode.getFrequency(); 
+            }
+        } else {
+            String currentItem = itemset.get(currIndex);
+            boolean isCurrentNodeProductGreaterThanCurrentItem = currentItem.compareTo(currentNode.getProduct()) < 0;
+
+            if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem) {
+                return 0;
+            }
+            else {
+                if (currentItem.compareTo(currentNode.getProduct()) == 0) {
+                    currIndex++;
+                }
+
+                int sumFreq = 0;
+
+                for (int i = 0; i < currentNode.getDegree(); i++) {
+                    sumFreq += getItemsetFreq(itemset, currIndex, currentNode.getChildIndexAt(i));
+                }
+
+                if (isAllItemSetFound) {
+                    return sumFreq + currentNode.getFrequency();
+                } else {
+                    return sumFreq;
+                }
             }
         }
     }

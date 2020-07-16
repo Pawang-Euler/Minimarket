@@ -62,6 +62,25 @@ public class TCSVWriter extends Writer {
     }
 
     /**
+     * Write a line in the file but with different parameter.
+     * 
+     * @param id id to write
+     * @param products products to write
+     * @throws IOException
+     */
+    public void writeLine(int id, String[] products) throws IOException {
+        String temp = "";
+
+        for (String item : products) {
+            temp += item;
+            temp += ",";
+        }
+
+        this.fileWriter.write(id + "," + temp.substring(0, temp.lastIndexOf(',')) + "\n");
+        this.fileWriter.flush();
+    }
+
+    /**
      * Check if the header is present in the file
      * 
      * @param filePath file location

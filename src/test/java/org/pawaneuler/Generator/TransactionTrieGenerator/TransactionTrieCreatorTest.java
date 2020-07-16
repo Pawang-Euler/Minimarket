@@ -1,6 +1,7 @@
 package org.pawaneuler.Generator.TransactionTrieGenerator;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -51,6 +52,8 @@ public class TransactionTrieCreatorTest {
      *          root
      *           |
      *           A (2)
+     *           |
+     *           W (1)
      */
     @Test
     public void sameProductTest() {
@@ -62,8 +65,17 @@ public class TransactionTrieCreatorTest {
             expectedTrie.addNode(new Node("A", 2));
             expectedTrie.getNodeAt(0).addChildIndex(1);
 
+            expectedTrie.addNode(new Node("W", 1));
+            expectedTrie.getNodeAt(1).addChildIndex(2);
+
+            int size = expectedTrie.size();
+
             assertEquals("Root is not equal", expectedTrie.getRootNode(), trie.getRootNode());
-            assertEquals("Leaf is not equal", expectedTrie.getNodeAt(1), trie.getNodeAt(1));
+            // assertEquals("Leaf is not equal", expectedTrie.getNodeAt(1), trie.getNodeAt(1));
+
+            for (int i = 0; i < size; i++) {
+                assertEquals("Node different in index " + i, expectedTrie.getNodeAt(i), trie.getNodeAt(i));
+            }
         } catch (Exception e) {
             System.out.println("Got exception " + e);
 
@@ -76,6 +88,8 @@ public class TransactionTrieCreatorTest {
      *              root
      *            /      \   
      *           A (1)    E (1)
+     *                    | 
+     *                    Z (1)
      */
     @Test
     public void greaterProductTest() {
@@ -89,6 +103,9 @@ public class TransactionTrieCreatorTest {
 
             expectedTrie.addNode(new Node("E", 1));
             expectedTrie.getNodeAt(0).addChildIndex(2);
+
+            expectedTrie.addNode(new Node("Z", 1));
+            expectedTrie.getNodeAt(2).addChildIndex(3);
 
             int size = expectedTrie.size();
 
@@ -109,11 +126,13 @@ public class TransactionTrieCreatorTest {
      *              root
      *            /      \   
      *           A (1)    E (1)
+     *           |
+     *           W (1)
      */
     @Test
     public void smallerProductTest() {
         try {
-            TransactionTrieCreator creator = new TransactionTrieCreator("./src/test/java/org/pawaneuler/Generator/TransactionTrieGenerator/greaterProductTest.tcsv");
+            TransactionTrieCreator creator = new TransactionTrieCreator("./src/test/java/org/pawaneuler/Generator/TransactionTrieGenerator/smallerProductTest.tcsv");
             Trie trie = creator.createTranssactionTrie();
 
             Trie expectedTrie = new Trie();
@@ -123,12 +142,35 @@ public class TransactionTrieCreatorTest {
             expectedTrie.addNode(new Node("E", 1));
             expectedTrie.getNodeAt(0).addChildIndex(2);
 
+            expectedTrie.addNode(new Node("W", 1));
+            expectedTrie.getNodeAt(1).addChildIndex(3);
+
             int size = expectedTrie.size();
+
+            System.out.println(trie.getNodeAt(2));
+
+            assertSame("Size isn't same", size, trie.size());
+            assertSame("Size isn't same", 4, trie.size());
 
             assertEquals("Root is not equal", expectedTrie.getRootNode(), trie.getRootNode());
             for (int i = 0; i < size; i++) {
                 assertEquals("Node different in index " + i, expectedTrie.getNodeAt(i), trie.getNodeAt(i));
             }
+        } catch (Exception e) {
+            System.out.println("Got exception " + e);
+
+            fail();
+        }
+    }
+
+    @Test
+    public void randomTest() {
+        try {
+            TransactionTrieCreator creator = new TransactionTrieCreator("./src/test/java/org/pawaneuler/Generator/TransactionTrieGenerator/randomTest.tcsv");
+            Trie trie = creator.createTranssactionTrie();
+
+            assertSame("Size isn't same", 23, trie.size());
+
         } catch (Exception e) {
             System.out.println("Got exception " + e);
 

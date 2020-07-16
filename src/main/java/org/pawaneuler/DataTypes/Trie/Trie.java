@@ -115,7 +115,7 @@ public class Trie {
             }
         } else {
             String currentItem = itemset.get(currIndex);
-            boolean isCurrentNodeProductGreaterThanCurrentItem = currentItem.compareTo(currentNode.getProduct()) < 0;
+            boolean isCurrentNodeProductGreaterThanCurrentItem = currentNode.getProduct().compareTo(currentItem) > 0;
 
             if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem) {
                 return 0;

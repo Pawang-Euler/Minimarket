@@ -46,19 +46,24 @@ public class Combinations {
         
 	// The main function that prints all combinations of size r 
 	// in arr[] of size n. This function mainly uses combinationUtil() 
-	public static void getCombination(ArrayList<ArrayList<String>> result, List<String> candidate, int n, int r) 
+	public static ArrayList<ArrayList<String>> getCombination(ArrayList<String> candidate, int r) 
 	{ 
 		// A temporary array to store all combination one by one 
-		String data[] = new String[r]; 
-
-		// Print all combination using temprary array 'data[]' 
-		combinationUtil(result, candidate, data, 0, n-1, 0, r); 
+		String data[] = new String[r];
+		int n = candidate.size(); 
+		ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+		// get all combination using temprary array 'data[]' 
+		combinationUtil(result,candidate, data, 0, n-1, 0, r); 
+		return result;
 	} 
 
-    public static void getAllCombination(ArrayList<ArrayList<String>> result, List<String> candidate) {
-        for (int i = 0; i < candidate.size(); i++) {
-            getCombination(result, candidate, candidate.size(), i);
-        }
+    public static ArrayList<ArrayList<String>> getAllCombination(ArrayList<String> candidate) {
+		
+		ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+		for (int i = 0; i < candidate.size(); i++) {
+			result.addAll(getCombination(candidate, i));
+		}
+		return result;
 	}
 } 
 

@@ -1,7 +1,6 @@
 package org.pawaneuler.Generator.AssociationRuleGenerator;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
 
 import org.pawaneuler.DataTypes.Trie.*;
@@ -38,9 +37,9 @@ public class AssociationRuleGenerator {
      */
     public void execute() {
         T.generateAllFreq();
-        ArrayList<ArrayList<String>> allSubSet = generateSet();
+        ArrayList<ArrayList<String>> allFreqSet = generateFrequentItemset();
 
-        for (ArrayList<String> subset : allSubSet) {
+        for (ArrayList<String> subset : allFreqSet) {
             AR.getAssociationRules().addAll(generatRuleFromSubset(subset));
         }
 
@@ -48,63 +47,78 @@ public class AssociationRuleGenerator {
     }
 
     /**
-     * 
-     * @return Array
+     * to print all association rule
      */
-    public ArrayList<ArrayList<String>> generateSet() {
+    public void printAllAssociationRules() {
+        this.AR.printAll();
+    }
+
+    /**
+     * 
+     * @return 2-dimentional ArrayList from frequent itemset
+     */
+    private ArrayList<ArrayList<String>> generateFrequentItemset() {
         int kItemset = 1; // Combinations start with 1-itemset
-        ArrayList<ArrayList<String>> itemList = new ArrayList<ArrayList<String>>();
-        ArrayList<ArrayList<String>> candidate = new ArrayList<ArrayList<String>>();
-        ArrayList<String> candidateSingleset = new ArrayList<String>();
-        candidateSingleset = generateSingleSet();
+        ArrayList<ArrayList<String>> frequentItemset = new ArrayList<ArrayList<String>>();
+        ArrayList<ArrayList<String>> candidate = new ArrayList<ArrayList<String>>(); //Frequent Itemset candidate
+        ArrayList<String> candidateSingleset = new ArrayList<String>(); //Unique singleset for frequent itemset
+
+        candidateSingleset = generateProducts();
         candidate = combination(candidateSingleset,kItemset);
         do {
             kItemset++;
             pruning(candidate);
-            candidateSingleset = getUniqueList(candidate);
+            candidateSingleset = getUniqueProduct(candidate);
             candidate = combination(candidateSingleset,kItemset);
-            itemList.addAll(candidate);
-        } while (candidate.size() <= kItemset);
-        return itemList;
+            frequentItemset.addAll(candidate);
+        } while (candidate.size() > kItemset);
+
+        return frequentItemset;
     }
 
     /**
      * 
-     * @return
+     * @return ArrayList of trie products
      */
-    public ArrayList<String> generateSingleSet() {
-        HashSet<String> uniqSet = new HashSet<String>();
-        ArrayList<Node> node = T.getNodes();
-        for (Node nodes : node) {
-            uniqSet.add(nodes.getProduct());
+    private ArrayList<String> generateProducts() {
+        ArrayList<String> products = new ArrayList<String>();
+        ArrayList<Node> nodes = T.getNodes();
+        for (Node node : nodes) {
+            //Make sure there's no duplicate
+            products.remove(node.getProduct());
+            products.add(node.getProduct());
         }
 
-        ArrayList<String> nodeSingleSet = new ArrayList<String>(uniqSet);
-        return nodeSingleSet;
+        return products;
     }
 
     /**
      * 
+     * @param list 2-Dimensional ArrayList contain itemlist
+     * @return 1-Dimentional ArrayList
      */
-    public ArrayList<String> getUniqueList(ArrayList<ArrayList<String>> list) {
-        HashSet<String> uniqSet = new HashSet<String>();
-        for (ArrayList<String> itemset : list) {
-            for (String string : itemset) {
-                uniqSet.add(string);
+    private ArrayList<String> getUniqueProduct(ArrayList<ArrayList<String>> list) {
+        ArrayList<String> uniqueProduct = new ArrayList<String>();
+        for (ArrayList<String> itemlist : list) {
+            for (String string : itemlist) {
+                //Make sure there's no duplicate
+                uniqueProduct.remove(string);
+                uniqueProduct.add(string);
             }
         }
-        ArrayList<String> singleSet = new ArrayList<String>(uniqSet);
-        return singleSet;
+        return uniqueProduct;
     }
 
     /**
      * 
-     * @param list
+     * @param list 2-Dimentional ArrayList contain candidate of frequent itemset
      */
-    public void pruning(ArrayList<ArrayList<String>> list) {
+    private void pruning(ArrayList<ArrayList<String>> list) {
         ArrayList<ArrayList<String>> removedList = new ArrayList<>();
+
         for (ArrayList<String> itemset : list) {
-            if (T.getItemsetFreq(itemset,0,0) < AR.getMinSupport())
+            int itemsetfreq = T.getItemsetFreq(itemset,0,0);
+            if (itemsetfreq < AR.getMinSupport())
                 removedList.add(itemset);
         }
         list.removeAll(removedList);
@@ -116,11 +130,8 @@ public class AssociationRuleGenerator {
      * @param k
      * @return
      */
-    public ArrayList<ArrayList<String>> combination(ArrayList<String> candidate, int k)
-    {
-        ArrayList<ArrayList<String>> allCombi = new ArrayList<ArrayList<String>>();
-        Combinations.getCombination(allCombi, candidate, candidate.size(), k);
-        return allCombi;
+    private ArrayList<ArrayList<String>> combination(ArrayList<String> candidate, int k) {
+        return Combinations.getCombination(candidate, k);
     }
 
     /**
@@ -128,14 +139,14 @@ public class AssociationRuleGenerator {
      * @param subset
      * @return
      */
-    public ArrayList<Rule> generatRuleFromSubset(ArrayList<String> subset) {
+    private ArrayList<Rule> generatRuleFromSubset(ArrayList<String> subset) {
         ArrayList<Rule> subsetRule = generateItemset(subset);
         
-        double subsetSupport = generateSupport(subset);
+        Double subsetSupport = generateSupport(subset);
         for (Iterator<Rule> iter = subsetRule.iterator(); iter.hasNext(); ) {
             Rule rule = iter.next();
-            generateConfidence(rule);
             rule.setSupport(subsetSupport);
+            generateConfidence(rule);
         }
         return subsetRule;
     }
@@ -145,10 +156,9 @@ public class AssociationRuleGenerator {
      * @param subset
      * @return
      */
-    public ArrayList<Rule> generateItemset(ArrayList<String> subset) {
+    private ArrayList<Rule> generateItemset(ArrayList<String> subset) {
         ArrayList<Rule> rules = new ArrayList<Rule>();
-        ArrayList<ArrayList<String>> allCombi = new ArrayList<ArrayList<String>>();
-        Combinations.getAllCombination(allCombi, subset);
+        ArrayList<ArrayList<String>> allCombi = Combinations.getAllCombination(subset);
         rules = generateRule(allCombi, subset);
         return rules;
     }
@@ -163,7 +173,7 @@ public class AssociationRuleGenerator {
         String leftString = new String();
         String rightString = new String();
         for (ArrayList<String> sub : leftSubset) {
-            leftString = sub.toString();
+            leftString = arrayListToString(sub);
             rightString = generateRightString(sub, subset);
             Rule temp = new Rule(leftString,rightString);
             rules.add(temp);
@@ -172,12 +182,29 @@ public class AssociationRuleGenerator {
         return rules;
     }
 
-    public String generateRightString(ArrayList<String> leftList, ArrayList<String> subset) {
-        if (subset.removeAll(leftList)) {
-            return subset.toString();
-        } else {
-            return subset.toString();
-        }
+    /**
+     * 
+     * @param list
+     * @return
+     */
+    private String arrayListToString(ArrayList<String> list) {
+        String newString = list.toString();
+        newString = newString.substring(0, newString.lastIndexOf(','));
+        return newString;
+    }
+
+    /**
+     * 
+     * @param leftList
+     * @param subset
+     * @return
+     */
+    private String generateRightString(ArrayList<String> leftList, ArrayList<String> subset) {
+        ArrayList<String> rightSubset = new ArrayList<String>();
+        rightSubset.addAll(subset);
+        rightSubset.removeAll(leftList);
+        String rightString = arrayListToString(rightSubset);
+        return rightString;
     }
 
     /**
@@ -185,15 +212,15 @@ public class AssociationRuleGenerator {
      * @param subset
      * @return
      */
-    public double generateSupport(ArrayList<String> subset) {
-        return T.getItemsetFreq(subset,0,0) / T.getAllFreq();
+    private Double generateSupport(ArrayList<String> subset) {
+        return new Double(T.getItemsetFreq(subset,0,0) / T.getAllFreq());
     }
 
     /**
      * 
      * @param rule
      */
-    public void generateConfidence(Rule rule) {
+    private void generateConfidence(Rule rule) {
         rule.setConfidence(rule.getSupport() / T.getItemsetFreq(rule.leftItemlistToArrayList(),0,0));
     }
 }

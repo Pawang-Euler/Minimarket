@@ -12,6 +12,7 @@ import org.pawaneuler.DataTypes.Rule.*;
 public class AssociationRuleGenerator {
     private AssociationRule AR;
     private Trie T;
+    private Frequency frequency;
 
     /**
      * 
@@ -20,6 +21,7 @@ public class AssociationRuleGenerator {
     public AssociationRuleGenerator(Trie T) {
         this.AR = new AssociationRule();
         this.T = T;
+        this.frequency = new Frequency(T);
     }
 
     /**
@@ -30,6 +32,7 @@ public class AssociationRuleGenerator {
     public AssociationRuleGenerator(Trie T, int minSup) {
         this.AR = new AssociationRule(minSup);
         this.T = T;
+        this.frequency = new Frequency(T);
     }
 
     /**
@@ -60,11 +63,9 @@ public class AssociationRuleGenerator {
     private ArrayList<ArrayList<String>> generateFrequentItemset() {
         int kItemset = 1; // Combinations start with 1-itemset
         ArrayList<ArrayList<String>> frequentItemset = new ArrayList<ArrayList<String>>();
-        ArrayList<ArrayList<String>> candidate = new ArrayList<ArrayList<String>>(); //Frequent Itemset candidate
-        ArrayList<String> candidateSingleset = new ArrayList<String>(); //Unique singleset for frequent itemset
+        ArrayList<String> candidateSingleset = generateProducts(); //Unique singleset for frequent itemset
+        ArrayList<ArrayList<String>> candidate = combination(candidateSingleset,kItemset); //Frequent Itemset candidate
 
-        candidateSingleset = generateProducts();
-        candidate = combination(candidateSingleset,kItemset);
         do {
             kItemset++;
             pruning(candidate);
@@ -84,11 +85,16 @@ public class AssociationRuleGenerator {
         ArrayList<String> products = new ArrayList<String>();
         ArrayList<Node> nodes = T.getNodes();
         for (Node node : nodes) {
+            if (node.isRoot()) {
+                continue;
+            }
+            else {
             //Make sure there's no duplicate
             products.remove(node.getProduct());
             products.add(node.getProduct());
+            }
         }
-
+         
         return products;
     }
 
@@ -117,7 +123,7 @@ public class AssociationRuleGenerator {
         ArrayList<ArrayList<String>> removedList = new ArrayList<>();
 
         for (ArrayList<String> itemset : list) {
-            int itemsetfreq = T.getItemsetFreq(itemset,0,0);
+            int itemsetfreq = frequency.getItemsetFreq(itemset);
             if (itemsetfreq < AR.getMinSupport())
                 removedList.add(itemset);
         }
@@ -189,7 +195,7 @@ public class AssociationRuleGenerator {
      */
     private String arrayListToString(ArrayList<String> list) {
         String newString = list.toString();
-        newString = newString.substring(0, newString.lastIndexOf(','));
+        newString = newString.substring(1, newString.lastIndexOf(']'));
         return newString;
     }
 
@@ -213,7 +219,7 @@ public class AssociationRuleGenerator {
      * @return
      */
     private Double generateSupport(ArrayList<String> subset) {
-        return new Double(T.getItemsetFreq(subset,0,0) / T.getAllFreq());
+        return (new Double(frequency.getItemsetFreq(subset)) / new Double(T.getAllFreq()));
     }
 
     /**
@@ -221,6 +227,6 @@ public class AssociationRuleGenerator {
      * @param rule
      */
     private void generateConfidence(Rule rule) {
-        rule.setConfidence(rule.getSupport() / T.getItemsetFreq(rule.leftItemlistToArrayList(),0,0));
+        rule.setConfidence(rule.getSupport()*T.getAllFreq() / new Double(frequency.getItemsetFreq(rule.leftItemlistToArrayList())));
     }
 }

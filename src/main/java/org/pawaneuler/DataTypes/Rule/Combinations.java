@@ -60,7 +60,7 @@ public class Combinations {
     public static ArrayList<ArrayList<String>> getAllCombination(ArrayList<String> candidate) {
 		
 		ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
-		for (int i = 0; i < candidate.size(); i++) {
+		for (int i = 1; i < candidate.size(); i++) {
 			result.addAll(getCombination(candidate, i));
 		}
 		return result;

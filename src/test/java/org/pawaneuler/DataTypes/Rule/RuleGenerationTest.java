@@ -16,14 +16,14 @@ public class RuleGenerationTest {
 
     @Test
     public void generateTest() {
-        Trie testTrie = getTestTrieNTransaction(100);
+        Trie testTrie = getTestTrieNTransactionMProducts(100,10);
         AssociationRuleGenerator generator = new AssociationRuleGenerator(testTrie, 1);
 
         generator.execute();
     }
 
-    public static Trie getTestTrieNTransaction(int maxTransaction) {
-        TransactionLogGenerator TLG = new TransactionLogGenerator();
+    public static Trie getTestTrieNTransactionMProducts(int maxTransaction, int maxProduct) {
+        TransactionLogGenerator TLG = new TransactionLogGenerator(maxProduct);
         String filePath = "src/test/java/org/pawaneuler/DataTypes/Rule/Test_" + maxTransaction + ".tcsv";
         try {
             TLG.generate(maxTransaction, filePath);

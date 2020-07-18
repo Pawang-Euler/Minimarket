@@ -10,8 +10,8 @@ import org.pawaneuler.DataTypes.Rule.*;
  * @author marissanura
  */
 public class AssociationRuleGenerator {
-    private AssociationRule AR;
-    private Trie T;
+    private AssociationRule associationRule;
+    private Trie trie;
     private Frequency frequency;
 
     /**
@@ -19,8 +19,8 @@ public class AssociationRuleGenerator {
      * @param T trie that want to generate to Association Rule
      */
     public AssociationRuleGenerator(Trie T) {
-        this.AR = new AssociationRule();
-        this.T = T;
+        this.associationRule = new AssociationRule();
+        this.trie = T;
         this.frequency = new Frequency(T);
     }
 
@@ -30,8 +30,8 @@ public class AssociationRuleGenerator {
      * @param minSup minimum support for generating Association Rule
      */
     public AssociationRuleGenerator(Trie T, int minSup) {
-        this.AR = new AssociationRule(minSup);
-        this.T = T;
+        this.associationRule = new AssociationRule(minSup);
+        this.trie = T;
         this.frequency = new Frequency(T);
     }
 
@@ -39,21 +39,20 @@ public class AssociationRuleGenerator {
      * to execute the Association Rule Generation from a Trie
      */
     public void execute() {
-        frequency.generateAllFreq();
         ArrayList<ArrayList<String>> allFreqSet = generateFrequentItemset();
 
         for (ArrayList<String> subset : allFreqSet) {
-            AR.getAssociationRules().addAll(generatRuleFromSubset(subset));
+            associationRule.getAssociationRules().addAll(generatRuleFromSubset(subset));
         }
 
-        AR.sort();
+        associationRule.sort();
     }
 
     /**
      * to print all association rule
      */
     public void printAllAssociationRules() {
-        this.AR.printAll();
+        this.associationRule.printAll();
     }
 
     /**
@@ -83,15 +82,13 @@ public class AssociationRuleGenerator {
      */
     private ArrayList<String> generateProducts() {
         ArrayList<String> products = new ArrayList<String>();
-        ArrayList<Node> nodes = T.getNodes();
+        ArrayList<Node> nodes = trie.getNodes();
         for (Node node : nodes) {
             if (node.isRoot()) {
                 continue;
             }
             else {
-            //Make sure there's no duplicate
-            products.remove(node.getProduct());
-            products.add(node.getProduct());
+                insertUniqueItemIntoArrayList(node.getProduct(), products);
             }
         }
          
@@ -106,13 +103,16 @@ public class AssociationRuleGenerator {
     private ArrayList<String> getUniqueProduct(ArrayList<ArrayList<String>> list) {
         ArrayList<String> uniqueProduct = new ArrayList<String>();
         for (ArrayList<String> itemlist : list) {
-            for (String string : itemlist) {
-                //Make sure there's no duplicate
-                uniqueProduct.remove(string);
-                uniqueProduct.add(string);
+            for (String productString : itemlist) {
+                insertUniqueItemIntoArrayList(productString, uniqueProduct);
             }
         }
         return uniqueProduct;
+    }
+    
+    private void insertUniqueItemIntoArrayList(String item, ArrayList<String> list) {
+        list.remove(item);
+        list.add(item);
     }
 
     /**
@@ -124,7 +124,7 @@ public class AssociationRuleGenerator {
 
         for (ArrayList<String> itemset : list) {
             int itemsetfreq = frequency.getItemsetFreq(itemset);
-            if (itemsetfreq < AR.getMinSupport())
+            if (itemsetfreq < associationRule.getMinSupport())
                 removedList.add(itemset);
         }
         list.removeAll(removedList);

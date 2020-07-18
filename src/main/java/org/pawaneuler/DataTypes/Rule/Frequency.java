@@ -12,9 +12,10 @@ public class Frequency {
 
     public Frequency(Trie T) {
         this.T = T;
+        this.allFreq = generateAllFreq();
     }
 
-    public int generateAllFreq() {
+    private int generateAllFreq() {
         ArrayList<Node> nodes = T.getNodes();
         int sum = 0;
         for (int i = 0; i < nodes.size(); i++) {
@@ -24,14 +25,27 @@ public class Frequency {
     }
 
     public int getAllFreq() {
-        return allFreq;
+        return this.allFreq;
     }
 
+    /**
+     * 
+     * @param itemset itemset that want to be checked
+     * @return frequency in trie
+     */
     public int getItemsetFreq(ArrayList<String> itemset) {
         this.itemset = itemset;
+        //Start recursive from current index 0 and current node 0 (root)
         return getItemsetFreqRecursive(0, 0);
     }
     
+    /**
+     * to get itemset frequency in recursive
+     * 
+     * @param currIndex current index of current item string that want to checked
+     * @param currNode current node of trie
+     * @return frequency of itemset
+     */
     private int getItemsetFreqRecursive(int currIndex, int currNode) {
         if (isAllItemSetFound(currIndex)) {
             return generateAllFrequent(currIndex, currNode);
@@ -40,6 +54,13 @@ public class Frequency {
         }
     }
 
+    /**
+     * method to get itemset frequency if all itemset isn't all found in trie
+     * 
+     * @param currIndex current index of current item string that want to checked
+     * @param currNode current node of trie
+     * @return frequency of itemset
+     */
     private int searchAllItemset(int currIndex, int currNode) {
         Node currentNode = T.getNodeAt(currNode);
         boolean isNodeNull = currentNode.isNull();
@@ -49,6 +70,7 @@ public class Frequency {
             return 0;
         }
         else {
+            //Check if current item is same with current node's product
             if (currentItem.compareTo(currentNode.getProduct()) == 0) {
                 currIndex++;
                 return getItemsetFreqRecursive(currIndex, currNode);
@@ -58,6 +80,13 @@ public class Frequency {
         }
     }
 
+    /**
+     * to check if the current node is greater than current item but have exception for comparison with root.
+     * 
+     * @param currentNode current node
+     * @param currentItem current item string that want to checked
+     * @return
+     */
     private boolean isCurrentNodeProductGreaterThanCurrentItem(Node currentNode, String currentItem) {
         if (currentNode.isRoot()) {
             return false;
@@ -67,10 +96,22 @@ public class Frequency {
         }
     }
 
+    /**
+     * 
+     * @param currIndex
+     * @return
+     */
     private boolean isAllItemSetFound(int currIndex) {
         return itemset.size() == currIndex;
     }
 
+    /**
+     * to get frequency of itemset from current node child with recursive
+     * 
+     * @param currIndex current index of current item string that want to checked
+     * @param currNode current node of trie
+     * @return
+     */
     private int childRecursive(Node currentNode, int currIndex) {
         int sumFreq = 0;
 
@@ -84,8 +125,8 @@ public class Frequency {
     /**
      * generate frequency itemset if all itemset is found
      * 
-     * @param currIndex
-     * @param currNode
+     * @param currIndex current index of current item string that want to checked
+     * @param currNode current node of trie
      * @return
      */
     private int generateAllFrequent(int currIndex, int currNode) {

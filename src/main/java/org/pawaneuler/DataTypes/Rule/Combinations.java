@@ -1,6 +1,6 @@
 package org.pawaneuler.DataTypes.Rule;
 
-// Java program to print all combination of size r in an array of size n 
+// Java program to get all combination of size r in an array of size n 
 // Modificate by Marissa Nur Amalia
 // 11 July 2020
 
@@ -8,17 +8,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List; 
 
-public class Combinations { 
+public class Combinations {
 
 	/* arr[] ---> Input Array 
 	data[] ---> Temporary array to store current combination 
 	start & end ---> Staring and Ending indexes in arr[] 
 	index ---> Current index in data[] 
 	r ---> Size of a combination to be printed */
-	public static void combinationUtil(ArrayList<ArrayList<String>> result, List<String> candidate, String data[], int start, 
+	private static void combinationUtil(ArrayList<ArrayList<String>> result, List<String> candidate, String data[], int start, 
 								int end, int index, int r) 
 	{ 
-		// Current combination is ready to be printed, print it 
+		// Current combination is ready to be returned, returned it 
 		if (index == r) 
 		{
             ArrayList<String> temp = new ArrayList<String>();

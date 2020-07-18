@@ -11,7 +11,7 @@ import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
 
 public class StressTest {
     private int maxVariety = 26;
-    private int numOfTransaction = 10000000;
+    private int numOfTransaction = 11062;
     private TransactionLogGenerator generator;
 
     @Test

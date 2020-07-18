@@ -6,7 +6,7 @@ import java.util.*;
  * @author marissanura
  */
 public class RandomGenerator {
-    private ArrayList<String> productVariety;
+    private String[] productVariety;
     private int maxVariety;
     private Random randomizer;
 
@@ -17,9 +17,8 @@ public class RandomGenerator {
 
     public RandomGenerator() {
         this.randomizer = new Random();
-        this.productVariety = randomProducts(10);
-        this.maxVariety = productVariety.size();
-        
+        this.maxVariety = 10;
+        this.productVariety = getStrings(products, maxVariety);      
     }
 
     /**
@@ -28,8 +27,9 @@ public class RandomGenerator {
      */
     public RandomGenerator(int maxVariety) {
         this.randomizer = new Random();
-        this.productVariety = randomProducts((maxVariety > 26) ? 26 : maxVariety);
-        this.maxVariety = productVariety.size();
+        this.maxVariety = (maxVariety > 26) ? 26 : maxVariety;
+        this.productVariety = getStrings(products, this.maxVariety);
+        
         
     }
 
@@ -37,7 +37,7 @@ public class RandomGenerator {
         return maxVariety;
     }
 
-    public ArrayList<String> getProductVariety() {
+    public String[] getProductVariety() {
         return productVariety;
     }
 
@@ -46,53 +46,44 @@ public class RandomGenerator {
     }
 
     /**
+     * to get random number of String
      * 
      * @return
      */
     public String[] randomStrings() {
         int randomNumOfList = randomizer.nextInt(maxVariety);
-        String[] randomString = new String[randomNumOfList];
-        ArrayList<String> random = randomList(randomNumOfList);
+        return getStrings(productVariety, randomNumOfList);
+    }
+
+    /**
+     * 
+     * @param numOfList number of list
+     * @return random list with the length that passed in poarameter
+     */
+    public String[] getStrings(String[] strings, int numOfList) {
+        String[] randomString = new String[numOfList];
+        ArrayList<String> random = randomList(strings,numOfList);
         
-        for (int i = 0; i < randomNumOfList; i++) {
+        for (int i = 0; i < random.size(); i++) {
             randomString[i] = random.get(i);
         }
         return randomString;
     }
 
     /**
+     * to get random list with random generator
      * 
      * @return random list of product with no duplicate and sorted
      */
-    public ArrayList<String> randomList(int randomNumOfList) {
+    public ArrayList<String> randomList(String[] strings, int randomNumOfList) {
         ArrayList<String> random = new ArrayList<String>();
         int randomIndex;
         while (random.size() < randomNumOfList) {
             randomIndex = randomizer.nextInt(maxVariety);
             
             //to make sure there's no duplicate 
-            random.remove(productVariety.get(randomIndex));
-            random.add(productVariety.get(randomIndex));
-            
-            Collections.sort(random);
-        }
-        return random;
-    }
-
-    /**
-     * 
-     * @return random list of product with no duplicate and sorted
-     */
-    public ArrayList<String> randomProducts(int randomNumOfList) {
-        ArrayList<String> random = new ArrayList<String>();
-
-        int randomIndex;
-        while (random.size() < randomNumOfList) {
-            randomIndex = randomizer.nextInt(randomNumOfList);
-            
-            //to make sure there's no duplicate 
-            random.remove(products[randomIndex]);
-            random.add(products[randomIndex]);
+            random.remove(strings[randomIndex]);
+            random.add(strings[randomIndex]);
             
             Collections.sort(random);
         }

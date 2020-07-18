@@ -39,7 +39,7 @@ public class AssociationRuleGenerator {
      * to execute the Association Rule Generation from a Trie
      */
     public void execute() {
-        T.generateAllFreq();
+        frequency.generateAllFreq();
         ArrayList<ArrayList<String>> allFreqSet = generateFrequentItemset();
 
         for (ArrayList<String> subset : allFreqSet) {
@@ -219,7 +219,7 @@ public class AssociationRuleGenerator {
      * @return
      */
     private Double generateSupport(ArrayList<String> subset) {
-        return (new Double(frequency.getItemsetFreq(subset)) / new Double(T.getAllFreq()));
+        return (new Double(frequency.getItemsetFreq(subset)) / new Double(frequency.getAllFreq()));
     }
 
     /**
@@ -227,6 +227,6 @@ public class AssociationRuleGenerator {
      * @param rule
      */
     private void generateConfidence(Rule rule) {
-        rule.setConfidence(rule.getSupport()*T.getAllFreq() / new Double(frequency.getItemsetFreq(rule.leftItemlistToArrayList())));
+        rule.setConfidence(rule.getSupport()*frequency.getAllFreq() / new Double(frequency.getItemsetFreq(rule.leftItemlistToArrayList())));
     }
 }

@@ -8,9 +8,23 @@ import org.pawaneuler.DataTypes.Trie.Trie;
 public class Frequency {
     private Trie T;
     private ArrayList<String> itemset;
+    private int allFreq;
 
     public Frequency(Trie T) {
         this.T = T;
+    }
+
+    public int generateAllFreq() {
+        ArrayList<Node> nodes = T.getNodes();
+        int sum = 0;
+        for (int i = 0; i < nodes.size(); i++) {
+            sum += T.getNodeAt(i).getFrequency();
+        }
+        return sum;
+    }
+
+    public int getAllFreq() {
+        return allFreq;
     }
 
     public int getItemsetFreq(ArrayList<String> itemset) {
@@ -19,27 +33,27 @@ public class Frequency {
     }
     
     private int getItemsetFreqRecursive(int currIndex, int currNode) {
-        Node currentNode = T.getNodeAt(currNode);
-        boolean isNodeNull = currentNode.isNull();
-        
         if (isAllItemSetFound(currIndex)) {
             return generateAllFrequent(currIndex, currNode);
         } else {
-            String currentItem = itemset.get(currIndex);
+            return searchAllItemset(currIndex, currNode);
+        }
+    }
 
-            if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem(currentNode, currentItem)) {
-                return 0;
-            }
-            else {
-                if (currentItem.compareTo(currentNode.getProduct()) == 0) {
-                    currIndex++;
-                }
+    private int searchAllItemset(int currIndex, int currNode) {
+        Node currentNode = T.getNodeAt(currNode);
+        boolean isNodeNull = currentNode.isNull();
+        String currentItem = itemset.get(currIndex);
 
-                if (isAllItemSetFound(currIndex)) {
-                    return childRecursive(currentNode,currIndex) + currentNode.getFrequency();
-                } else {
-                    return childRecursive(currentNode,currIndex);
-                }
+        if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem(currentNode, currentItem)) {
+            return 0;
+        }
+        else {
+            if (currentItem.compareTo(currentNode.getProduct()) == 0) {
+                currIndex++;
+                return getItemsetFreqRecursive(currIndex, currNode);
+            } else {
+                return childRecursive(currentNode,currIndex);
             }
         }
     }

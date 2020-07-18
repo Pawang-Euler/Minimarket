@@ -9,7 +9,6 @@ import java.util.ArrayList;
  */
 public class Trie {
     private ArrayList<Node> nodes;
-    private int AllFreq;
 
     /**
      * The trie constuctor with a null node as the root of the trie
@@ -17,13 +16,11 @@ public class Trie {
     public Trie() {
         this.nodes = new ArrayList<Node>();
         this.addNode(Node.createRootNode());
-        this.AllFreq = 0;
     }
 
     public Trie(Node root) {
         this.nodes = new ArrayList<Node>();
         this.addNode(root);
-        this.AllFreq = 0;
     }
 
     public Node getRootNode() {
@@ -74,18 +71,6 @@ public class Trie {
      */
     public int size() {
         return this.nodes.size();
-    }
-
-    public void generateAllFreq() {
-        int sum = 0;
-        for (int i = 0; i < nodes.size(); i++) {
-            sum += getNodeAt(i).getFrequency();
-        }
-        this.AllFreq = sum;
-    }
-
-    public int getAllFreq() {
-        return AllFreq;
     }
 }
 

@@ -21,9 +21,8 @@ public class MultiThreadedTrieSearch extends RecursiveTask<Integer> {
 
     private int getChildFreq() {
         MultiThreadedChildFreq childFreq = new MultiThreadedChildFreq(this.trie, this.currentItemsetIndex);
-        childFreq.fork();
 
-        return childFreq.join();
+        return childFreq.invoke();
     }
 
     private int searchTrieFurther() {
@@ -53,9 +52,8 @@ public class MultiThreadedTrieSearch extends RecursiveTask<Integer> {
 
     private int doNextSearch() {
         MultiThreadedTrieSearch nextJob = this.generateNextJob();
-        nextJob.fork();
 
-        return nextJob.join();
+        return nextJob.invoke();
     }
 
     private int searchAllChildern() {

@@ -20,11 +20,11 @@ import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
  * @author ReyRizki
  */
 public class ProgramExecutionExperiment {
-    private int maxVariety;
-    private int numOfTransaction;
-    private int minSup = 1;
-    private Trie testTrie;
-    private File resultFile;
+    protected int maxVariety;
+    protected int numOfTransaction;
+    protected int minSup = 1;
+    protected Trie testTrie;
+    protected File resultFile;
 
     @Test
     public void stressTest() {
@@ -39,7 +39,7 @@ public class ProgramExecutionExperiment {
         }
     }
 
-    private StringBuilder record;
+    protected StringBuilder record;
 
     /**
      * 
@@ -111,7 +111,7 @@ public class ProgramExecutionExperiment {
         }
     }
 
-    private void GenerateAssosiationRule() {
+    protected void GenerateAssosiationRule() {
         long startTime = System.currentTimeMillis();
                 
         AssociationRuleGenerator generator = new AssociationRuleGenerator(this.testTrie, minSup);

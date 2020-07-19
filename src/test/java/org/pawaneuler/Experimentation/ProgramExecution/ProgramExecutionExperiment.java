@@ -22,61 +22,74 @@ import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
 public class ProgramExecutionExperiment {
     private int maxVariety;
     private int numOfTransaction;
-    private int minSup = 5;
+    private int minSup = 1;
     private Trie testTrie;
     private File resultFile;
 
     @Test
     public void stressTest() {
         String resultFilePath = getResultFilePath();
-        int varietiesArray[] = {5, 10};
+        int varietiesArray[] = {5, 10, 15};
 
-            // clear file
-            this.resultFile =  new File(resultFilePath);
+        // clear file
+        this.resultFile =  new File(resultFilePath);
 
-            // this.iterateWithSameVariety(5);
-            for (int variety: varietiesArray) {
-                iterateWithSameVariety(variety);
-            }
+        for (int variety: varietiesArray) {
+            iterateWithSameVariety(variety);
+        }
     }
 
+    private StringBuilder record;
+
+    /**
+     * 
+     */
     private void TransactionLogGenerator() {
         TransactionLogGenerator TLG = new TransactionLogGenerator(maxVariety);
-        String filePath = createFilePath();
+        String filePath = (createTCSVFilePath());
         try {
-           TLG.generate(numOfTransaction, filePath); 
+            long startTime = System.currentTimeMillis();
+
+            TLG.generate(numOfTransaction, filePath);
+
+            long endTime = System.currentTimeMillis();
+            long runTime = endTime - startTime;
+            this.record.append(Long.toString(runTime) + ", ");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Method to create a trie from a source.
-     * The source could be from RuntimeTest or StressTest of TransactionLogGenerator
      * 
-     * @return
-     * @throws BadExtentionException
-     * @throws IOException
      */
     private void createTrie() throws BadExtentionException, IOException {
         // String filePath = createFilePathFromRuntimeTest(1);
-        String filePath = createFilePath();
+        long startTime = System.currentTimeMillis();
+
+        String filePath = (createTCSVFilePath());
         TransactionTrieCreator creator = new TransactionTrieCreator(filePath);
         this.testTrie = creator.createTranssactionTrie();
+
+        long endTime = System.currentTimeMillis();
+        long runTime = endTime - startTime;
+        this.record.append(Long.toString(runTime) + ", ");
     }
 
     /**
-     * Method to write triescript from trie
      * 
-     * @param trie
-     * @throws BadExtentionException
-     * @throws IOException
      */
     private void writeTrieScript() throws BadExtentionException, IOException {
         try {
-            String filePath = createFilePath();
+            long startTime = System.currentTimeMillis();
+
+            String filePath = (createTriescriptFilePath());
             TriescriptWriter writer = TriescriptWriter.createWriter(filePath);
             writer.bulkWriteLine(this.testTrie);
+
+            long endTime = System.currentTimeMillis();
+            long runTime = endTime - startTime;
+            this.record.append(Long.toString(runTime) + ", ");
         } catch (BadExtentionException | IOException e) {
             e.printStackTrace();
         }
@@ -85,47 +98,50 @@ public class ProgramExecutionExperiment {
 
     private void loadTrieFromTriescript() throws BadExtentionException, IOException{
         try {
-            TransactionTrieLoader TTL = new TransactionTrieLoader(createFilePath());
+            long startTime = System.currentTimeMillis();
+
+            TransactionTrieLoader TTL = new TransactionTrieLoader(createTriescriptFilePath());
             this.testTrie = TTL.load();
+                
+            long endTime = System.currentTimeMillis();
+            long runTime = endTime - startTime;
+            this.record.append(Long.toString(runTime) + ", ");
         } catch (BadExtentionException | IOException e) {
             e.printStackTrace();
         }
     }
 
     private void GenerateAssosiationRule() {
+        long startTime = System.currentTimeMillis();
+                
         AssociationRuleGenerator generator = new AssociationRuleGenerator(this.testTrie, minSup);
         generator.execute();
+
+        long endTime = System.currentTimeMillis();
+        long runTime = endTime - startTime;
+        this.record.append(Long.toString(runTime) + ", ");
     }
 
     private void iterateWithSameVariety(int maxVariety) {
         this.maxVariety = maxVariety;
-
-        for (int i = 0; i < 5; i++) {
+        writeHeader();
+        
+        for (int i = 0; i < 6; i++) {
             this.numOfTransaction = (int) Math.pow(10, i + 1);
             this.iterateWithSameNumberOfTransactions();
         }
     }
-    
+
     private void iterateWithSameNumberOfTransactions() {
         try {
             FileWriter resultWriter = new FileWriter(this.resultFile, true);
-            StringBuilder record = new StringBuilder();
+            this.record = new StringBuilder();
             
-            for (int i = 0; i < 5; i++) {
-                long startTime = System.currentTimeMillis();
-
-                TransactionLogGenerator();
-                createTrie();
-                writeTrieScript();
-                loadTrieFromTriescript();
-                GenerateAssosiationRule();
-
-                long endTime = System.currentTimeMillis();
-
-                long runTime = endTime - startTime;
-
-                record.append(Long.toString(runTime) + " ");
-            }
+            TransactionLogGenerator();
+            createTrie();
+            writeTrieScript();
+            loadTrieFromTriescript();
+            GenerateAssosiationRule();
 
             record.append("\n");
             resultWriter.write(record.toString());
@@ -138,11 +154,26 @@ public class ProgramExecutionExperiment {
         }
     }
 
-    private String createFilePath() {
-        return "src/test/java/org/pawaneuler/Experimentation/ProgramExecutionExperiment/" + this.maxVariety + "_" + this.numOfTransaction +".tcsv";
+    private void writeHeader() {
+        try {
+            FileWriter resultWriter = new FileWriter(this.resultFile, true);
+            resultWriter.write("TLG, CreateTrie, WriteTrieScript, LoadFromTriescript, GenerateAssociationRule\n");
+            resultWriter.flush();
+            resultWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String createTriescriptFilePath() {
+        return "src/test/java/org/pawaneuler/Experimentation/ProgramExecution/" + this.maxVariety + "_" + this.numOfTransaction + ".triescript";
+    }
+
+    private String createTCSVFilePath() {
+        return "src/test/java/org/pawaneuler/Experimentation/ProgramExecution/" + this.maxVariety + "_" + this.numOfTransaction + ".tcsv";
     }
 
     private String getResultFilePath() {
-        return "src/test/java/org/pawaneuler/Experimentation/ProgramExecutionExperiment/testResult.txt";
+        return "src/test/java/org/pawaneuler/Experimentation/ProgramExecution/testResult.txt";
     }
 }

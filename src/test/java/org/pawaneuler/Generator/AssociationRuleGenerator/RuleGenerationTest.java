@@ -1,10 +1,9 @@
-package org.pawaneuler.DataTypes.Rule;
+package org.pawaneuler.Generator.AssociationRuleGenerator;
 
 import java.io.IOException;
 
 import org.junit.Test;
 import org.pawaneuler.DataTypes.Trie.Trie;
-import org.pawaneuler.Generator.AssociationRuleGenerator.AssociationRuleGenerator;
 import org.pawaneuler.Generator.TransactionLogGenerator.TransactionLogGenerator;
 import org.pawaneuler.Generator.TransactionTrieGenerator.TransactionTrieCreator;
 import org.pawaneuler.IOTools.Exceptions.BadExtentionException;

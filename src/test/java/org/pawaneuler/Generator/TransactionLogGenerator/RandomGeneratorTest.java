@@ -16,7 +16,7 @@ public class RandomGeneratorTest {
         int expectedMaxVariety = 26;
         
         assertNotNull("Random generator is NULL", random.getRandomizer());
-        assertEquals("Product variety quantity didn't match expected", expectedProductVariety, random.getProductVariety().size());
+        assertEquals("Product variety quantity didn't match expected", expectedProductVariety, random.getProductVariety().length);
         assertTrue("Product Max variety is larger than product sample", random30.getMaxVariety() <= expectedMaxVariety);
     }
 

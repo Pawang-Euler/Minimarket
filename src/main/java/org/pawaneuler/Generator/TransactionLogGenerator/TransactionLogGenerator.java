@@ -30,9 +30,7 @@ public class TransactionLogGenerator {
                     lineOftransacion++;
                 }
             } 
-        } catch (BadExtentionException e) {
-            System.out.println(e);
-        } catch (IOException e) {
+        } catch (BadExtentionException | IOException e) {
             System.out.println(e);
         }
     }

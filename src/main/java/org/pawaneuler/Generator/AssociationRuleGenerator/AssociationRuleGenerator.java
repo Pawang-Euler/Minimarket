@@ -10,9 +10,9 @@ import org.pawaneuler.DataTypes.Rule.*;
  * @author marissanura
  */
 public class AssociationRuleGenerator {
-    private AssociationRule associationRule;
-    private Trie trie;
-    private Frequency frequency;
+    protected AssociationRule associationRule;
+    protected Trie trie;
+    protected Frequency frequency;
 
     /**
      * 

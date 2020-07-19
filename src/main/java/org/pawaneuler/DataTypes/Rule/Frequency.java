@@ -6,16 +6,16 @@ import org.pawaneuler.DataTypes.Trie.Node;
 import org.pawaneuler.DataTypes.Trie.Trie;
 
 public class Frequency {
-    private Trie T;
-    private ArrayList<String> itemset;
-    private int allFreq;
+    protected Trie T;
+    protected ArrayList<String> itemset;
+    protected int allFreq;
 
     public Frequency(Trie T) {
         this.T = T;
         this.allFreq = generateAllFreq();
     }
 
-    private int generateAllFreq() {
+    protected int generateAllFreq() {
         ArrayList<Node> nodes = T.getNodes();
         int sum = 0;
         for (int i = 0; i < nodes.size(); i++) {

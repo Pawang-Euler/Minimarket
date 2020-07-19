@@ -1,4 +1,4 @@
-package org.pawaneuler.DataTypes.Rule;
+package org.pawaneuler.Generator.AssociationRulesGenerator;
 
 import java.io.IOException;
 
@@ -16,15 +16,16 @@ public class RuleGenerationTest {
 
     @Test
     public void generateTest() {
-        Trie testTrie = getTestTrieNTransactionMProducts(100,10);
+        Trie testTrie = getTestTrieNTransactionMProducts(100, 10);
         AssociationRuleGenerator generator = new AssociationRuleGenerator(testTrie, 1);
 
         generator.execute();
+        generator.printAllAssociationRules();
     }
 
     public static Trie getTestTrieNTransactionMProducts(int maxTransaction, int maxProduct) {
         TransactionLogGenerator TLG = new TransactionLogGenerator(maxProduct);
-        String filePath = "src/test/java/org/pawaneuler/DataTypes/Rule/Test_" + maxTransaction + ".tcsv";
+        String filePath = "src/test/java/org/pawaneuler/Generator/AssociationRulesGenerator/Test_" + maxTransaction + ".tcsv";
         try {
             TLG.generate(maxTransaction, filePath);
 
@@ -33,7 +34,7 @@ public class RuleGenerationTest {
         } catch (BadExtentionException | IOException e) {
             e.printStackTrace();
         }
-        
+
         return new Trie();
     }
 }

@@ -60,6 +60,10 @@ public class Trie {
         return Node.getNullNode();
     }
 
+    public ArrayList<Node> getNodes() {
+        return nodes;
+    }
+
     /**
      * Method to get elements in the nodes array
      * 
@@ -69,3 +73,4 @@ public class Trie {
         return this.nodes.size();
     }
 }
+

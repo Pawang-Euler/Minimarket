@@ -1,7 +1,6 @@
 package org.pawaneuler.DataTypes.Rule;
 
 import java.util.ArrayList;
-import org.pawaneuler.DataTypes.Trie.*;
 
 /**
  * @author Marissa
@@ -9,8 +8,8 @@ import org.pawaneuler.DataTypes.Trie.*;
 public class Rule implements Comparable<Rule> {
     private String leftItemset;
     private String rightItemset;
-    private double support;
-    private double confidence;
+    private Double support;
+    private Double confidence;
 
 
     /**
@@ -21,8 +20,8 @@ public class Rule implements Comparable<Rule> {
     public Rule(String leftItemset, String rightItemset) {
         this.leftItemset = leftItemset;
         this.rightItemset = rightItemset;
-        this.support = 0;
-        this.confidence = 0;
+        this.support = 0.0;
+        this.confidence = 0.0;
     }
 
     /**
@@ -45,7 +44,7 @@ public class Rule implements Comparable<Rule> {
      * 
      * @return support
      */
-    public double getSupport() {
+    public Double getSupport() {
         return support;
     }
 
@@ -53,7 +52,7 @@ public class Rule implements Comparable<Rule> {
      * 
      * @return confidence
      */
-    public double getConfidence() {
+    public Double getConfidence() {
         return confidence;
     }
 
@@ -77,7 +76,7 @@ public class Rule implements Comparable<Rule> {
      * 
      * @param support
      */
-    public void setSupport(double support) {
+    public void setSupport(Double support) {
         this.support = support;
     }
 
@@ -85,7 +84,7 @@ public class Rule implements Comparable<Rule> {
      * 
      * @param confidence
      */
-    public void setConfidence(double confidence) {
+    public void setConfidence(Double confidence) {
         this.confidence = confidence;
     }
 
@@ -136,9 +135,9 @@ public class Rule implements Comparable<Rule> {
     public String toString() {
         StringBuilder result = new StringBuilder();
         
-        result.append(this.leftItemset + "----->" + this.rightItemset + ",");
+        result.append(this.leftItemset + " -----> " + this.rightItemset + ",");
         result.append(" support: " + this.support + ",");
-        result.append(" confidence: " + this.confidence + ",");
+        result.append(" confidence: " + this.confidence);
         
         return result.toString();
     }

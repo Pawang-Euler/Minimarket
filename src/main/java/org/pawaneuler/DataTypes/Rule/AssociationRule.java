@@ -1,7 +1,6 @@
 package org.pawaneuler.DataTypes.Rule;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class AssociationRule 
@@ -37,6 +36,15 @@ public class AssociationRule
      */
     public ArrayList<Rule> getAssociationRules() {
         return associationRules;
+    }
+
+    /**
+     * print all Association Rule
+     */
+    public void printAll() {
+        for (Rule rule : associationRules) {
+            System.out.println(rule.toString());
+        }
     }
 
     public void sort() {

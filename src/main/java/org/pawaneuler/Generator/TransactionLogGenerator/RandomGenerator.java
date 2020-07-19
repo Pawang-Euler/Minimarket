@@ -14,6 +14,7 @@ public class RandomGenerator {
     "Ham","Ice Cream","Jelly","Kelp","Lime","Mayonaise","Nugget","Oskadon",
     "Pear","Quinoa","Red Bean","Soursoup","Tartar","Udon","Vanilla","Whipped Cream",
     "Xavier","Yellow Radish","Zest"};
+
     final int VARIETY_LIMIT = products.length;
 
     public RandomGenerator() {
@@ -30,7 +31,6 @@ public class RandomGenerator {
         this.randomizer = new Random();
         this.maxVariety = (maxVariety > VARIETY_LIMIT) ? VARIETY_LIMIT : maxVariety;
         this.productVariety = getNRandomStringFrom(this.maxVariety, products);
-        
         
     }
 

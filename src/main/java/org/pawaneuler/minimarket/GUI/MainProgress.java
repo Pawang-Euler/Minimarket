@@ -4,10 +4,12 @@ import java.awt.Dimension;
 import java.awt.event.*;
 import java.io.IOException;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -23,16 +25,21 @@ public class MainProgress extends JPanel {
     private JTextField minSupField;
     private JLabel minimumSupportLabel;
     private JTextArea progress;
+    private JScrollPane scroll;
     private JButton execute;
 
     private MainProgress(String filePath) {
         this.filePath = filePath;
+        JPanel insidePanel = new JPanel();
 
         // construct components
         minSupField = new JTextField(5);
         minimumSupportLabel = new JLabel("Minimum Support");
         progress = new JTextArea(5, 5);
         progress.setLineWrap(true);
+        progress.setEditable(false);
+        scroll = new JScrollPane(progress);
+        scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         execute = new JButton("Generate");
 
         execute.addActionListener(new ActionListener() {
@@ -48,13 +55,15 @@ public class MainProgress extends JPanel {
         // add components
         add(minSupField);
         add(minimumSupportLabel);
-        add(progress);
+        insidePanel.add(scroll);
+        add(insidePanel);
         add(execute);
 
         // set component bounds (only needed by Absolute Positioning)
         minSupField.setBounds(155, 30, 125, 25);
         minimumSupportLabel.setBounds(20, 30, 135, 25);
-        progress.setBounds(20, 125, 610, 265);
+        insidePanel.setBounds(20, 125, 610, 265);
+        scroll.setPreferredSize(new Dimension(610, 265));
         execute.setBounds(465, 30, 150, 60);
 
         this.runProgress();

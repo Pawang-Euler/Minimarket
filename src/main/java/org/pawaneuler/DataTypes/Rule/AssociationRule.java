@@ -47,6 +47,17 @@ public class AssociationRule
         }
     }
 
+    @Override
+    public String toString() {
+        String temp = "";
+        for (Rule rule : associationRules) {
+            temp += rule;
+            temp += "\n";
+        }
+
+        return temp;
+    }
+
     public void sort() {
         Collections.sort(this.associationRules);
     }

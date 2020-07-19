@@ -20,7 +20,6 @@ public class RuleGenerationTest {
         AssociationRuleGenerator generator = new AssociationRuleGenerator(testTrie, 1);
 
         generator.execute();
-        generator.printAllAssociationRules();
     }
 
     public static Trie getTestTrieNTransactionMProducts(int maxTransaction, int maxProduct) {

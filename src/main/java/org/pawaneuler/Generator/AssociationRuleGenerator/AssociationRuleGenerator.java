@@ -55,6 +55,11 @@ public class AssociationRuleGenerator {
         this.associationRule.printAll();
     }
 
+    @Override
+    public String toString() {
+        return this.associationRule.toString();
+    }
+
     /**
      * 
      * @return 2-dimentional ArrayList from frequent itemset

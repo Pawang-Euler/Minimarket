@@ -1,6 +1,7 @@
 package org.pawaneuler.minimarket.GUI;
 
 import java.awt.Dimension;
+import java.awt.event.*;
 import java.io.IOException;
 
 import javax.swing.JButton;
@@ -11,6 +12,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import org.pawaneuler.DataTypes.Trie.Trie;
+import org.pawaneuler.Generator.AssociationRuleGenerator.AssociationRuleGenerator;
 import org.pawaneuler.Generator.TransactionTrieGenerator.TransactionTrieLoader;
 import org.pawaneuler.IOTools.Exceptions.BadExtentionException;
 
@@ -20,8 +22,6 @@ public class MainProgress extends JPanel {
 
     private JTextField minSupField;
     private JLabel minimumSupportLabel;
-    private JLabel minimumConfidenceLabel;
-    private JTextField minimumConfidenceField;
     private JTextArea progress;
     private JButton execute;
 
@@ -31,12 +31,16 @@ public class MainProgress extends JPanel {
         // construct components
         minSupField = new JTextField(5);
         minimumSupportLabel = new JLabel("Minimum Support");
-        minimumConfidenceLabel = new JLabel("Minimum Confidence");
-        minimumConfidenceField = new JTextField(5);
         progress = new JTextArea(5, 5);
         progress.setLineWrap(true);
         execute = new JButton("Generate");
 
+        execute.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                generateAssociationRules(Integer.parseInt(minSupField.getText()));
+            }
+        });
         // adjust size and set layout
         setPreferredSize(new Dimension(643, 406));
         setLayout(null);
@@ -44,16 +48,12 @@ public class MainProgress extends JPanel {
         // add components
         add(minSupField);
         add(minimumSupportLabel);
-        add(minimumConfidenceLabel);
-        add(minimumConfidenceField);
         add(progress);
         add(execute);
 
         // set component bounds (only needed by Absolute Positioning)
         minSupField.setBounds(155, 30, 125, 25);
         minimumSupportLabel.setBounds(20, 30, 135, 25);
-        minimumConfidenceLabel.setBounds(20, 65, 135, 25);
-        minimumConfidenceField.setBounds(155, 65, 125, 25);
         progress.setBounds(20, 125, 610, 265);
         execute.setBounds(465, 30, 150, 60);
 
@@ -83,11 +83,18 @@ public class MainProgress extends JPanel {
             this.progress.append("Unsupported file type!\n");
         }
 
-        this.generateAssociationRules();
     }
 
-    private void generateAssociationRules() {
-        // TODO: Add Association Rules loader
+    private void generateAssociationRules(int minSupport) {
+        this.execute.setEnabled(false);
+        AssociationRuleGenerator generator = new AssociationRuleGenerator(this.processedTrie, minSupport);
+
+        this.progress.append("Calculating Association Rules\n");
+        generator.execute();
+
+        this.progress.append("Result of the Association Rules : \n");
+        this.progress.append(generator.toString());
+        this.execute.setEnabled(true);
     }
 
     private String getExtension() {

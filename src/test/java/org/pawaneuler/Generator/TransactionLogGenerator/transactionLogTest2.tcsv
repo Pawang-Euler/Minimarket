@@ -1,0 +1,1001 @@
+id,products
+0,Beer,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+1,Beer,Coke,Eggs,Fanta,Granola,Ham
+2,Apple,Jelly
+3,Beer,Coke,Dumpling,Granola,Jelly
+4,Apple,Coke,Eggs,Granola
+5,Apple,Dumpling,Granola,Ham,Ice Cream,Jelly
+6,Beer,Coke,Granola
+7,Beer,Granola,Ham,Jelly
+8,Beer
+9,Coke,Ice Cream
+10,Granola
+11,Coke,Eggs
+12,Beer,Coke,Eggs,Ice Cream
+13,Apple,Beer,Eggs,Fanta,Granola,Ham,Jelly
+14,Apple,Ice Cream,Jelly
+15,Beer,Eggs,Fanta,Granola,Ham,Ice Cream
+16,Apple,Coke,Dumpling,Eggs,Granola,Jelly
+17,Beer,Dumpling,Eggs,Granola
+18,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+19,Apple,Coke,Fanta,Ham
+20,Beer,Coke,Eggs,Fanta,Ice Cream,Jelly
+21,Apple,Coke,Eggs,Fanta,Ham
+22,Apple,Dumpling,Eggs,Ham,Ice Cream
+23,Dumpling,Eggs,Fanta,Granola,Jelly
+24,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham
+25,Apple,Beer,Coke,Dumpling,Granola,Ham,Jelly
+26,Eggs,Fanta,Granola,Ham,Ice Cream
+27,Ham
+28,Coke
+29,Apple,Beer,Eggs,Fanta,Granola,Ham,Jelly
+30,Coke
+31,Beer,Coke,Dumpling,Granola,Ham
+32,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+33,Granola,Jelly
+34,Apple,Coke,Dumpling,Eggs,Fanta,Ham,Jelly
+35,Apple,Beer,Coke,Dumpling,Jelly
+36,Apple,Eggs,Ham
+37,Apple,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+38,Apple,Beer,Dumpling,Fanta,Ice Cream,Jelly
+39,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+40,Beer,Coke,Granola
+41,Apple,Coke,Eggs,Ham,Ice Cream,Jelly
+42,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+43,Apple
+44,Beer
+45,Dumpling,Granola,Ham,Jelly
+46,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream
+47,Coke,Fanta,Granola
+48,Apple,Beer,Coke,Granola,Jelly
+49,Apple,Beer,Coke,Ice Cream,Jelly
+50,Coke,Dumpling,Eggs,Fanta,Granola,Ham
+51,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+52,Apple,Eggs,Granola
+53,Eggs,Ice Cream
+54,Apple,Beer,Eggs,Granola,Ham,Ice Cream,Jelly
+55,Beer,Eggs,Fanta,Granola,Ice Cream,Jelly
+56,Apple
+57,Granola,Ice Cream,Jelly
+58,Beer,Eggs,Granola,Ham,Ice Cream,Jelly
+59,Apple,Ham
+60,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+61,Apple,Beer,Coke,Fanta,Ham,Ice Cream
+62,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+63,Coke,Eggs,Ice Cream,Jelly
+64,Beer,Coke,Dumpling,Fanta,Ice Cream,Jelly
+65,Apple,Fanta,Ham,Ice Cream,Jelly
+66,Beer,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+67,Apple,Beer,Coke,Dumpling,Fanta,Ice Cream,Jelly
+68,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+69,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+70,Granola,Ham,Ice Cream
+71,Beer,Eggs,Fanta,Granola,Ham,Ice Cream
+72,Apple,Beer,Dumpling,Eggs,Fanta,Jelly
+73,Dumpling,Granola,Ice Cream,Jelly
+74,Beer,Eggs,Fanta,Jelly
+75,Beer,Eggs,Fanta,Granola
+76,Eggs
+77,Apple,Dumpling,Eggs,Granola,Ice Cream
+78,Beer,Coke,Dumpling,Granola,Ice Cream,Jelly
+79,Apple,Fanta
+80,Apple,Beer,Coke,Dumpling,Eggs,Jelly
+81,Apple
+82,Dumpling,Ham,Jelly
+83,Apple,Coke,Dumpling
+84,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+85,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+86,Fanta,Ham,Ice Cream
+87,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+88,Beer,Coke,Dumpling,Fanta,Granola,Ice Cream,Jelly
+89,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+90,Apple,Coke,Ice Cream
+91,Beer,Fanta,Jelly
+92,Apple,Beer,Coke,Dumpling,Fanta,Granola
+93,Coke,Eggs,Fanta,Granola,Ham,Jelly
+94,Fanta,Granola,Ham,Ice Cream
+95,Beer,Coke,Dumpling,Ham,Jelly
+96,Apple,Beer,Dumpling,Fanta,Granola,Ice Cream,Jelly
+97,Dumpling,Fanta,Ham
+98,Eggs,Granola,Ham
+99,Dumpling,Fanta,Ham,Jelly
+100,Beer,Granola,Jelly
+101,Apple,Coke,Fanta,Granola,Jelly
+102,Beer,Fanta,Granola,Ham,Jelly
+103,Apple,Beer,Granola,Ice Cream,Jelly
+104,Dumpling,Fanta,Granola,Ham
+105,Eggs
+106,Coke,Eggs,Fanta,Jelly
+107,Beer,Dumpling,Granola
+108,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream
+109,Eggs,Granola,Jelly
+110,Dumpling,Fanta
+111,Coke,Fanta,Jelly
+112,Apple,Beer,Dumpling,Ice Cream,Jelly
+113,Beer,Dumpling,Jelly
+114,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+115,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+116,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+117,Apple,Coke,Eggs,Granola,Ham
+118,Apple,Beer,Coke,Fanta,Granola,Ham,Jelly
+119,Beer,Dumpling
+120,Beer,Dumpling,Eggs
+121,Beer,Fanta,Granola,Ice Cream
+122,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola
+123,Beer,Fanta,Ham,Ice Cream
+124,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+125,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+126,Beer,Coke,Dumpling
+127,Apple,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+128,Ice Cream
+129,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+130,Beer,Ham
+131,Apple,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+132,Beer,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+133,Apple,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+134,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+135,Dumpling
+136,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+137,Ham
+138,Apple,Eggs,Fanta,Ham,Ice Cream,Jelly
+139,Coke,Dumpling,Eggs
+140,Apple,Beer,Coke,Ham
+141,Apple,Coke,Dumpling,Eggs,Ice Cream,Jelly
+142,Beer
+143,Apple,Beer,Dumpling
+144,Beer,Coke,Fanta,Granola,Ice Cream
+145,Beer,Dumpling,Eggs,Fanta,Granola,Jelly
+146,Beer
+147,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ice Cream,Jelly
+148,Apple,Eggs,Granola
+149,Beer,Coke,Eggs,Ice Cream
+150,Beer,Granola
+151,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+152,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+153,Apple,Beer,Coke,Eggs,Ham,Ice Cream,Jelly
+154,Apple,Coke,Dumpling,Eggs,Jelly
+155,Apple,Dumpling,Eggs,Fanta,Ham
+156,Coke,Fanta,Ham,Ice Cream,Jelly
+157,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+158,Apple,Beer,Fanta
+159,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+160,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+161,Dumpling,Granola
+162,Apple,Granola
+163,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+164,Apple,Fanta,Ice Cream,Jelly
+165,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+166,Apple,Coke,Eggs,Fanta,Granola,Ice Cream
+167,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+168,Ham
+169,Eggs,Ice Cream
+170,Ham
+171,Apple,Beer,Coke,Dumpling,Eggs,Granola,Jelly
+172,Beer,Dumpling,Granola,Ice Cream,Jelly
+173,Coke,Dumpling,Eggs,Ham,Ice Cream
+174,Eggs
+175,Beer,Coke,Dumpling,Granola,Ham,Jelly
+176,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Jelly
+177,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+178,Beer,Coke,Dumpling,Fanta,Granola,Ice Cream
+179,Beer,Eggs,Fanta,Ham
+180,Dumpling,Eggs,Ice Cream
+181,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+182,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+183,Apple,Beer,Coke,Eggs,Fanta,Granola,Ice Cream,Jelly
+184,Coke,Eggs,Fanta,Ice Cream
+185,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+186,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+187,Beer,Coke,Eggs,Ham,Ice Cream,Jelly
+188,Beer,Granola,Ham,Ice Cream
+189,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+190,Apple,Beer,Dumpling,Ham,Ice Cream,Jelly
+191,Coke,Dumpling,Fanta,Ham,Jelly
+192,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+193,Beer,Eggs,Fanta,Ice Cream
+194,Eggs,Jelly
+195,Apple,Beer,Dumpling,Fanta,Jelly
+196,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+197,Beer,Coke,Dumpling,Fanta,Granola,Ham,Jelly
+198,Apple,Beer,Coke,Dumpling
+199,Apple,Beer,Coke,Dumpling,Eggs,Jelly
+200,Dumpling
+201,Dumpling,Fanta
+202,Beer,Coke,Ice Cream
+203,Apple,Coke,Fanta,Jelly
+204,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham
+205,Granola
+206,Coke,Ham
+207,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+208,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+209,Apple,Beer,Dumpling,Granola,Ham,Ice Cream
+210,Apple,Dumpling,Granola
+211,Apple,Beer,Coke,Fanta,Ham,Ice Cream,Jelly
+212,Apple,Coke,Dumpling,Granola,Ham,Ice Cream
+213,Apple,Coke,Fanta,Ham
+214,Eggs
+215,Apple,Beer,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+216,Apple,Coke,Granola,Jelly
+217,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+218,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+219,Beer,Dumpling,Fanta,Ham,Ice Cream
+220,Apple,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+221,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+222,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream
+223,Dumpling
+224,Beer
+225,Beer,Dumpling,Eggs,Fanta,Ice Cream
+226,Granola
+227,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream
+228,Apple,Fanta
+229,Beer,Dumpling,Fanta,Granola,Ice Cream
+230,Apple,Beer,Coke,Dumpling,Granola,Ham,Jelly
+231,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+232,Ice Cream,Jelly
+233,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+234,Apple,Dumpling,Eggs,Granola
+235,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+236,Beer,Dumpling
+237,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+238,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+239,Apple,Coke,Granola
+240,Beer,Coke,Dumpling,Ham,Ice Cream
+241,Beer
+242,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+243,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+244,Beer,Coke,Dumpling,Fanta,Granola,Ham
+245,Apple,Jelly
+246,Apple,Beer,Dumpling,Jelly
+247,Coke,Dumpling,Fanta,Granola,Jelly
+248,Fanta
+249,Jelly
+250,Dumpling
+251,Coke,Ham
+252,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+253,Beer,Dumpling,Fanta,Jelly
+254,Beer,Dumpling
+255,Apple,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+256,Apple,Beer,Granola,Ham,Ice Cream,Jelly
+257,Dumpling,Granola
+258,Apple,Beer,Coke,Eggs,Fanta,Ham,Ice Cream,Jelly
+259,Beer,Eggs,Granola,Jelly
+260,Ice Cream
+261,Apple,Eggs,Ham
+262,Beer,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+263,Coke,Ham
+264,Apple,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+265,Beer
+266,Eggs,Granola
+267,Coke,Ice Cream
+268,Apple,Beer,Coke,Eggs,Granola,Jelly
+269,Ham
+270,Granola,Ham
+271,Apple,Beer,Coke,Eggs,Ham,Ice Cream,Jelly
+272,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+273,Apple,Beer,Coke,Dumpling,Fanta,Ham,Ice Cream,Jelly
+274,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+275,Fanta
+276,Apple,Beer,Eggs,Ice Cream,Jelly
+277,Apple,Coke,Eggs,Fanta
+278,Apple,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+279,Apple,Coke,Dumpling,Eggs,Fanta,Ham,Jelly
+280,Apple,Eggs,Ham,Ice Cream,Jelly
+281,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+282,Beer,Dumpling,Eggs,Granola,Ice Cream,Jelly
+283,Beer
+284,Coke,Granola
+285,Apple,Beer,Coke,Eggs,Fanta,Granola,Jelly
+286,Apple
+287,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+288,Apple,Beer
+289,Beer,Fanta,Granola,Ham,Ice Cream,Jelly
+290,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+291,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham
+292,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream
+293,Coke,Eggs
+294,Apple,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+295,Coke,Fanta,Granola
+296,Beer
+297,Apple,Eggs,Granola
+298,Apple,Coke,Eggs,Fanta,Ice Cream
+299,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+300,Fanta
+301,Beer,Dumpling,Eggs,Granola,Ham,Jelly
+302,Coke,Granola
+303,Coke,Dumpling,Eggs,Fanta,Ham
+304,Granola,Jelly
+305,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+306,Beer,Coke,Dumpling,Eggs,Granola,Ham
+307,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham
+308,Apple,Beer,Granola,Ham
+309,Apple,Coke,Fanta,Granola,Ice Cream,Jelly
+310,Fanta
+311,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+312,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+313,Granola,Ham
+314,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+315,Ice Cream
+316,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+317,Beer,Granola,Ham,Jelly
+318,Granola,Ice Cream
+319,Apple,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+320,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham
+321,Apple,Beer,Ham
+322,Apple,Beer,Granola,Ham,Ice Cream,Jelly
+323,Apple,Beer,Dumpling,Fanta,Granola,Ham,Ice Cream
+324,Apple,Coke,Eggs,Fanta,Granola,Ham
+325,Apple,Beer,Coke,Eggs,Fanta,Ham
+326,Apple,Jelly
+327,Jelly
+328,Apple,Beer,Jelly
+329,Beer,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+330,Apple,Coke,Fanta
+331,Apple,Fanta
+332,Apple,Beer,Granola,Ham,Jelly
+333,Apple,Beer,Eggs,Fanta,Granola,Ice Cream,Jelly
+334,Apple,Dumpling,Fanta,Granola,Ham,Ice Cream
+335,Dumpling
+336,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+337,Beer,Fanta
+338,Apple,Beer,Eggs,Fanta,Granola
+339,Coke,Granola
+340,Fanta,Jelly
+341,Jelly
+342,Dumpling,Ham
+343,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+344,Apple,Coke,Fanta,Ham,Jelly
+345,Fanta,Ham
+346,Beer,Dumpling,Eggs,Ham,Jelly
+347,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Jelly
+348,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+349,Dumpling,Granola,Ice Cream
+350,Apple,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream
+351,Apple,Beer,Coke,Granola,Ham
+352,Fanta,Granola
+353,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Jelly
+354,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+355,Ice Cream,Jelly
+356,Apple,Dumpling,Ham,Ice Cream,Jelly
+357,Beer,Coke,Dumpling,Fanta,Ham,Ice Cream
+358,Fanta,Ice Cream
+359,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+360,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+361,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+362,Apple,Beer,Coke,Granola,Ham,Jelly
+363,Coke,Granola,Ice Cream
+364,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+365,Apple,Dumpling,Fanta,Granola,Jelly
+366,Apple,Beer,Fanta,Granola,Ham,Jelly
+367,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham
+368,Beer,Coke,Eggs,Ice Cream,Jelly
+369,Apple,Beer,Coke,Dumpling,Fanta,Ham,Ice Cream,Jelly
+370,Dumpling,Granola
+371,Beer,Dumpling,Eggs,Ham,Ice Cream
+372,Beer,Dumpling,Eggs,Fanta,Ham
+373,Apple
+374,Coke,Eggs,Granola
+375,Apple,Coke,Eggs
+376,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+377,Eggs,Granola
+378,Beer,Eggs,Ham,Jelly
+379,Apple,Beer,Coke,Fanta,Granola,Ham,Ice Cream
+380,Beer,Eggs,Ham,Ice Cream,Jelly
+381,Ham
+382,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham
+383,Ice Cream
+384,Beer,Dumpling,Fanta,Granola,Ice Cream
+385,Ice Cream,Jelly
+386,Beer,Dumpling,Ice Cream
+387,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+388,Apple,Eggs,Granola
+389,Eggs,Ham
+390,Apple,Coke,Jelly
+391,Apple,Beer,Coke,Dumpling,Granola,Ham,Ice Cream,Jelly
+392,Apple,Ice Cream
+393,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ice Cream
+394,Apple,Beer,Coke,Dumpling,Granola,Ham,Ice Cream,Jelly
+395,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+396,Beer,Coke,Fanta,Granola
+397,Beer,Eggs,Jelly
+398,Beer,Coke,Dumpling,Eggs,Ham,Ice Cream
+399,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+400,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+401,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+402,Eggs,Jelly
+403,Apple,Beer,Coke,Dumpling,Granola,Ham,Ice Cream,Jelly
+404,Fanta
+405,Apple,Beer,Coke,Ham,Ice Cream
+406,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+407,Apple,Coke,Ice Cream,Jelly
+408,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+409,Apple,Eggs,Fanta,Ham,Ice Cream
+410,Dumpling
+411,Apple,Beer,Dumpling,Fanta,Ice Cream
+412,Granola,Jelly
+413,Dumpling,Fanta
+414,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+415,Apple
+416,Beer,Eggs,Fanta,Jelly
+417,Apple,Coke,Eggs
+418,Eggs,Ham,Jelly
+419,Beer,Eggs,Ham,Jelly
+420,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+421,Beer
+422,Apple,Dumpling,Fanta,Jelly
+423,Beer,Coke,Eggs,Granola,Ham
+424,Coke,Dumpling
+425,Apple,Beer,Coke,Dumpling,Eggs,Granola,Jelly
+426,Apple,Dumpling,Fanta,Ham,Ice Cream,Jelly
+427,Apple,Dumpling,Ice Cream
+428,Dumpling,Granola
+429,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+430,Eggs,Fanta,Granola
+431,Coke,Dumpling,Fanta,Ice Cream,Jelly
+432,Apple,Beer,Dumpling,Eggs,Ham,Ice Cream
+433,Coke,Ham,Ice Cream
+434,Apple,Coke,Eggs,Granola,Ice Cream
+435,Apple,Coke,Dumpling,Fanta
+436,Jelly
+437,Coke,Dumpling,Granola,Ice Cream
+438,Apple,Fanta
+439,Apple,Beer,Coke,Eggs,Granola,Ham,Ice Cream,Jelly
+440,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+441,Fanta,Ham,Ice Cream
+442,Coke,Dumpling,Granola,Ham
+443,Apple,Coke,Jelly
+444,Apple,Ice Cream
+445,Apple,Beer,Coke,Eggs,Ham
+446,Apple,Beer,Dumpling,Granola,Ham,Ice Cream,Jelly
+447,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+448,Coke,Fanta,Jelly
+449,Granola
+450,Coke,Dumpling,Eggs,Jelly
+451,Apple,Coke,Dumpling,Eggs,Jelly
+452,Apple,Beer,Coke,Dumpling,Eggs,Ham,Jelly
+453,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream
+454,Beer,Coke,Dumpling,Fanta,Granola,Ice Cream
+455,Coke,Fanta,Ham,Ice Cream
+456,Apple,Coke,Dumpling,Ice Cream,Jelly
+457,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+458,Apple,Coke,Dumpling,Fanta,Granola,Ice Cream
+459,Dumpling
+460,Fanta,Jelly
+461,Apple,Beer,Eggs,Granola,Ice Cream
+462,Beer,Coke,Granola,Ice Cream,Jelly
+463,Dumpling,Granola
+464,Coke
+465,Apple,Beer,Coke
+466,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+467,Dumpling,Eggs,Granola,Ham,Jelly
+468,Apple,Coke,Eggs,Granola,Ham,Jelly
+469,Apple,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+470,Apple,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+471,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+472,Apple,Beer,Ice Cream
+473,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+474,Ham
+475,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+476,Apple,Coke,Eggs,Fanta,Granola,Ice Cream,Jelly
+477,Beer,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+478,Beer,Coke,Eggs,Fanta,Ham
+479,Coke,Dumpling,Eggs,Fanta,Granola,Ham
+480,Dumpling,Ice Cream,Jelly
+481,Dumpling
+482,Ice Cream
+483,Apple,Dumpling,Fanta,Granola
+484,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream
+485,Dumpling,Eggs,Fanta,Granola,Ice Cream
+486,Beer,Eggs,Fanta,Ham,Ice Cream
+487,Beer,Coke,Dumpling,Eggs,Fanta,Granola
+488,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+489,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+490,Jelly
+491,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+492,Apple,Beer,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+493,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ice Cream
+494,Apple,Beer,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+495,Dumpling,Ham
+496,Apple,Beer,Dumpling,Fanta,Ham,Ice Cream
+497,Apple,Beer,Coke,Fanta,Granola,Ham,Ice Cream,Jelly
+498,Apple,Beer,Dumpling,Fanta,Granola,Ice Cream,Jelly
+499,Apple,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+500,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+501,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+502,Coke
+503,Fanta,Ice Cream
+504,Coke
+505,Apple,Beer,Coke,Dumpling,Granola
+506,Beer,Eggs,Fanta,Jelly
+507,Dumpling,Granola
+508,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+509,Apple,Coke,Granola,Ham,Ice Cream
+510,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+511,Apple,Beer,Eggs,Granola,Ice Cream
+512,Apple,Beer,Eggs,Fanta,Ice Cream,Jelly
+513,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+514,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+515,Beer,Coke,Eggs,Fanta
+516,Ice Cream,Jelly
+517,Ice Cream
+518,Apple
+519,Apple,Beer,Dumpling,Granola,Ham,Jelly
+520,Beer,Granola,Jelly
+521,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+522,Apple,Beer,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+523,Apple,Beer,Eggs,Fanta,Granola,Ham
+524,Ice Cream
+525,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+526,Eggs
+527,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+528,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+529,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+530,Apple,Dumpling,Granola
+531,Ham,Ice Cream
+532,Beer,Coke,Dumpling,Eggs,Fanta
+533,Apple,Ice Cream
+534,Apple,Eggs,Fanta,Granola,Ham,Ice Cream
+535,Beer,Coke,Dumpling,Eggs,Fanta
+536,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+537,Beer,Coke,Dumpling,Fanta,Ham,Jelly
+538,Apple,Beer
+539,Beer,Jelly
+540,Apple,Beer,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+541,Granola,Ham,Ice Cream,Jelly
+542,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+543,Coke,Dumpling,Granola,Ham,Ice Cream,Jelly
+544,Coke,Granola
+545,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream
+546,Apple,Ham,Ice Cream
+547,Beer,Coke,Dumpling,Eggs,Fanta,Granola
+548,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+549,Jelly
+550,Apple,Coke,Fanta,Granola,Ham
+551,Beer,Eggs,Fanta,Granola,Ice Cream
+552,Apple,Eggs,Fanta,Ham
+553,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+554,Beer
+555,Ice Cream
+556,Beer
+557,Beer
+558,Apple,Beer,Granola,Ice Cream
+559,Beer,Coke,Fanta,Ham
+560,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+561,Fanta
+562,Apple,Eggs,Granola,Ice Cream
+563,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+564,Apple,Beer,Dumpling,Granola,Ham,Ice Cream
+565,Beer,Coke,Dumpling,Eggs,Jelly
+566,Beer,Coke,Dumpling,Eggs,Ham
+567,Beer,Coke,Fanta,Ham,Ice Cream,Jelly
+568,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+569,Apple,Beer,Coke,Eggs,Ice Cream,Jelly
+570,Dumpling,Ham,Jelly
+571,Dumpling,Granola
+572,Apple,Beer,Coke,Fanta,Granola,Ham,Ice Cream,Jelly
+573,Apple,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+574,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+575,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+576,Apple
+577,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream
+578,Beer
+579,Apple,Coke,Fanta,Ice Cream
+580,Apple,Beer,Coke,Eggs,Fanta,Ice Cream
+581,Beer,Dumpling,Fanta,Ham
+582,Coke,Dumpling,Eggs,Fanta
+583,Beer,Granola,Ham,Jelly
+584,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+585,Fanta,Granola
+586,Apple,Eggs
+587,Coke,Dumpling,Granola
+588,Apple,Dumpling,Eggs,Fanta,Granola,Jelly
+589,Beer,Fanta,Granola,Ham
+590,Granola
+591,Granola,Ham,Ice Cream,Jelly
+592,Beer,Eggs
+593,Apple,Coke,Dumpling,Granola,Jelly
+594,Apple,Beer,Coke,Eggs,Ice Cream,Jelly
+595,Coke,Dumpling,Granola
+596,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Jelly
+597,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Jelly
+598,Ice Cream
+599,Fanta
+600,Ice Cream
+601,Apple,Beer,Fanta,Ham
+602,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+603,Apple,Jelly
+604,Beer,Dumpling,Ice Cream,Jelly
+605,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+606,Beer,Fanta,Granola,Ice Cream
+607,Coke,Dumpling,Eggs,Granola,Ham,Jelly
+608,Coke,Eggs,Granola,Ham,Ice Cream,Jelly
+609,Coke,Eggs,Ham,Ice Cream
+610,Apple,Coke
+611,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+612,Coke,Fanta
+613,Apple,Coke,Fanta,Granola,Ice Cream,Jelly
+614,Apple,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream
+615,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream
+616,Apple,Fanta
+617,Apple,Coke,Dumpling,Granola,Ham,Jelly
+618,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream
+619,Apple,Beer,Coke,Fanta,Granola,Ham,Jelly
+620,Ice Cream
+621,Apple,Beer,Dumpling,Eggs,Granola,Ham
+622,Apple,Beer,Fanta,Granola
+623,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Jelly
+624,Coke
+625,Dumpling
+626,Apple,Beer,Eggs,Fanta,Granola,Ice Cream,Jelly
+627,Apple,Beer,Coke,Dumpling,Fanta,Granola,Jelly
+628,Apple,Eggs,Ham,Jelly
+629,Coke,Dumpling,Fanta,Granola
+630,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+631,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+632,Apple,Eggs,Fanta,Granola,Ice Cream
+633,Jelly
+634,Coke,Dumpling,Granola,Ham,Jelly
+635,Ice Cream,Jelly
+636,Apple,Coke,Dumpling,Eggs,Fanta
+637,Apple,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+638,Ham,Jelly
+639,Beer,Dumpling,Eggs,Ham,Jelly
+640,Apple,Coke,Eggs,Fanta
+641,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream
+642,Beer,Coke,Dumpling,Eggs,Jelly
+643,Beer,Eggs,Fanta,Granola,Ham
+644,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+645,Beer,Coke,Eggs,Fanta,Granola,Ice Cream,Jelly
+646,Apple,Ham,Ice Cream,Jelly
+647,Apple,Beer,Dumpling,Granola,Ham,Ice Cream
+648,Fanta,Jelly
+649,Fanta
+650,Fanta
+651,Apple,Beer,Coke,Eggs,Jelly
+652,Beer,Fanta
+653,Granola
+654,Coke,Fanta,Granola,Jelly
+655,Dumpling,Eggs
+656,Fanta,Granola
+657,Granola
+658,Beer,Coke,Eggs,Granola
+659,Fanta
+660,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+661,Coke,Dumpling,Fanta,Ice Cream
+662,Apple,Dumpling,Eggs,Fanta,Ham
+663,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Jelly
+664,Eggs,Ice Cream
+665,Granola,Ham
+666,Apple,Beer,Coke,Ham,Ice Cream
+667,Apple,Coke,Dumpling,Fanta,Granola,Ham
+668,Apple,Beer,Dumpling,Eggs,Fanta,Ham
+669,Coke,Granola
+670,Coke,Eggs,Fanta,Ham
+671,Eggs
+672,Beer,Fanta,Ham,Jelly
+673,Apple,Coke,Dumpling,Granola,Ham,Jelly
+674,Apple,Beer,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+675,Apple,Eggs,Ham,Jelly
+676,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+677,Fanta,Jelly
+678,Ice Cream
+679,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham
+680,Jelly
+681,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+682,Granola,Ham,Jelly
+683,Apple,Beer,Coke,Eggs,Granola,Ham,Ice Cream,Jelly
+684,Coke,Eggs,Fanta,Granola,Ham,Jelly
+685,Eggs,Fanta
+686,Apple,Coke,Dumpling,Fanta,Granola,Ham,Jelly
+687,Granola
+688,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+689,Apple,Coke,Fanta,Jelly
+690,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+691,Coke,Fanta,Ham,Ice Cream,Jelly
+692,Beer,Coke,Eggs,Ham,Ice Cream,Jelly
+693,Jelly
+694,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Jelly
+695,Apple,Coke
+696,Apple,Beer,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+697,Apple,Dumpling,Jelly
+698,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+699,Beer,Eggs,Granola,Ham
+700,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+701,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+702,Apple,Fanta,Ham
+703,Apple,Beer,Coke,Dumpling,Eggs,Granola,Jelly
+704,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+705,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+706,Beer,Fanta,Granola,Ham,Jelly
+707,Ice Cream
+708,Apple,Fanta,Ice Cream,Jelly
+709,Apple,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+710,Apple,Beer,Fanta,Granola,Ham,Ice Cream,Jelly
+711,Apple,Dumpling,Eggs,Granola,Ham,Jelly
+712,Apple,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+713,Coke,Dumpling,Eggs,Fanta,Ham,Jelly
+714,Beer,Dumpling,Fanta
+715,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+716,Apple,Beer,Dumpling,Ham,Ice Cream
+717,Beer,Eggs
+718,Coke,Dumpling,Eggs
+719,Beer,Eggs,Fanta,Granola,Ham,Ice Cream
+720,Beer,Coke,Eggs,Fanta,Ice Cream
+721,Apple,Beer,Coke,Eggs,Granola,Ham,Ice Cream,Jelly
+722,Apple,Beer,Dumpling,Eggs,Granola,Ham
+723,Beer,Dumpling,Eggs,Fanta,Ham
+724,Apple,Beer,Coke,Granola,Ham,Ice Cream,Jelly
+725,Fanta
+726,Dumpling,Eggs,Jelly
+727,Apple,Beer,Coke,Dumpling,Fanta,Ham,Ice Cream,Jelly
+728,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+729,Apple,Beer,Coke,Fanta,Ham,Ice Cream
+730,Apple
+731,Beer,Dumpling,Eggs,Fanta,Granola
+732,Apple,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream
+733,Coke
+734,Apple,Beer,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+735,Eggs,Ice Cream
+736,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream
+737,Apple,Dumpling,Fanta,Ham,Ice Cream
+738,Coke,Dumpling,Eggs,Granola,Ice Cream,Jelly
+739,Beer,Dumpling,Eggs,Fanta,Granola,Ham
+740,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+741,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+742,Beer,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+743,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+744,Fanta,Granola,Ham,Jelly
+745,Apple,Granola,Jelly
+746,Apple,Coke,Dumpling,Granola,Ham
+747,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream
+748,Beer,Coke
+749,Apple,Beer,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+750,Beer,Coke,Dumpling,Granola,Ice Cream,Jelly
+751,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+752,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+753,Apple,Beer,Dumpling,Granola,Jelly
+754,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+755,Coke,Dumpling,Fanta
+756,Coke,Dumpling,Eggs,Granola,Ham
+757,Dumpling,Eggs,Granola,Ice Cream
+758,Beer,Coke,Eggs,Granola,Ice Cream
+759,Ice Cream
+760,Ice Cream
+761,Beer,Fanta
+762,Apple,Beer,Dumpling,Eggs,Granola,Ice Cream,Jelly
+763,Dumpling,Eggs,Ham,Ice Cream,Jelly
+764,Beer,Coke,Eggs,Ice Cream,Jelly
+765,Coke,Fanta,Ham
+766,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream
+767,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+768,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+769,Coke,Eggs,Fanta,Granola,Ice Cream
+770,Apple,Beer,Dumpling,Granola,Jelly
+771,Beer,Eggs
+772,Beer,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+773,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+774,Apple,Dumpling,Fanta,Ham
+775,Apple,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+776,Apple,Beer,Coke,Fanta,Ham,Jelly
+777,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+778,Apple,Beer,Eggs,Fanta,Jelly
+779,Apple,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+780,Beer,Fanta,Ice Cream,Jelly
+781,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+782,Apple,Fanta,Ham
+783,Beer,Dumpling,Fanta,Ice Cream
+784,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+785,Coke,Ice Cream
+786,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+787,Apple,Coke,Eggs,Ice Cream
+788,Beer,Coke,Dumpling,Granola,Ham
+789,Apple,Beer,Granola,Ice Cream
+790,Beer,Granola,Ham,Ice Cream
+791,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream
+792,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+793,Dumpling
+794,Fanta
+795,Apple,Beer,Coke,Dumpling,Eggs,Ice Cream
+796,Apple,Ham
+797,Apple,Beer,Dumpling,Eggs,Ham,Ice Cream,Jelly
+798,Apple,Coke,Ham,Ice Cream
+799,Beer,Fanta,Jelly
+800,Apple,Coke,Eggs,Fanta,Ham,Ice Cream
+801,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Jelly
+802,Apple,Beer,Coke,Fanta,Granola,Ham,Ice Cream,Jelly
+803,Beer,Ham
+804,Granola
+805,Apple,Beer,Coke,Dumpling,Eggs,Ham,Ice Cream
+806,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+807,Apple,Dumpling,Eggs,Granola,Jelly
+808,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+809,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+810,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+811,Apple,Beer,Eggs,Ice Cream
+812,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+813,Dumpling,Eggs,Granola
+814,Apple,Coke,Granola,Ham
+815,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Jelly
+816,Apple,Beer,Coke,Dumpling,Fanta,Ham,Ice Cream,Jelly
+817,Apple,Fanta,Granola,Ham,Ice Cream
+818,Beer,Eggs,Fanta,Granola,Ham,Jelly
+819,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+820,Beer,Coke,Granola
+821,Apple,Ice Cream
+822,Apple,Coke,Dumpling,Eggs
+823,Apple,Ham
+824,Apple,Dumpling,Eggs,Fanta
+825,Fanta,Granola
+826,Apple,Fanta,Ham
+827,Coke,Eggs,Fanta,Granola
+828,Beer,Fanta,Granola,Ham,Jelly
+829,Ice Cream
+830,Eggs
+831,Apple,Beer,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+832,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+833,Beer,Dumpling
+834,Apple,Dumpling,Granola
+835,Eggs,Ice Cream
+836,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+837,Eggs,Fanta
+838,Apple,Dumpling,Granola,Ham,Ice Cream
+839,Apple,Fanta
+840,Beer,Dumpling,Fanta,Granola,Ham
+841,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+842,Apple,Coke,Eggs,Fanta,Ice Cream
+843,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+844,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+845,Apple,Coke,Jelly
+846,Apple,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+847,Dumpling,Eggs,Ice Cream
+848,Ice Cream
+849,Coke,Eggs,Ham
+850,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream
+851,Beer,Coke,Dumpling,Eggs,Granola,Ham
+852,Apple,Dumpling,Eggs,Fanta,Granola,Ham
+853,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+854,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Jelly
+855,Apple,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+856,Dumpling,Granola
+857,Coke,Granola,Jelly
+858,Apple,Beer
+859,Beer,Dumpling,Eggs,Fanta,Granola,Ice Cream,Jelly
+860,Apple,Beer,Dumpling,Fanta
+861,Coke,Eggs
+862,Coke,Dumpling,Fanta,Granola,Ham,Jelly
+863,Apple,Coke,Dumpling,Fanta,Jelly
+864,Eggs,Ham
+865,Coke,Ice Cream
+866,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+867,Coke,Dumpling,Jelly
+868,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+869,Apple
+870,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+871,Eggs
+872,Apple,Beer,Ice Cream
+873,Apple,Eggs,Ham
+874,Beer,Coke,Eggs,Fanta,Granola
+875,Apple,Ice Cream
+876,Apple,Jelly
+877,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+878,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+879,Beer,Coke,Eggs,Fanta,Ice Cream,Jelly
+880,Beer
+881,Fanta,Granola
+882,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+883,Apple,Beer,Dumpling,Eggs,Ham,Jelly
+884,Apple,Beer,Fanta,Ham,Ice Cream,Jelly
+885,Apple,Coke,Granola
+886,Dumpling,Fanta,Ham
+887,Apple,Dumpling,Ham
+888,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream
+889,Beer,Eggs,Granola,Ham,Ice Cream,Jelly
+890,Dumpling
+891,Apple,Beer,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+892,Jelly
+893,Beer,Eggs,Ice Cream,Jelly
+894,Apple,Beer,Dumpling,Granola,Ham,Ice Cream,Jelly
+895,Apple
+896,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+897,Coke,Fanta,Granola,Ham,Jelly
+898,Apple,Coke,Dumpling,Fanta
+899,Beer,Ham
+900,Dumpling
+901,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+902,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Jelly
+903,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+904,Coke
+905,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+906,Apple,Eggs,Fanta,Jelly
+907,Granola
+908,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+909,Apple,Beer,Granola,Ice Cream,Jelly
+910,Dumpling,Fanta,Granola
+911,Apple,Beer,Coke,Dumpling,Eggs,Ham,Ice Cream
+912,Beer,Eggs,Fanta,Ham,Jelly
+913,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+914,Apple,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+915,Apple,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+916,Apple,Dumpling,Fanta,Granola,Ham,Jelly
+917,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream
+918,Beer,Ice Cream
+919,Apple,Beer,Dumpling,Ham,Ice Cream
+920,Coke,Eggs
+921,Apple,Beer,Coke,Eggs,Fanta,Granola
+922,Coke,Eggs,Fanta,Granola,Jelly
+923,Beer,Coke,Dumpling,Granola,Ham,Jelly
+924,Apple,Beer,Coke,Fanta,Ham,Ice Cream
+925,Fanta
+926,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+927,Beer,Dumpling,Fanta,Ice Cream
+928,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream
+929,Ice Cream
+930,Dumpling
+931,Apple,Dumpling,Eggs,Granola,Ham,Jelly
+932,Beer,Jelly
+933,Coke,Granola
+934,Apple,Beer,Coke,Eggs,Fanta,Granola,Ham,Jelly
+935,Beer,Coke,Eggs,Granola,Jelly
+936,Jelly
+937,Apple,Beer,Dumpling,Eggs,Fanta,Jelly
+938,Apple,Beer,Coke,Granola,Ham,Jelly
+939,Apple,Coke,Dumpling,Eggs,Fanta,Jelly
+940,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Jelly
+941,Dumpling,Eggs,Granola,Ham
+942,Apple,Beer,Fanta,Granola,Ham,Jelly
+943,Ham
+944,Apple,Ice Cream,Jelly
+945,Apple,Beer,Coke,Dumpling,Ice Cream
+946,Coke,Ice Cream,Jelly
+947,Apple,Beer,Coke,Fanta,Ham
+948,Apple,Fanta,Jelly
+949,Beer,Coke,Ham,Ice Cream
+950,Eggs
+951,Beer,Dumpling,Granola,Ice Cream,Jelly
+952,Eggs
+953,Ham
+954,Coke,Eggs
+955,Coke,Fanta,Ice Cream,Jelly
+956,Apple,Coke,Fanta,Granola,Ham,Jelly
+957,Apple,Coke,Ham,Ice Cream,Jelly
+958,Beer,Coke,Dumpling,Eggs,Ham
+959,Apple,Beer,Dumpling,Eggs,Fanta,Ham
+960,Beer,Coke,Dumpling,Fanta,Granola,Ham,Ice Cream,Jelly
+961,Fanta
+962,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+963,Beer,Dumpling,Fanta,Granola
+964,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+965,Apple,Dumpling,Fanta
+966,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+967,Apple,Beer
+968,Fanta,Ham
+969,Apple,Coke,Dumpling,Eggs,Granola,Jelly
+970,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Jelly
+971,Apple
+972,Coke,Eggs,Granola
+973,Apple,Beer,Ice Cream,Jelly
+974,Beer,Dumpling,Fanta,Granola,Ham,Ice Cream
+975,Apple,Coke,Eggs,Fanta,Ham,Ice Cream,Jelly
+976,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+977,Beer,Eggs,Granola
+978,Apple,Beer,Coke,Dumpling,Granola,Ham,Ice Cream,Jelly
+979,Apple,Beer,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream,Jelly
+980,Apple,Fanta
+981,Apple,Ham,Jelly
+982,Apple,Beer,Coke,Fanta,Granola,Ham,Ice Cream
+983,Apple,Coke,Dumpling,Eggs,Fanta,Granola,Ice Cream
+984,Coke,Dumpling,Eggs,Granola,Ham,Ice Cream
+985,Apple,Coke,Dumpling,Fanta,Granola,Ham,Jelly
+986,Coke,Eggs,Fanta,Granola,Ham,Ice Cream
+987,Apple,Coke,Eggs
+988,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream
+989,Eggs,Granola,Ham,Ice Cream,Jelly
+990,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ham,Ice Cream,Jelly
+991,Dumpling,Ice Cream
+992,Apple,Coke,Fanta,Ice Cream
+993,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham
+994,Beer,Dumpling,Eggs,Fanta,Granola
+995,Apple,Beer,Dumpling,Eggs,Fanta,Ham,Jelly
+996,Apple,Coke,Dumpling,Eggs,Ham,Ice Cream,Jelly
+997,Beer,Dumpling,Fanta
+998,Beer,Coke,Dumpling,Eggs,Fanta,Granola,Ham,Ice Cream,Jelly
+999,Dumpling,Jelly

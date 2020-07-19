@@ -42,29 +42,29 @@ public class Frequency {
     /**
      * to get itemset frequency in recursive
      * 
-     * @param currIndex current index of current item string that want to checked
+     * @param currIndexItemset current index of current item string that want to checked
      * @param currNode current node of trie
      * @return frequency of itemset
      */
-    private int getItemsetFreqRecursive(int currIndex, int currNode) {
-        if (isAllItemSetFound(currIndex)) {
-            return generateAllFrequent(currIndex, currNode);
+    private int getItemsetFreqRecursive(int currIndexItemset, int currNode) {
+        if (isAllItemSetFound(currIndexItemset)) {
+            return generateAllFrequent(currIndexItemset, currNode);
         } else {
-            return searchAllItemset(currIndex, currNode);
+            return searchAllItemset(currIndexItemset, currNode);
         }
     }
 
     /**
      * method to get itemset frequency if all itemset isn't all found in trie
      * 
-     * @param currIndex current index of current item string that want to checked
+     * @param currIndexItemset current index of current item string that want to checked
      * @param currNode current node of trie
      * @return frequency of itemset
      */
-    private int searchAllItemset(int currIndex, int currNode) {
+    private int searchAllItemset(int currIndexItemset, int currNode) {
         Node currentNode = T.getNodeAt(currNode);
         boolean isNodeNull = currentNode.isNull();
-        String currentItem = itemset.get(currIndex);
+        String currentItem = itemset.get(currIndexItemset);
 
         if (isNodeNull || isCurrentNodeProductGreaterThanCurrentItem(currentNode, currentItem)) {
             return 0;
@@ -72,10 +72,10 @@ public class Frequency {
         else {
             //Check if current item is same with current node's product
             if (currentItem.compareTo(currentNode.getProduct()) == 0) {
-                currIndex++;
-                return getItemsetFreqRecursive(currIndex, currNode);
+                currIndexItemset++;
+                return getItemsetFreqRecursive(currIndexItemset, currNode);
             } else {
-                return childRecursive(currentNode,currIndex);
+                return childRecursive(currentNode,currIndexItemset);
             }
         }
     }
@@ -98,26 +98,26 @@ public class Frequency {
 
     /**
      * 
-     * @param currIndex
+     * @param currIndexItemset
      * @return
      */
-    private boolean isAllItemSetFound(int currIndex) {
-        return itemset.size() == currIndex;
+    private boolean isAllItemSetFound(int currIndexItemset) {
+        return itemset.size() == currIndexItemset;
     }
 
     /**
      * to get frequency of itemset from current node child with recursive
      * 
-     * @param currIndex current index of current item string that want to checked
+     * @param currIndexItemset current index of current item string that want to checked
      * @param currNode current node of trie
      * @return
      */
-    private int childRecursive(Node currentNode, int currIndex) {
+    private int childRecursive(Node currentNode, int currIndexItemset) {
         int sumFreq = 0;
 
         for (int i = 0; i < currentNode.getDegree(); i++) {
             int childrenIndex = currentNode.getChildIndexAt(i);
-            sumFreq += getItemsetFreqRecursive(currIndex, childrenIndex);
+            sumFreq += getItemsetFreqRecursive(currIndexItemset, childrenIndex);
         }
         return sumFreq;
     }
@@ -125,17 +125,17 @@ public class Frequency {
     /**
      * generate frequency itemset if all itemset is found
      * 
-     * @param currIndex current index of current item string that want to checked
+     * @param currIndexItemset current index of current item string that want to checked
      * @param currNode current node of trie
      * @return
      */
-    private int generateAllFrequent(int currIndex, int currNode) {
+    private int generateAllFrequent(int currIndexItemset, int currNode) {
         Node currentNode = T.getNodeAt(currNode);
         boolean isNodeNull = currentNode.isNull();
         if (isNodeNull) {
             return 0;
         } else {
-            return childRecursive(currentNode, currIndex) + currentNode.getFrequency(); 
+            return childRecursive(currentNode, currIndexItemset) + currentNode.getFrequency(); 
         }
     }
 }

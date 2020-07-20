@@ -106,7 +106,7 @@ public class Rule implements Comparable<Rule> {
     public ArrayList<String> leftItemlistToArrayList() {
         ArrayList<String> leftList = new ArrayList<String>();
 
-        String[] temp = this.leftItemset.split(",");
+        String[] temp = this.leftItemset.split(", ");
 
         for (int i = 0; i < temp.length; i++) {
             leftList.add(temp[i]);
@@ -122,7 +122,7 @@ public class Rule implements Comparable<Rule> {
     public ArrayList<String> rightItemlistToArrayList() {
         ArrayList<String> rightList = new ArrayList<String>();
 
-        String[] temp = this.rightItemset.split(",");
+        String[] temp = this.rightItemset.split(", ");
 
         for (int i = 0; i < temp.length; i++) {
             rightList.add(temp[i]);

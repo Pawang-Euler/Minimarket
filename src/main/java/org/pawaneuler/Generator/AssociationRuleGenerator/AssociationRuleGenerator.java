@@ -55,6 +55,11 @@ public class AssociationRuleGenerator {
         this.associationRule.printAll();
     }
 
+    @Override
+    public String toString() {
+        return this.associationRule.toString();
+    }
+
     /**
      * 
      * @return 2-dimentional ArrayList from frequent itemset
@@ -153,6 +158,9 @@ public class AssociationRuleGenerator {
             Rule rule = iter.next();
             rule.setSupport(subsetSupport);
             generateConfidence(rule);
+            if (rule.getConfidence() == 0.0) {
+                iter.remove();
+            }
         }
         return subsetRule;
     }
@@ -227,6 +235,12 @@ public class AssociationRuleGenerator {
      * @param rule
      */
     private void generateConfidence(Rule rule) {
-        rule.setConfidence(rule.getSupport()*frequency.getAllFreq() / new Double(frequency.getItemsetFreq(rule.leftItemlistToArrayList())));
+        int leftItemsetFreq= frequency.getItemsetFreq(rule.leftItemlistToArrayList());
+        if (leftItemsetFreq == 0) {
+            rule.setConfidence(0.0);
+        }
+        else {
+            rule.setConfidence(rule.getSupport()*frequency.getAllFreq() / new Double(leftItemsetFreq));
+        }
     }
 }

@@ -10,7 +10,8 @@ import java.util.List;
 
 public class Combinations {
 
-	/* arr[] ---> Input Array 
+	/* 
+	result ---> Input ArrayList 
 	data[] ---> Temporary array to store current combination 
 	start & end ---> Staring and Ending indexes in arr[] 
 	index ---> Current index in data[] 

@@ -52,7 +52,7 @@ public class RuleTest {
     @Test
     public void stringItemListToArrayListTest() {
         try {
-            Rule rule = new Rule("Bread,Cereal,Milk","Coke,Diaper");
+            Rule rule = new Rule("Bread, Cereal, Milk","Coke, Diaper");
             ArrayList<String> expectedLeftArrayList = new ArrayList<String>();
             ArrayList<String> expectedRightArrayList = new ArrayList<String>();
             

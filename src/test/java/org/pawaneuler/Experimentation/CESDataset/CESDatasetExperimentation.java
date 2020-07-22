@@ -4,12 +4,14 @@ import static org.junit.Assert.fail;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.opencsv.CSVWriter;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.pawaneuler.Converter.CESDatasetToTCSVConverter.CESDatasetToTCSVConverter;
+import org.pawaneuler.DataTypes.Rule.Combinations;
 import org.pawaneuler.DataTypes.Trie.Trie;
 import org.pawaneuler.Generator.AssociationRuleGenerator.AssociationRuleGenerator;
 import org.pawaneuler.Generator.TransactionTrieGenerator.TransactionTrieCreator;
@@ -78,7 +80,7 @@ public class CESDatasetExperimentation {
             runtime.gc();
             long memoryUsed = runtime.totalMemory() - runtime.freeMemory();
 
-            writeExperimentResult(executionTime, memoryUsed);
+            writeExperimentResult("experimentResult", executionTime, memoryUsed);
 
             System.out.println("Experimentation is done");
         } catch (BadExtentionException e) {
@@ -90,8 +92,49 @@ public class CESDatasetExperimentation {
         }
     }
 
-    public void writeExperimentResult(long executionTime, long memoryUsed) {
-        String experimentResultFilePath = "src/test/java/org/pawaneuler/Experimentation/CESDataset/experimentResult.csv";
+    @Test
+    public void runCombinationExperimentation() {
+        try {
+            TransactionTrieLoader loader = new TransactionTrieLoader(CESDatasetTrie);
+            Trie trie = loader.load();
+            System.out.println("Transaction Trie is loaded");
+
+            AssociationRuleGenerator generator = new AssociationRuleGenerator(trie, 3);
+            
+            // generate unique products from trie
+            ArrayList<String> uniqueProducts = generator.getUniqueProducts();
+            System.out.println("Unique products generated");
+            System.out.println(uniqueProducts.size());
+
+            // generate combination from unique product
+            long startTime = System.currentTimeMillis();
+
+            ArrayList<ArrayList<String>> combination = Combinations.getAllCombination(uniqueProducts);
+
+            long endTime = System.currentTimeMillis();
+            long executionTime = endTime - startTime;
+
+            // get memory used
+            Runtime runtime = Runtime.getRuntime();
+            runtime.gc();
+            long memoryUsed = runtime.totalMemory() - runtime.freeMemory();
+            
+            System.out.println("Combination is generated");
+
+            writeExperimentResult("combinationExperimentResult.csv", executionTime, memoryUsed);
+
+            System.out.println("Experimentation is done");
+        } catch (BadExtentionException e) {
+            fail("Wrong File extension reading!");
+            e.printStackTrace();
+        } catch (IOException e) {
+            fail("Failed to read file!");
+            e.printStackTrace();
+        }
+    }
+
+    public void writeExperimentResult(String filename, long executionTime, long memoryUsed) {
+        String experimentResultFilePath = "src/test/java/org/pawaneuler/Experimentation/CESDataset/" + filename;
         
         // create a record to write
         String[] result = new String[2];

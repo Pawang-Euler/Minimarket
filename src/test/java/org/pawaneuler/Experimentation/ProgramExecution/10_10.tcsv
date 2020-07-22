@@ -1,0 +1,11 @@
+id,products
+0,Coke,Dumpling,Granola,Ham,Ice Cream,Jelly
+1,Apple,Ice Cream
+2,Eggs
+3,Eggs,Jelly
+4,Ice Cream
+5,Coke,Jelly
+6,Apple,Coke,Ice Cream
+7,Apple,Beer,Coke,Dumpling,Eggs,Fanta,Ice Cream,Jelly
+8,Beer,Coke
+9,Coke

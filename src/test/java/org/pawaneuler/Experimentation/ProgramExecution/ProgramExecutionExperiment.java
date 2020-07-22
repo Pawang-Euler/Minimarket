@@ -29,7 +29,7 @@ public class ProgramExecutionExperiment {
     @Test
     public void stressTest() {
         String resultFilePath = getResultFilePath();
-        int varietiesArray[] = {5, 10, 15};
+        int varietiesArray[] = {5, 10};
 
         // clear file
         this.resultFile =  new File(resultFilePath);

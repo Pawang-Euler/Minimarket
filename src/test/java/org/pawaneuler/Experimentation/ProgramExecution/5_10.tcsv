@@ -1,0 +1,11 @@
+id,products
+0,Apple,Beer,Dumpling,Eggs
+1,Beer,Coke,Dumpling,Eggs
+2,Apple,Eggs
+3,Beer,Coke
+4,Dumpling,Eggs
+5,Dumpling
+6,Apple,Beer
+7,Apple,Coke
+8,Apple,Beer,Coke,Eggs
+9,Beer,Coke,Eggs

@@ -1,0 +1,1021 @@
+data,frek,child
+root,0,1,2,3,4,5,6,107,108,109,432
+Apple,115,7,8,9,10,191,192,400,525,526
+Beer,110,29,30,135,281,282,283,515,516
+Coke,106,37,43,98,99,177,178,179
+Dumpling,102,153,154,155,156,157,185
+Eggs,120,85,86,87,385,576
+Fanta,112,290,291,292,293
+Beer,31,21,22,94,259,374,457,643,889
+Coke,30,16,17,359,476,477,692,693
+Dumpling,23,66,89,90,503,504,505
+Eggs,27,11,12,483,513,514
+Fanta,10,122,614,930,931
+Granola,10,13,14,775
+Ham,4,657,740
+Ice Cream,4,15
+Jelly,2,
+Dumpling,6,124,125,218,420,421,689
+Eggs,8,18,312,586,587,588
+Fanta,4,19,20,877,984
+Granola,5,211,527,767
+Ham,6,652,653
+Coke,11,58,110,111,112,113,248,942
+Dumpling,16,23,186,386,681,682,683
+Eggs,9,24,430,662,815,838
+Fanta,3,25,158,159,875
+Granola,10,26,398,502
+Ham,11,27,367
+Ice Cream,23,28
+Jelly,108,
+Coke,28,48,49,50,51,52,180,440
+Dumpling,28,31,80,81,82,83,920
+Eggs,10,32,55,512,766,886
+Fanta,7,33,34,35,560
+Granola,4,406,637,747
+Ham,3,270,271
+Ice Cream,4,36
+Jelly,4,
+Dumpling,22,38,307,308,309,310,311
+Eggs,8,39,40,348,807,808
+Fanta,7,65,326,745,998
+Granola,10,41,551,687
+Ham,4,42,165
+Ice Cream,9,707
+Eggs,21,44,45,46,315,770
+Fanta,6,171,475,771,772
+Granola,7,580,640,949
+Ham,10,47,669
+Ice Cream,6,956
+Dumpling,7,116,174,182,331,332,1001
+Eggs,7,130,441,568,569,935
+Fanta,11,103,610,611,966
+Granola,9,403,802,872
+Ham,13,53,706
+Ice Cream,4,54
+Jelly,8,
+Granola,3,56,57,710
+Ham,4,972,983
+Ice Cream,7,937
+Dumpling,1,59,72,73,529,590
+Eggs,5,60,196,345,346,778
+Fanta,7,61,77,78,538
+Granola,13,62,231,280
+Ham,21,63,64
+Ice Cream,112,
+Jelly,117,
+Granola,6,146,336,721
+Eggs,5,67,250,303,304,750
+Fanta,5,68,558,727,728
+Granola,4,69,840,841
+Ham,7,70,71
+Ice Cream,10,411
+Jelly,5,
+Fanta,10,149,542,593,873
+Granola,7,74,75,947
+Ham,4,143,488
+Ice Cream,6,76
+Jelly,7,
+Ham,8,354,496
+Ice Cream,12,79
+Jelly,20,
+Fanta,8,92,93,334,628
+Granola,9,207,208,277
+Ham,11,939
+Ice Cream,12,84
+Jelly,3,
+Fanta,27,166,734,735,831
+Granola,37,244,481,565
+Ham,19,88,145
+Ice Cream,2,556
+Fanta,10,245,318,319,320
+Granola,13,91,674,675
+Ham,4,655,656
+Granola,8,100,101,102
+Ham,6,491,1002
+Eggs,9,95,424,451,812,888
+Fanta,2,96,338,443,455
+Granola,8,97,642,990
+Ham,4,380,805
+Fanta,23,552,553,761,762
+Granola,23,229,461,927
+Ham,6,412,891
+Ice Cream,5,835
+Jelly,4,
+Granola,5,104,105,1005
+Ham,2,329,330
+Ice Cream,6,106
+Jelly,7,
+Granola,106,267,545,613
+Ham,109,738,753
+Ice Cream,136,742
+Eggs,5,160,200,201,442,836
+Fanta,5,167,168,654,795
+Granola,5,391,464,963
+Ham,7,114,621
+Ice Cream,5,115
+Jelly,6,
+Eggs,5,117,225,645,676,922
+Fanta,8,118,140,141,142
+Granola,8,119,409,410
+Ham,7,120,701
+Ice Cream,14,121
+Jelly,107,
+Granola,7,123,711,1009
+Ham,5,796,832
+Eggs,8,213,214,256,257,634
+Fanta,7,126,127,128,129
+Granola,3,287,755,856
+Ham,3,667,1010
+Ice Cream,6,917
+Jelly,6,
+Fanta,6,131,448,607,608
+Granola,5,132,133,1018
+Ham,5,278,495
+Ice Cream,3,134
+Jelly,10,
+Eggs,23,136,137,536,537,944
+Fanta,8,321,378,493,974
+Granola,17,138,301,302
+Ham,4,139,811
+Ice Cream,9,948
+Ham,5,501,589
+Ice Cream,3,436
+Jelly,5,
+Ice Cream,9,144
+Jelly,26,
+Jelly,16,
+Ham,4,147,592
+Ice Cream,9,148
+Jelly,21,
+Granola,4,150,685,776
+Ham,8,151,152
+Ice Cream,32,396
+Jelly,33,
+Eggs,26,262,263,264,265,266
+Fanta,25,205,206,499,500
+Granola,25,472,473,474
+Ham,28,547,606
+Ice Cream,18,471
+Ham,8,236,736
+Ice Cream,7,397
+Fanta,3,161,383,392,997
+Granola,5,162,163,164
+Ham,14,260,423
+Ice Cream,15,390
+Jelly,11,
+Jelly,7,
+Granola,12,209,414,1006
+Granola,5,351,479,480
+Ham,4,169,170
+Ice Cream,5,899
+Jelly,2,
+Granola,7,172,173,961
+Ham,11,717,968
+Ice Cream,3,955
+Fanta,6,175,785,858,859
+Granola,3,176,723,724
+Ham,5,294,445
+Ham,28,416,417
+Ice Cream,28,325
+Jelly,33,
+Ice Cream,7,181
+Jelly,2,
+Granola,6,183,184,487
+Ham,5,295
+Ice Cream,4,470
+Jelly,27,
+Fanta,4,187,203,204,846
+Granola,6,188,189,433
+Ham,7,509,894
+Ice Cream,7,190
+Jelly,15,
+Fanta,19,240,241,618,619
+Granola,20,193,194,195
+Ham,11,284,554
+Ice Cream,11,602
+Jelly,7,
+Granola,10,197,285,633
+Ham,8,198,713
+Ice Cream,16,199
+Jelly,109,
+Granola,4,237,238,1012
+Ham,2,202,959
+Ice Cream,4,906
+Ham,5,566,855
+Ice Cream,1,929
+Granola,9,252,341,885
+Ham,12,234,995
+Ham,5,577,578
+Ice Cream,9,896
+Ham,3,210,845
+Ice Cream,3,521
+Ham,2,212,535
+Ice Cream,12,749
+Fanta,1,221,437,456,594
+Granola,3,215,300,635
+Ham,4,216,902
+Ice Cream,11,217
+Jelly,26,
+Granola,4,219,220,691
+Ham,6,622,804
+Ice Cream,7,847
+Granola,3,222,223,249
+Ham,10,255,463
+Ice Cream,6,224
+Jelly,22,
+Granola,3,226,227,907
+Ham,8,233,454
+Ice Cream,5,228
+Jelly,13,
+Ham,7,230,557
+Ice Cream,6,981
+Ice Cream,27,232
+Jelly,116,
+Ice Cream,11,428
+Ice Cream,7,235
+Jelly,7,
+Ice Cream,11,431
+Ham,5,276,379
+Ice Cream,5,239
+Jelly,10,
+Granola,11,368,369,824
+Ham,12,242,243
+Ice Cream,5,819
+Jelly,4,
+Ham,8,355,730
+Granola,5,246,791,792
+Ham,5,247,950
+Ice Cream,7,382
+Ice Cream,4,561
+Jelly,9,
+Granola,4,251,870,871
+Ham,7,485,850
+Ham,8,253,1015
+Ice Cream,6,254
+Jelly,2,
+Ice Cream,29,306
+Ham,8,531,733
+Ice Cream,3,258
+Jelly,12,
+Fanta,12,272,273,274,639
+Ice Cream,22,261
+Jelly,97,
+Fanta,11,296,297,366,951
+Granola,16,648,773,837
+Ham,17,510,511
+Ice Cream,6,415
+Jelly,14,
+Ham,18,268,269
+Ice Cream,8,632
+Jelly,11,
+Ice Cream,3,600
+Jelly,4,
+Granola,8,659,660,962
+Ham,7,924,925
+Ice Cream,5,275
+Jelly,6,
+Ice Cream,9,405
+Jelly,6,
+Ice Cream,7,279
+Jelly,24,
+Jelly,26,
+Fanta,24,357,703,704,705
+Granola,26,342,343,344
+Ham,21,548,549
+Ice Cream,5,880
+Ice Cream,5,286
+Jelly,20,
+Ham,2,288,289
+Ice Cream,13,317
+Jelly,13,
+Granola,32,574,575,765
+Ham,17,519,520
+Ice Cream,27,688
+Jelly,18,
+Ice Cream,6,609
+Ice Cream,10,690
+Granola,6,371,763,936
+Ham,7,298,760
+Ice Cream,1,299
+Jelly,5,
+Ice Cream,3,583
+Ice Cream,6,743
+Jelly,5,
+Ham,5,694,695
+Ice Cream,7,305
+Jelly,6,
+Jelly,113,
+Fanta,8,363,696,714,934
+Granola,9,370,890,1019
+Ham,9,533,534
+Ice Cream,4,601
+Jelly,10,
+Granola,5,313,497,498
+Ham,13,314,943
+Ice Cream,3,911
+Ice Cream,7,316
+Jelly,8,
+Jelly,20,
+Ham,5,572,573
+Ice Cream,5,462
+Jelly,8,
+Granola,2,322,323,335
+Ham,8,365,967
+Ice Cream,3,324
+Jelly,6,
+Jelly,13,
+Ham,6,327,754
+Ice Cream,6,328
+Jelly,10,
+Ice Cream,6,726
+Jelly,7,
+Ham,6,413,988
+Ice Cream,7,333
+Jelly,4,
+Ice Cream,4,970
+Jelly,5,
+Ice Cream,10,337
+Jelly,9,
+Ham,5,339,883
+Ice Cream,10,340
+Jelly,12,
+Ice Cream,4,849
+Ham,5,434,801
+Ice Cream,14,729
+Jelly,13,
+Ham,3,517,869
+Ice Cream,2,347
+Jelly,9,
+Ham,2,349,350
+Ice Cream,4,958
+Jelly,6,
+Ham,8,352,666
+Ice Cream,8,353
+Jelly,23,
+Ice Cream,32,404
+Ice Cream,11,356
+Jelly,2,
+Granola,6,358,604,605
+Ham,9,459,460
+Fanta,7,360,361,852,853
+Granola,2,394,546,978
+Ham,2,362,833
+Ice Cream,4,482
+Granola,6,364,597,758
+Ham,9,418,783
+Ice Cream,5,863
+Ice Cream,8,938
+Jelly,24,
+Ham,6,466,793
+Ice Cream,5,979
+Ham,5,616,897
+Ham,6,372,784
+Ice Cream,5,373
+Jelly,12,
+Granola,11,375,376,377
+Ham,5,507,508
+Ice Cream,6,952
+Jelly,6,
+Ham,3,626,797
+Jelly,7,
+Ice Cream,11,381
+Jelly,32,
+Jelly,8,
+Ham,5,384,1016
+Ice Cream,9,651
+Ice Cream,27,419
+Granola,5,387,388,709
+Ham,7,617,1013
+Ice Cream,4,389
+Jelly,6,
+Jelly,19,
+Ham,4,595,782
+Ice Cream,10,393
+Jelly,14,
+Ham,4,395,506
+Ice Cream,6,458
+Jelly,102,
+Jelly,6,
+Ice Cream,7,399
+Jelly,29,
+Ham,23,401,839
+Ice Cream,5,402
+Jelly,13,
+Ham,7,446,787
+Jelly,120,
+Jelly,23,
+Ham,7,407,408
+Ice Cream,8,429
+Jelly,7,
+Ice Cream,5,636
+Jelly,11,
+Jelly,31,
+Ice Cream,5,684
+Ice Cream,4,579
+Ice Cream,7,823
+Jelly,7,
+Ice Cream,9,800
+Jelly,12,
+Ice Cream,7,720
+Jelly,8,
+Ham,2,489,490
+Ice Cream,5,422
+Jelly,4,
+Jelly,19,
+Granola,3,425,426,708
+Ham,10,468,744
+Ice Cream,4,427
+Jelly,4,
+Jelly,17,
+Jelly,17,
+Granola,5,522,523,524
+Jelly,30,
+Jelly,107,
+Jelly,8,
+Ice Cream,4,435
+Jelly,3,
+Jelly,10,
+Ham,5,438,748
+Ice Cream,10,439
+Jelly,26,
+Jelly,11,
+Granola,8,539,630,915
+Ice Cream,3,759
+Ice Cream,4,444
+Jelly,7,
+Jelly,10,
+Ice Cream,3,447
+Jelly,7,
+Ham,1,449,450
+Ice Cream,3,555
+Jelly,7,
+Ham,6,452,941
+Ice Cream,3,453
+Jelly,9,
+Jelly,10,
+Jelly,10,
+Ice Cream,8,746
+Ham,7,665,768
+Jelly,12,
+Ice Cream,1,788
+Jelly,5,
+Ice Cream,11,985
+Jelly,5,
+Jelly,22,
+Ice Cream,0,465
+Jelly,4,
+Ice Cream,6,467
+Jelly,7,
+Ice Cream,3,469
+Jelly,12,
+Jelly,8,
+Jelly,14,
+Ham,12,799,895
+Ice Cream,8,620
+Jelly,7,
+Ham,11,627,965
+Granola,11,678,679,848
+Ham,7,478,584
+Ice Cream,10,777
+Ice Cream,3,737
+Jelly,7,
+Ice Cream,8,779
+Jelly,3,
+Ham,10,484,921
+Ice Cream,3,809
+Ice Cream,12,486
+Jelly,9,
+Jelly,5,
+Jelly,8,
+Ice Cream,3,933
+Jelly,4,
+Ice Cream,4,492
+Jelly,5,
+Ice Cream,7,494
+Jelly,6,
+Jelly,11,
+Jelly,16,
+Ice Cream,8,884
+Jelly,8,
+Ice Cream,8,980
+Jelly,8,
+Ice Cream,6,794
+Jelly,13,
+Ham,7,825,843
+Ice Cream,11,1003
+Jelly,11,
+Jelly,6,
+Ice Cream,4,798
+Jelly,5,
+Ice Cream,10,861
+Ice Cream,5,550
+Jelly,6,
+Ham,9,817,928
+Ice Cream,7,722
+Jelly,11,
+Ice Cream,21,851
+Jelly,22,
+Ice Cream,9,518
+Jelly,29,
+Ice Cream,9,887
+Jelly,11,
+Jelly,8,
+Ham,5,624,625
+Ice Cream,2,585
+Jelly,5,
+Ice Cream,27,864
+Jelly,30,
+Ice Cream,3,528
+Jelly,11,
+Ham,6,530,719
+Ice Cream,8,670
+Ice Cream,2,532
+Jelly,11,
+Ice Cream,7,993
+Jelly,6,
+Jelly,15,
+Ham,5,789,790
+Ice Cream,13,571
+Jelly,13,
+Ham,3,540,541
+Ice Cream,7,629
+Jelly,9,
+Ham,4,543,957
+Ice Cream,12,544
+Jelly,31,
+Ice Cream,23,898
+Ice Cream,5,829
+Ice Cream,7,1008
+Ice Cream,8,901
+Jelly,8,
+Jelly,3,
+Ice Cream,7,982
+Granola,3,562,563,564
+Ham,9,844,986
+Jelly,5,
+Jelly,10,
+Jelly,7,
+Jelly,6,
+Ham,2,559,599
+Ice Cream,6,881
+Jelly,5,
+Jelly,3,
+Ham,6,904,905
+Ice Cream,8,769
+Jelly,8,
+Jelly,7,
+Ice Cream,6,567
+Jelly,12,
+Ham,1,731,732
+Ice Cream,1,570
+Jelly,10,
+Jelly,4,
+Ice Cream,7,975
+Jelly,8,
+Ham,6,671,860
+Ice Cream,14,900
+Jelly,19,
+Ice Cream,10,774
+Jelly,3,
+Jelly,5,
+Ham,3,581,582
+Ice Cream,7,932
+Jelly,3,
+Jelly,13,
+Jelly,2,
+Jelly,9,
+Ham,5,603,987
+Ice Cream,6,903
+Jelly,4,
+Jelly,8,
+Ice Cream,2,591
+Jelly,7,
+Jelly,11,
+Ice Cream,6,842
+Jelly,7,
+Ice Cream,2,596
+Jelly,10,
+Ice Cream,5,598
+Jelly,4,
+Jelly,5,
+Jelly,11,
+Jelly,9,
+Jelly,4,
+Ice Cream,4,700
+Ice Cream,11,865
+Jelly,2,
+Jelly,7,
+Ice Cream,6,996
+Jelly,5,
+Jelly,24,
+Ham,2,821,822
+Ice Cream,4,612
+Jelly,7,
+Jelly,28,
+Ham,6,615,999
+Ice Cream,7,752
+Ice Cream,5,976
+Ice Cream,8,715
+Ice Cream,10,757
+Jelly,7,
+Jelly,4,
+Jelly,7,
+Ice Cream,3,623
+Jelly,9,
+Ice Cream,7,716
+Jelly,12,
+Ice Cream,3,702
+Ice Cream,2,712
+Jelly,10,
+Jelly,9,
+Ice Cream,5,631
+Jelly,6,
+Jelly,5,
+Jelly,7,
+Jelly,4,
+Jelly,10,
+Jelly,13,
+Ice Cream,4,638
+Jelly,15,
+Jelly,7,
+Ice Cream,9,641
+Jelly,6,
+Ice Cream,7,781
+Ice Cream,9,644
+Jelly,5,
+Ham,3,646,828
+Ice Cream,6,647
+Jelly,10,
+Ham,3,649,725
+Ice Cream,6,650
+Jelly,6,
+Jelly,12,
+Ice Cream,5,673
+Jelly,10,
+Ice Cream,4,810
+Ice Cream,3,741
+Jelly,5,
+Ice Cream,2,658
+Jelly,3,
+Ham,6,698,699
+Ice Cream,7,661
+Jelly,3,
+Ham,4,663,914
+Ice Cream,6,664
+Jelly,10,
+Ice Cream,7,919
+Jelly,10,
+Ice Cream,5,668
+Jelly,8,
+Jelly,3,
+Jelly,12,
+Ice Cream,5,672
+Jelly,7,
+Jelly,7,
+Ice Cream,5,926
+Jelly,3,
+Ice Cream,3,677
+Jelly,9,
+Ham,3,806,854
+Ice Cream,5,680
+Jelly,7,
+Ham,3,892,908
+Ice Cream,5,916
+Jelly,9,
+Jelly,11,
+Ice Cream,14,686
+Jelly,25,
+Jelly,6,
+Jelly,9,
+Jelly,6,
+Jelly,10,
+Jelly,4,
+Ice Cream,10,827
+Jelly,8,
+Ice Cream,5,953
+Jelly,4,
+Ham,5,697,964
+Ice Cream,9,945
+Ice Cream,7,969
+Jelly,8,
+Jelly,7,
+Jelly,19,
+Jelly,2,
+Ham,10,814,862
+Ice Cream,8,820
+Jelly,12,
+Jelly,5,
+Jelly,9,
+Jelly,5,
+Jelly,1,
+Jelly,8,
+Ice Cream,5,989
+Jelly,3,
+Jelly,29,
+Ice Cream,3,813
+Jelly,8,
+Jelly,19,
+Ice Cream,3,718
+Jelly,12,
+Jelly,5,
+Jelly,10,
+Jelly,7,
+Jelly,4,
+Ice Cream,8,751
+Jelly,7,
+Jelly,8,
+Jelly,3,
+Ice Cream,2,876
+Jelly,4,
+Jelly,7,
+Jelly,8,
+Ice Cream,2,879
+Jelly,8,
+Jelly,6,
+Ham,11,867,971
+Ice Cream,7,991
+Jelly,11,
+Jelly,11,
+Ice Cream,26,739
+Jelly,7,
+Jelly,4,
+Jelly,6,
+Jelly,27,
+Jelly,5,
+Jelly,5,
+Ice Cream,5,913
+Jelly,16,
+Jelly,6,
+Jelly,6,
+Jelly,21,
+Jelly,5,
+Jelly,11,
+Jelly,4,
+Jelly,26,
+Jelly,3,
+Ice Cream,5,756
+Jelly,10,
+Jelly,5,
+Jelly,3,
+Jelly,5,
+Jelly,5,
+Ice Cream,10,780
+Jelly,7,
+Ice Cream,8,764
+Jelly,6,
+Jelly,9,
+Ice Cream,3,954
+Jelly,4,
+Jelly,2,
+Jelly,7,
+Jelly,11,
+Ice Cream,2,1014
+Jelly,4,
+Ice Cream,6,1000
+Jelly,5,
+Jelly,5,
+Jelly,11,
+Jelly,4,
+Jelly,3,
+Jelly,4,
+Jelly,8,
+Jelly,10,
+Jelly,5,
+Jelly,6,
+Jelly,8,
+Ham,3,786,912
+Ice Cream,2,923
+Jelly,5,
+Jelly,7,
+Ice Cream,5,1017
+Jelly,2,
+Ice Cream,6,977
+Jelly,5,
+Jelly,6,
+Jelly,19,
+Jelly,1,
+Ice Cream,6,830
+Jelly,5,
+Jelly,3,
+Ice Cream,3,1004
+Jelly,5,
+Jelly,4,
+Ice Cream,3,803
+Jelly,2,
+Jelly,7,
+Jelly,12,
+Ice Cream,1,874
+Ice Cream,7,973
+Jelly,2,
+Jelly,7,
+Jelly,7,
+Jelly,5,
+Ice Cream,4,834
+Jelly,5,
+Ice Cream,3,1007
+Ice Cream,4,816
+Jelly,5,
+Ice Cream,9,818
+Jelly,6,
+Jelly,1,
+Jelly,4,
+Ice Cream,2,857
+Jelly,6,
+Jelly,5,
+Jelly,9,
+Ice Cream,5,826
+Jelly,7,
+Jelly,7,
+Jelly,6,
+Jelly,7,
+Jelly,7,
+Jelly,5,
+Jelly,3,
+Jelly,10,
+Jelly,5,
+Jelly,5,
+Jelly,3,
+Jelly,5,
+Jelly,2,
+Jelly,10,
+Ice Cream,5,882
+Jelly,3,
+Jelly,5,
+Jelly,2,
+Ice Cream,5,918
+Jelly,6,
+Jelly,2,
+Jelly,3,
+Jelly,7,
+Jelly,3,
+Jelly,5,
+Jelly,9,
+Ice Cream,7,866
+Jelly,4,
+Jelly,5,
+Jelly,6,
+Jelly,6,
+Jelly,7,
+Ice Cream,3,910
+Jelly,3,
+Jelly,4,
+Jelly,19,
+Jelly,3,
+Jelly,12,
+Jelly,4,
+Jelly,4,
+Jelly,6,
+Ice Cream,5,868
+Jelly,2,
+Jelly,9,
+Ice Cream,6,946
+Jelly,3,
+Jelly,4,
+Jelly,4,
+Jelly,5,
+Jelly,2,
+Jelly,3,
+Ice Cream,2,878
+Jelly,4,
+Jelly,7,
+Jelly,4,
+Jelly,7,
+Jelly,11,
+Jelly,4,
+Jelly,7,
+Jelly,8,
+Jelly,5,
+Jelly,5,
+Jelly,5,
+Jelly,4,
+Ice Cream,4,960
+Jelly,5,
+Ice Cream,4,893
+Jelly,2,
+Jelly,4,
+Jelly,8,
+Jelly,2,
+Jelly,5,
+Jelly,7,
+Jelly,6,
+Jelly,4,
+Jelly,4,
+Jelly,6,
+Jelly,2,
+Ice Cream,6,909
+Jelly,3,
+Jelly,6,
+Jelly,3,
+Jelly,5,
+Jelly,2,
+Jelly,6,
+Jelly,16,
+Jelly,3,
+Jelly,4,
+Jelly,4,
+Jelly,4,
+Jelly,7,
+Jelly,5,
+Jelly,6,
+Jelly,3,
+Jelly,12,
+Jelly,3,
+Jelly,5,
+Jelly,17,
+Ice Cream,2,994
+Jelly,8,
+Jelly,6,
+Jelly,7,
+Jelly,3,
+Jelly,9,
+Ice Cream,0,1011
+Jelly,8,
+Jelly,5,
+Jelly,3,
+Jelly,3,
+Jelly,4,
+Jelly,2,
+Jelly,5,
+Jelly,3,
+Ice Cream,3,940
+Jelly,5,
+Jelly,3,
+Jelly,5,
+Jelly,4,
+Jelly,6,
+Jelly,3,
+Jelly,4,
+Jelly,8,
+Jelly,3,
+Jelly,7,
+Jelly,3,
+Jelly,3,
+Jelly,4,
+Jelly,3,
+Jelly,5,
+Jelly,6,
+Jelly,5,
+Jelly,5,
+Jelly,5,
+Jelly,5,
+Jelly,4,
+Jelly,7,
+Jelly,4,
+Jelly,5,
+Jelly,3,
+Jelly,3,
+Jelly,4,
+Jelly,5,
+Jelly,3,
+Jelly,4,
+Jelly,4,
+Jelly,5,
+Ice Cream,5,992
+Jelly,4,
+Jelly,5,
+Jelly,3,
+Jelly,7,
+Jelly,3,
+Jelly,3,
+Jelly,4,
+Jelly,3,
+Jelly,2,
+Jelly,5,
+Jelly,4,
+Jelly,4,
+Jelly,5,
+Jelly,4,
+Jelly,1,
+Jelly,4,
+Jelly,4,
+Jelly,4,
+Jelly,1,
+Jelly,6,
+Jelly,4,
+Jelly,6,
+Jelly,4,
+Jelly,5,
+Jelly,2,
+Jelly,4,
+Jelly,3,
+Jelly,2,
+Jelly,1,
+Jelly,3,
+Jelly,5,
+Jelly,3,
+Jelly,4,
+Jelly,1,
+Jelly,1,
+Jelly,4,
+Jelly,2,
+Jelly,3,
+Jelly,1,
+Jelly,3,
+Jelly,4,
+Jelly,2,
+Jelly,2,
+Jelly,5,
+Jelly,1,
+Jelly,1,
+Jelly,1,

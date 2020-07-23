@@ -101,6 +101,17 @@ public class AssociationRuleGenerator {
     }
 
     /**
+     * Method to get unique products from trie in this class.
+     * This method is exist for experimentation purpose.
+     * 
+     * @author ReyRizki
+     * @return unique products from trie
+     */
+    public ArrayList<String> getUniqueProducts() {
+        return this.generateProducts();
+    }
+
+    /**
      * 
      * @param list 2-Dimensional ArrayList contain itemlist
      * @return 1-Dimentional ArrayList

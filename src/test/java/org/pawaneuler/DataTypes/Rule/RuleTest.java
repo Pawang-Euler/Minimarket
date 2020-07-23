@@ -1,7 +1,6 @@
 package org.pawaneuler.DataTypes.Rule;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -52,7 +51,7 @@ public class RuleTest {
     @Test
     public void stringItemListToArrayListTest() {
         try {
-            Rule rule = new Rule("Bread,Cereal,Milk","Coke,Diaper");
+            Rule rule = new Rule("Bread, Cereal, Milk","Coke, Diaper");
             ArrayList<String> expectedLeftArrayList = new ArrayList<String>();
             ArrayList<String> expectedRightArrayList = new ArrayList<String>();
             

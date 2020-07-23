@@ -75,6 +75,7 @@ public class AssociationRuleGenerator {
             pruning(candidate);
             candidateSingleset = getUniqueProduct(candidate);
             candidate = combination(candidateSingleset,kItemset);
+            pruning(candidate);
             frequentItemset.addAll(candidate);
         } while (candidate.size() > kItemset);
 

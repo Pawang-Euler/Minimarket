@@ -28,3 +28,17 @@ TLG, CreateTrie, WriteTrieScript, LoadFromTriescript, GenerateAssociationRule
 1146, 43, 106, 3, 1742, 
 10442, 172, 98, 3, 1159, 
 131139, 1930, 139, 2, 1474, 
+TLG, CreateTrie, WriteTrieScript, LoadFromTriescript, GenerateAssociationRule
+17, 33, 11, 17, 230, 
+46, 19, 9, 4, 186, 
+260, 70, 12, 1, 227, 
+2732, 203, 20, 4, 166, 
+18709, 650, 27, 1, 98, 
+195796, 1097, 22, 1, 101, 
+TLG, CreateTrie, WriteTrieScript, LoadFromTriescript, GenerateAssociationRule
+12, 8, 25, 4, 2437, 
+33, 13, 59, 10, 15296, 
+249, 21, 148, 5, 76814, 
+2582, 71, 210, 4, 144933, 
+20233, 254, 219, 3, 151810, 
+200539, 3538, 268, 5, 146951, 

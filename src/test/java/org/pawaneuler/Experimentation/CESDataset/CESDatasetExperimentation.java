@@ -23,7 +23,7 @@ import org.pawaneuler.IOTools.TriescriptTools.TriescriptWriter;
  * @author ReyRizki
  */
 public class CESDatasetExperimentation {
-    private static String CESDatasetCSV = "src/test/java/org/pawaneuler/Experimentation/CESDataset/ces_hybrid.csv";
+    private static String CESDatasetCSV = "src/test/java/org/pawaneuler/Experimentation/CESDataset/example.csv";
     private static String CESDatasetTCSV = "src/test/java/org/pawaneuler/Experimentation/CESDataset/CESDataset.tcsv";
     private static String CESDatasetTrie = "src/test/java/org/pawaneuler/Experimentation/CESDataset/CESDatasetTrie.triescript";
 
@@ -80,7 +80,7 @@ public class CESDatasetExperimentation {
             runtime.gc();
             long memoryUsed = runtime.totalMemory() - runtime.freeMemory();
 
-            writeExperimentResult("experimentResult", executionTime, memoryUsed);
+            writeExperimentResult("experimentResult.csv", executionTime, memoryUsed);
 
             System.out.println("Experimentation is done");
         } catch (BadExtentionException e) {
@@ -144,7 +144,8 @@ public class CESDatasetExperimentation {
         try {
             CSVWriter writer = new CSVWriter(new FileWriter(experimentResultFilePath, true));
             
-            writer.writeNext(result);
+            // writer.writeNext(result);
+            writer.writeNext(result, false);
 
             writer.close();
         } catch (IOException e) {
